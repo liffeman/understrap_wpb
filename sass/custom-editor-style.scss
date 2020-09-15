@@ -1,2 +1,17 @@
 //Add your own editor styles here or comment out the next line if you want to pull in the whole Bootstrap stuff
-//@import "theme"; 
+@import "theme";
+
+body.mce-content-body {
+	margin: 0;
+	padding: 1rem;
+}
+.wp-block {
+	font-family: $font-family-base;
+	max-width: 1100px
+}
+.editor-post-title__input {
+	font-family: $headings-font-family !important;
+	font-size: $h1-font-size !important;
+	font-weight: $headings-font-weight !important;
+}
+

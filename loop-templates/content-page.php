@@ -7,17 +7,19 @@
 
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
+$page_title = get_field ('page_title_visiblity');
+
 ?>
 
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
+<?php if( $page_title ==  0 ) : ?>
+	<header class="entry-header d-none">
 
-	<header class="entry-header">
-
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+		<?php the_title( '<h1 class="entry-title text-center">', '</h1>' ); ?>
 
 	</header><!-- .entry-header -->
-
-	<?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
+<?php endif; ?>
+	<?php //echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
 
 	<div class="entry-content">
 

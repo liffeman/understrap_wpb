@@ -1,0 +1,29 @@
+// Gutenberg color options
+// -- see editor-color-palette in functions.php
+$colors:
+	( blue, #00679c ),
+	( blue-100, #E5EFF5),
+	( blue-300, #B2D0E2),
+	( blue-500, #7FB2D0),
+	( gray-100, #f8f9fa ),
+	( gray-300, #dee2e6 ),
+	( gray-500, #adb5bd ),
+	( gray-700, #495057 ),
+	( gray-900, #212529 ),
+	( black, #000 ),
+	( white, #fff );
+
+
+/* Color Options
+--------------------------------------------- */
+
+@each $name, $color in $colors {
+
+	.has-#{$name}-color {
+		color: $color;
+	}
+
+	.has-#{$name}-background-color {
+		background-color: $color !important;
+	}
+}

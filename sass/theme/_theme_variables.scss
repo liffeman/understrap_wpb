@@ -3,4 +3,71 @@
 // Just copy a variable from src/sass/bootstrap4/_variables.scss, paste it here and edit the value.
 
 
-$primary: #5533ff; // Thats a sample how you could change a BootStrap variable.
+$primary: #00679c; // Thats a sample how you could change a BootStrap variable.
+
+$enable-responsive-font-sizes:                true;
+
+$spacer: 1rem;
+
+// stylelint-disable value-keyword-case
+$font-family-sans-serif:      'Source Sans Pro', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+
+$font-size-base:              1.125rem !default; // Assumes the browser default, typically `16px`
+$font-size-lg:                $font-size-base * 1.25 !default;
+$font-size-sm:                $font-size-base * .875 !default;
+
+$font-weight-lighter:         lighter !default;
+$font-weight-light:           300 !default;
+$font-weight-normal:          400 !default;
+$font-weight-bold:            700 !default;
+$font-weight-bolder:          bolder !default;
+
+$font-weight-base:            $font-weight-normal !default;
+$line-height-base:            1.5 !default;
+
+$h1-font-size:                $font-size-base * 3.75;
+$h2-font-size:                $font-size-base * 3 !default;
+$h3-font-size:                $font-size-base * 2.5 !default;
+$h4-font-size:                $font-size-base * 2.0 !default;
+$h5-font-size:                $font-size-base * 1.5 !default;
+$h6-font-size:                $font-size-base !default;
+
+$headings-margin-bottom:      $spacer / 2 !default;
+$headings-font-family:        'Barlow', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$headings-font-weight:        $font-weight-light;
+$headings-line-height:        1.2 !default;
+$headings-color:              $primary;
+
+//$card-height: 100%;
+
+// Navs
+
+$nav-link-padding-y:                .5rem !default;
+$nav-link-padding-x:                1rem !default;
+//$nav-link-disabled-color:           $gray-600 !default;
+
+// Navbar
+
+$navbar-padding-y:                  $spacer / 2 !default;
+$navbar-padding-x:                  $spacer !default;
+
+$navbar-nav-link-padding-x:         .5rem !default;
+
+$navbar-brand-font-size:            $font-size-lg !default;
+// Compute the navbar-brand padding-y so the navbar-brand will have the same height as navbar-text and nav-link
+$nav-link-height:                   $font-size-base * $line-height-base + $nav-link-padding-y * 2 !default;
+$navbar-brand-height:               $navbar-brand-font-size * $line-height-base !default;
+$navbar-brand-padding-y:            ($nav-link-height - $navbar-brand-height) / 2 !default;
+
+$navbar-toggler-padding-y:          .25rem !default;
+$navbar-toggler-padding-x:          .5rem;
+$navbar-toggler-font-size:          $font-size-lg !default;
+$navbar-toggler-border-radius:      none;
+
+$custom-logo-height:		4rem;
+$nav-height:						$custom-logo-height + ($navbar-brand-padding-y * 2) + ( $navbar-padding-y * 2 );
+
+$transition-base:             all .2s ease-in-out !default;
+$transition-fade:             opacity .15s linear !default;
+$transition-collapse:         height .15s ease;

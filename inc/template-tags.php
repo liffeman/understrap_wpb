@@ -10,11 +10,11 @@
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
-if ( ! function_exists( 'understrap_posted_on' ) ) {
+if ( ! function_exists( 'understrap_posted_on_old' ) ) {
 	/**
 	 * Prints HTML with meta information for the current post-date/time and author.
 	 */
-	function understrap_posted_on() {
+	function understrap_posted_on_old() {
 		$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
 		if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
 			$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s"> (%4$s) </time>';
@@ -45,6 +45,30 @@ if ( ! function_exists( 'understrap_posted_on' ) ) {
 			)
 		);
 		echo $posted_on . $byline; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+	}
+}
+
+if ( ! function_exists( 'understrap_posted_on' ) ) {
+	/**
+	 * Prints HTML with meta information for the current post-date/time and author.
+	 */
+	function understrap_posted_on() {
+		$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time>';
+		$time_string = sprintf(
+			$time_string,
+			esc_attr( get_the_date( 'c' ) ),
+			esc_html( get_the_date() ),
+		);
+		$posted_on   = apply_filters(
+			'understrap_posted_on',
+			sprintf(
+				'<span class="posted-on">%1$s <a href="%2$s" rel="bookmark">%3$s</a></span>',
+				esc_html_x( 'Posted on', 'post date', 'understrap' ),
+				esc_url( get_permalink() ),
+				apply_filters( 'understrap_posted_on_time', $time_string )
+			)
+		);
+		echo $posted_on; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 	}
 }
 
@@ -158,3 +182,41 @@ if ( ! function_exists( 'understrap_body_attributes' ) ) {
 		echo trim( $attributes ); // phpcs:ignore WordPress.Security.EscapeOutput
 	}
 }
+
+
+add_action( 'generate_after_header','featured_image_full' );
+function featured_image_full() { ?>
+
+<?php if ( is_page() ) :
+	$page_title = get_field ('page_title_visiblity');
+	if ( has_post_thumbnail() ) { ?>
+		<div class="featured-image-in-header">
+		<?php the_post_thumbnail(); ?>
+			<?php if( $page_title ==  0 ) : ?>
+				<div class="featured-image-in-header-inner-content">
+					<h1 class="featured-page-title"><?php the_title(); ?></h1>
+				</div>
+			<?php endif; ?>
+		</div>
+	<?php } else { ?>
+		<?php if( $page_title ==  0 ) : ?>
+			<header class="entry-header">
+				<?php the_title( '<h1 class="entry-title text-center">', '</h1>' ); ?>
+			</header><!-- .entry-header -->
+		<?php endif; ?>
+<?php }
+endif; ?>
+
+<?php if (is_home() && get_option('page_for_posts') ) :
+	$img = wp_get_attachment_image_src(get_post_thumbnail_id(get_option('page_for_posts')),'full');
+	$featured_image = $img[0];
+	$our_title = get_the_title( get_option('page_for_posts', true) ); ?>
+	<div class="featured-image-in-header">
+		<img src="<?php echo $featured_image ; ?>"/>
+		<div class="featured-image-in-header-inner-content">
+			<h1 class="featured-page-title"><?php echo $our_title ?></h1>
+		</div>
+	</div>
+<?php endif; ?>
+<?php }
+
