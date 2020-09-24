@@ -1,0 +1,76 @@
+{
+    "key": "group_5f5f1cbded965",
+    "title": "Project time",
+    "fields": [
+        {
+            "key": "field_5f5f1cfde6b82",
+            "label": "Start time",
+            "name": "project_start_time",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "admin_column_enabled": 1,
+            "admin_column_post_types": [
+                "project"
+            ],
+            "admin_column_taxonomies": "",
+            "default_value": "",
+            "placeholder": "YYYY",
+            "prepend": "",
+            "append": "",
+            "min": "",
+            "max": "",
+            "step": ""
+        },
+        {
+            "key": "field_5f5f1d36e6b83",
+            "label": "End time",
+            "name": "project_end_time",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "admin_column_enabled": 1,
+            "admin_column_post_types": [
+                "project"
+            ],
+            "admin_column_taxonomies": "",
+            "default_value": "",
+            "placeholder": "YYYY",
+            "prepend": "",
+            "append": "",
+            "min": "",
+            "max": "",
+            "step": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "project"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "side",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1600943511
+}
