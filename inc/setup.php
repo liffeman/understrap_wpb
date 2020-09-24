@@ -288,7 +288,7 @@ function wpdocs_custom_excerpt_length( $length ) {
 add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
 
 
-add_action( 'init', 'cp_change_post_object' );
+//add_action( 'init', 'cp_change_post_object' );
 // Change dashboard Posts to News
 function cp_change_post_object() {
 	$get_post_type = get_post_type_object('post');

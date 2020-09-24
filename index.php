@@ -26,7 +26,7 @@ $our_title = get_the_title( get_option('page_for_posts', true) );
 	<?php get_template_part( 'global-templates/hero' ); ?>
 <?php endif; ?>
 
-<div class="wrapper" id="index-wrapper">
+<div class="wrapper pb-0" id="index-wrapper">
 
 	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
 
@@ -51,9 +51,9 @@ $our_title = get_the_title( get_option('page_for_posts', true) );
 						 */
 						 if ($view == 'grid') {
 							 get_template_part( 'loop-templates/content', 'grid' );
-								 } else {
+						 } else {
 							 get_template_part( 'loop-templates/content', get_post_format() );
-							 }
+						}
 					}
 				} else {
 					get_template_part( 'loop-templates/content', 'none' );

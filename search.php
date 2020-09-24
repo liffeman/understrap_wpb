@@ -11,10 +11,12 @@ defined( 'ABSPATH' ) || exit;
 get_header();
 
 $container = get_theme_mod( 'understrap_container_type' );
+$view = get_theme_mod( 'understrap_blog_view' );
+
 
 ?>
 
-<div class="wrapper" id="search-wrapper">
+<div class="wrapper pb-0" id="search-wrapper">
 
 	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
 

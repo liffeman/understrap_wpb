@@ -43,8 +43,8 @@ body {
 	//display: inline-flex;
 	width: auto;
 	background-color: #0065a1;
-	padding: 15px 50px;
-	line-height: 2;
+	padding: 0.5em;
+	//line-height: 2;
 	color: #ffffff;
 	text-align: center;
 }
@@ -79,8 +79,13 @@ body {
 	outline: none;
 }
 .custom-logo-link img {
+	height: $custom-logo-height;
+	width: auto;
 	max-width: 240px;
 	padding: $spacer *0.25;
+	@include media-breakpoint-down(sm) {
+		max-width: 170px;
+	 }
 }
 
 .wp-block-cover, .wp-block-cover-image {
@@ -171,7 +176,7 @@ ul#menu-footer-menu {
 
 
 /* Single Posts */
-.single-post {
+.single-post, .single-cases {
 	article {
 		box-shadow: $box-shadow-lg;
 		@media (max-width: 768px) {
@@ -221,7 +226,11 @@ ul#menu-footer-menu {
 		outline: none;
 	}
 }
-
+.navbar {
+	.container {
+		padding: 0;
+	}
+}
 
 .navbar-nav {
 	li.menu-item {
@@ -232,8 +241,11 @@ ul#menu-footer-menu {
 		text-align: center;
 		a.nav-link {
 			padding: 1rem;
-			font-size: $h3-font-size;
+			font-size: $h4-font-size;
 			font-family: $headings-font-family;
+			@include media-breakpoint-down(sm) {
+				font-size: $font-size-base;
+			 }
 			&:hover {
 				background-color: #E5EFF5;
 				color: $black;
@@ -246,8 +258,11 @@ ul#menu-footer-menu {
 			li.menu-item {
 				a.dropdown-item {
 					padding: 1rem;
-					font-size: $h4-font-size;
+					font-size: $h5-font-size;
 					font-family: $headings-font-family;
+					@include media-breakpoint-down(sm) {
+						font-size: $font-size-base;
+					 }
 					&:hover {
 						background-color: #E5EFF5;
 					}

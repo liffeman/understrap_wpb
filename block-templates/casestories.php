@@ -39,6 +39,7 @@ $section_anchor = $id;
 						$number = get_field('number_of_posts');
 
 						$args = array (
+							'post_type' => 'cases',
 							'posts_per_page' => $number,
 						);
 

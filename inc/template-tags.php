@@ -62,9 +62,8 @@ if ( ! function_exists( 'understrap_posted_on' ) ) {
 		$posted_on   = apply_filters(
 			'understrap_posted_on',
 			sprintf(
-				'<span class="posted-on">%1$s <a href="%2$s" rel="bookmark">%3$s</a></span>',
+				'<span class="posted-on">%1$s %2$s</span>',
 				esc_html_x( 'Posted on', 'post date', 'understrap' ),
-				esc_url( get_permalink() ),
 				apply_filters( 'understrap_posted_on_time', $time_string )
 			)
 		);
@@ -78,7 +77,11 @@ if ( ! function_exists( 'understrap_entry_footer' ) ) {
 	 */
 	function understrap_entry_footer() {
 		// Hide category and tag text for pages.
-		if ( 'post' === get_post_type() ) {
+
+		$post_type = get_post_type();
+
+		if ($post_type == 'post' || 'cases') {
+		//if ( 'post' === get_post_type() ) {
 			/* translators: used between list items, there is a space after the comma */
 			$categories_list = get_the_category_list( esc_html__( ', ', 'understrap' ) );
 			if ( $categories_list && understrap_categorized_blog() ) {
@@ -92,6 +95,7 @@ if ( ! function_exists( 'understrap_entry_footer' ) ) {
 				printf( '<span class="tags-links">' . esc_html__( 'Tagged %s', 'understrap' ) . '</span>', $tags_list ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 			}
 		}
+		//}
 		if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
 			echo '<span class="comments-link">';
 			comments_popup_link( esc_html__( 'Leave a comment', 'understrap' ), esc_html__( '1 Comment', 'understrap' ), esc_html__( '% Comments', 'understrap' ) );
@@ -189,19 +193,32 @@ function featured_image_full() { ?>
 
 <?php if ( is_page() ) :
 	$page_title = get_field ('page_title_visiblity');
+	$service_icon = get_field('icon');
 	if ( has_post_thumbnail() ) { ?>
 		<div class="featured-image-in-header">
 		<?php the_post_thumbnail(); ?>
 			<?php if( $page_title ==  0 ) : ?>
 				<div class="featured-image-in-header-inner-content">
-					<h1 class="featured-page-title"><?php the_title(); ?></h1>
+					<h1 class="featured-page-title">
+						<?php if ( $service_icon ) {
+							echo $service_icon;
+							}
+						?>
+						<?php the_title(); ?>
+					</h1>
 				</div>
 			<?php endif; ?>
 		</div>
 	<?php } else { ?>
 		<?php if( $page_title ==  0 ) : ?>
 			<header class="entry-header">
-				<?php the_title( '<h1 class="entry-title text-center">', '</h1>' ); ?>
+				<h1 class="entry-title text-center">
+				<?php if ( $service_icon ) {
+					echo $service_icon;
+					}
+				?>
+				<?php the_title( ); ?>
+				</h1>
 			</header><!-- .entry-header -->
 		<?php endif; ?>
 <?php }
