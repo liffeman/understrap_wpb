@@ -116,13 +116,6 @@
                 "operator": "==",
                 "value": "acf\/projects"
             }
-        ],
-        [
-            {
-                "param": "page_template",
-                "operator": "==",
-                "value": "default"
-            }
         ]
     ],
     "menu_order": 0,
@@ -133,5 +126,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1600943532
+    "modified": 1601028625
 }

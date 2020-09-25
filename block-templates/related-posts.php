@@ -17,7 +17,7 @@ if( !empty($block['anchor']) ) {
 
 // Create class attribute allowing for custom "className" and "align" values.
 $className = 'custom-block';
-$className .= ' casestories';
+$className .= ' related-posts';
 if( !empty($block['className']) ) {
     $className .= ' ' . $block['className'];
 }
@@ -35,10 +35,15 @@ $section_anchor = $id;
 
 
 <?php
+$number = get_field('number_of_posts');
+$columns = get_field('number_of_cols');
 $related_posts = get_field('related_posts');
 if( $related_posts ): ?>
-<div class="row row-cols-' . $columns . ' ">
-	<?php foreach( $related_posts as $related_post ):
+<div class="row row-cols-<?php echo $columns ;?> ">
+	<?php
+	$i = 0;
+	foreach( $related_posts as $related_post ):
+		if ($i++ == $number) { break; }
 		$permalink = get_permalink( $related_post->ID );
 		$title = get_the_title( $related_post->ID );
 		$image = get_the_post_thumbnail( $related_post->ID, 'grid_image', array('class' => 'card-img-top' ));
@@ -62,7 +67,7 @@ if( $related_posts ): ?>
 					</div>
 				</div>
 				</div>
-	<?php endforeach; ?>
+	<?php	endforeach; ?>
 	</div>
 <?php endif; ?>
 
