@@ -127,7 +127,7 @@ gulp.task( 'styles', function( callback ) {
 /**
  * Watches .scss, .js and image files for changes.
  * On change re-runs corresponding build task.
- * 
+ *
  * Run: gulp watch
  */
 gulp.task( 'watch', function() {
@@ -171,7 +171,7 @@ gulp.task(
 /**
  * Starts watcher with browser-sync.
  * Browser-sync reloads page automatically on your browser.
- * 
+ *
  * Run: gulp watch-bs
  */
 gulp.task( 'watch-bs', gulp.parallel( 'browser-sync', 'watch' ) );
@@ -186,6 +186,12 @@ gulp.task( 'scripts', function() {
 		paths.dev + '/js/themejs/*.js',
 
 		// End - All BS4 stuff
+
+		// Start - All mmmenu-light stuff
+		paths.dev + '/js/mmenu-light/mmenu-light.js',
+		paths.dev + '/js/mmenu-light/mmenu-light.polyfills.js',
+
+		// End - All mmeny-light stuff
 
 		paths.dev + '/js/skip-link-focus-fix.js',
 
@@ -231,6 +237,19 @@ gulp.task( 'copy-assets', function( done ) {
 
 	////////////////// End Bootstrap 4 Assets /////////////////////////
 
+	////////////////// All mmenu  Assets /////////////////////////
+		// Copy all JS files
+		var stream = gulp
+			.src( paths.node + '/mmenu-light/dist/**/*.js' )
+			.pipe( gulp.dest( paths.dev + '/js/mmenu-light' ) );
+
+		// Copy all mmenu SCSS files
+		gulp
+			.src( paths.node + '/mmenu-light/src/**/*.scss' )
+			.pipe( gulp.dest( paths.dev + '/sass/mmenu-light' ) );
+
+		////////////////// End Bootstrap 4 Assets /////////////////////////
+
 	// Copy all Font Awesome Fonts
 	gulp
 		.src( paths.node + '/font-awesome/fonts/**/*.{ttf,woff,woff2,eot,svg}' )
@@ -249,6 +268,8 @@ gulp.task( 'clean-vendor-assets', function() {
 	return del( [
 		paths.dev + '/js/bootstrap4',
 		paths.dev + '/sass/bootstrap4',
+		paths.dev + '/js/mmenu-light',
+		paths.dev + '/sass/mmenu-light',
 		paths.fonts + '/*wesome*.{ttf,woff,woff2,eot,svg}',
 		paths.dev + '/sass/fontawesome',
 		paths.js + paths.vendor,

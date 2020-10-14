@@ -23,14 +23,11 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 <body <?php body_class(); ?> <?php understrap_body_attributes(); ?>>
 <?php do_action( 'wp_body_open' ); ?>
-<div class="site" id="page">
-
-	<!-- ******************* The Navbar Area ******************* -->
-	<div id="wrapper-navbar">
+<!-- ******************* The Navbar Area ******************* -->
 
 		<a class="skip-link sr-only sr-only-focusable" href="#content"><?php esc_html_e( 'Skip to content', 'understrap' ); ?></a>
 
-		<nav id="main-nav" class="navbar navbar-expand-md navbar-dark bg-primary" aria-labelledby="main-nav-label">
+		<nav id="main-nav" class="navbar navbar-dark bg-primary sticky-top" aria-labelledby="main-nav-label">
 
 			<h2 id="main-nav-label" class="sr-only">
 				<?php esc_html_e( 'Main Navigation', 'understrap' ); ?>
@@ -63,7 +60,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'understrap' ); ?>">
 					<span class="navbar-toggler-icon"></span>
 				</button>
-
+				<a href="#my-menu"><span class="navbar-toggler-icon"></span></a>
 				<!-- The WordPress Menu goes here -->
 				<?php
 				wp_nav_menu(
@@ -85,4 +82,43 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 		</nav><!-- .site-navigation -->
 
-	</div><!-- #wrapper-navbar end -->
+
+			<nav id="my-menu">
+				<?php
+				wp_nav_menu(
+					array(
+						'theme_location'  => 'primary',
+						//'container_class' => 'collapse navbar-collapse',
+						//'container_id'    => 'navbarNavDropdown',
+						//'menu_class'      => 'navbar-nav ml-auto',
+						'fallback_cb'     => '',
+						'menu_id'         => 'main-menu',
+						'depth'           => 4,
+						//'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
+					)
+				);
+				?>
+			</nav>
+		<script>
+			document.addEventListener(
+				"DOMContentLoaded", () => {
+					const menu = new MmenuLight(
+						document.querySelector( "#my-menu" ),
+						"(min-width: 200px)"
+					);
+
+					const navigator = menu.navigation();
+
+					const drawer = menu.offcanvas({
+						position: "right"
+					});
+					document.querySelector( "a[href='#my-menu']" )
+						.addEventListener( "click", ( event ) => {
+							event.preventDefault();
+							drawer.open();
+						});
+				}
+			);
+		</script>
+
+<div class="site" id="page">
