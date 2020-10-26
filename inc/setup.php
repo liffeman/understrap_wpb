@@ -218,7 +218,7 @@ function use_new_image_size() {
 		add_image_size( 'grid_image', 400, 300, true ); // 400 pixels wide and  200px height, cropped
 		//add_image_size( 'gallery_image', 300, 300, true ); // 300 pixels wide and height, cropped
 		//add_image_size( 'standard', 460 ); // 400 pixels wide (and unlimited height)
-		//add_image_size( 'header_image', 1500, 640, true ); // 400 pixels wide (and unlimited height)
+		add_image_size( 'header_image', 1150, 450, true ); // 1500 pixels wide and 640 px height, cropped
 	}
 }
 

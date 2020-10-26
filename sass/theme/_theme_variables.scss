@@ -26,11 +26,11 @@ $font-weight-bolder:          bolder !default;
 $font-weight-base:            $font-weight-normal !default;
 $line-height-base:            1.5 !default;
 
-$h1-font-size:                $font-size-base * 3.75;
-$h2-font-size:                $font-size-base * 3 !default;
-$h3-font-size:                $font-size-base * 2.5 !default;
-$h4-font-size:                $font-size-base * 2.0 !default;
-$h5-font-size:                $font-size-base * 1.5 !default;
+$h1-font-size:                $font-size-base * 2.5 !default;
+$h2-font-size:                $font-size-base * 2 !default;
+$h3-font-size:                $font-size-base * 1.75 !default;
+$h4-font-size:                $font-size-base * 1.5 !default;
+$h5-font-size:                $font-size-base * 1.125 !default;
 $h6-font-size:                $font-size-base !default;
 
 $headings-margin-bottom:      $spacer / 2 !default;
@@ -40,6 +40,9 @@ $headings-line-height:        1.2 !default;
 $headings-color:              $primary;
 
 //$card-height: 100%;
+
+$link-hover-decoration:                   none ;
+
 
 // Navs
 

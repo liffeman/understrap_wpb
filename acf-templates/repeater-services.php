@@ -20,10 +20,11 @@
 						//$link_title = $link['title'];
 						$link_target = $service_link['target'] ? $service_link['target'] : '_self';
 				?>
-				<a class="service-link service-title stretched-link" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $service_title ); ?></a>
+				<h5 class="service-title text-center"><a class="service-link stretched-link" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $service_title ); ?></a>
 				<?php else: ?>
-				<div class="service-link service-title"><?php echo $service_title; ?></div>
+				<h5 class="service-title text-center"><?php echo $service_title; ?>
 				<?php endif; ?>
+				</h5>
 			</div>
 		</div>
 
