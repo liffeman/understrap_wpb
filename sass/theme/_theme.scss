@@ -19,3 +19,31 @@ body {
 .mm-spn ul.mm-spn--parent {
 	left: -100%;
 }
+
+
+//navbar fix //
+.navbar-toggler {
+	border: none;
+	&:focus {
+		outline: none;
+	}
+}
+.navbar-dark .navbar-toggler,
+.navbar-dark .navbar-toggler a {
+	color: $light;
+	&:hover {
+		color: $gray-300;
+	}
+}
+
+.navbar-light .navbar-toggler,
+.navbar-light .navbar-toggler a {
+	color: $gray-700;
+	&:hover {
+		color: $gray-900;
+	}
+}
+
+.svg-inline--fa {
+	color: inherit;
+}

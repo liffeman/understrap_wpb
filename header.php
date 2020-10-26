@@ -11,6 +11,9 @@
 defined( 'ABSPATH' ) || exit;
 
 $container = get_theme_mod( 'understrap_container_type' );
+$menu = get_theme_mod('understrap_offcanvas');
+$nav_theme = get_theme_mod('understrap_navbar_scheme');
+$searchbox = get_theme_mod('understrap_searchbox');
 ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
@@ -27,7 +30,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 		<a class="skip-link sr-only sr-only-focusable" href="#content"><?php esc_html_e( 'Skip to content', 'understrap' ); ?></a>
 
-		<nav id="main-nav" class="navbar navbar-dark bg-primary sticky-top" aria-labelledby="main-nav-label">
+		<nav id="main-nav" class="navbar <?php echo $nav_theme; ?> sticky-top" aria-labelledby="main-nav-label">
 
 			<h2 id="main-nav-label" class="sr-only">
 				<?php esc_html_e( 'Main Navigation', 'understrap' ); ?>
@@ -56,11 +59,24 @@ $container = get_theme_mod( 'understrap_container_type' );
 					}
 					?>
 					<!-- end custom logo -->
-
+				<div class="nav-buttons">
+					<?php if ( 'show' === $searchbox ) : ?>
+					<span class="navbar-toggler">
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#searchbox" aria-expanded="false" aria-controls="searchbox">
+							<i class="fas fa-search"></i>
+						  </button>
+					</span>
+					<?php endif; ?>
+				<?php if ( '1' === $menu ) : ?>
+				<span class="navbar-toggler">
+					<a href="#my-menu"><i class="fas fa-bars"></i></a>
+				</span>
+				<?php endif;?>
+				<?php if ( '0' === $menu ) : ?>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'understrap' ); ?>">
-					<span class="navbar-toggler-icon"></span>
+					<i class="fas fa-bars"></i>
 				</button>
-				<a href="#my-menu"><span class="navbar-toggler-icon"></span></a>
+				</div>
 				<!-- The WordPress Menu goes here -->
 				<?php
 				wp_nav_menu(
@@ -76,29 +92,42 @@ $container = get_theme_mod( 'understrap_container_type' );
 					)
 				);
 				?>
+			<?php endif; ?>
 			<?php if ( 'container' === $container ) : ?>
 			</div><!-- .container -->
 			<?php endif; ?>
-
 		</nav><!-- .site-navigation -->
+		<?php if ( 'show' === $searchbox ) : ?>
+		<div id="searchbox" class="collapse">
+			<?php if ( 'container' === $container ) : ?>
+			<div class="container">
+			<?php endif; ?>
+				<div class="searchbox-area">
+					<?php get_search_form(); ?>
+				</div>
+			<?php if ( 'container' === $container ) : ?>
+			</div><!-- .container -->
+			<?php endif; ?>
+		</div>
+		<?php endif; ?>
+		<?php if ( '1' === $menu ) : ?>
+		<nav id="my-menu">
+			<?php
+			wp_nav_menu(
+				array(
+					'theme_location'  => 'primary',
+					//'container_class' => 'collapse navbar-collapse',
+					//'container_id'    => 'navbarNavDropdown',
+					//'menu_class'      => 'navbar-nav ml-auto',
+					'fallback_cb'     => '',
+					'menu_id'         => 'main-menu',
+					'depth'           => 4,
+					//'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
+				)
+			);
+			?>
+		</nav>
 
-
-			<nav id="my-menu">
-				<?php
-				wp_nav_menu(
-					array(
-						'theme_location'  => 'primary',
-						//'container_class' => 'collapse navbar-collapse',
-						//'container_id'    => 'navbarNavDropdown',
-						//'menu_class'      => 'navbar-nav ml-auto',
-						'fallback_cb'     => '',
-						'menu_id'         => 'main-menu',
-						'depth'           => 4,
-						//'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
-					)
-				);
-				?>
-			</nav>
 		<script>
 			document.addEventListener(
 				"DOMContentLoaded", () => {
@@ -120,5 +149,5 @@ $container = get_theme_mod( 'understrap_container_type' );
 				}
 			);
 		</script>
-
+	<?php endif; ?>
 <div class="site" id="page">

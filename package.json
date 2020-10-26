@@ -28,6 +28,7 @@
   },
   "homepage": "https://understrap.com",
   "dependencies": {
+    "@fortawesome/fontawesome-pro": "^5.15.1",
     "mmenu-light": "^3.0.7"
   },
   "devDependencies": {
@@ -37,7 +38,6 @@
     "bootstrap": "^4.5.3",
     "browser-sync": "^2.26.12",
     "del": "^5.1.0",
-    "font-awesome": "^4.7.0",
     "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",
     "gulp-clean-css": "^4.3.0",

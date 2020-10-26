@@ -131,6 +131,73 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
 		);
 
 		$wp_customize->add_setting(
+			'understrap_navbar_scheme',
+			array(
+				'default'           => 'navbar-dark bg-dark',
+				'type'              => 'theme_mod',
+				'sanitize_callback' => 'sanitize_text_field',
+				'capability'        => 'edit_theme_options',
+			)
+		);
+
+		$wp_customize->add_control(
+			new WP_Customize_Control(
+				$wp_customize,
+				'understrap_navbar_scheme',
+				array(
+					'label'             => __( 'Choose color scheme on navbar', 'understrap' ),
+					'description'       => __(
+						'Choose dark or light color on navbar',
+						'understrap'
+					),
+					'section'           => 'understrap_theme_layout_options',
+					'settings'          => 'understrap_navbar_scheme',
+					'type'              => 'select',
+					'sanitize_callback' => 'understrap_theme_slug_sanitize_select',
+					'choices'           => array(
+						'navbar-dark bg-dark' => __( 'Dark theme', 'understrap' ),
+						'navbar-light bg-light'  => __( 'Light theme', 'understrap' ),
+						'navbar-dark bg-primary'  => __( 'Primary color theme', 'understrap' ),
+					),
+					'priority'          => apply_filters( 'understrap_sidebar_position_priority', 35 ),
+				)
+			)
+		);
+
+		$wp_customize->add_setting(
+			'understrap_searchbox',
+			array(
+				'default'           => 'hide',
+				'type'              => 'theme_mod',
+				'sanitize_callback' => 'sanitize_text_field',
+				'capability'        => 'edit_theme_options',
+			)
+		);
+
+		$wp_customize->add_control(
+			new WP_Customize_Control(
+				$wp_customize,
+				'understrap_searchbox',
+				array(
+					'label'             => __( 'Show search button in navbar', 'understrap' ),
+					'description'       => __(
+						'Set to show or hide the search button in the navbar',
+						'understrap'
+					),
+					'section'           => 'understrap_theme_layout_options',
+					'settings'          => 'understrap_searchbox',
+					'type'              => 'select',
+					'sanitize_callback' => 'understrap_theme_slug_sanitize_select',
+					'choices'           => array(
+						'show' => __( 'Show search button', 'understrap' ),
+						'hide'  => __( 'Hide search button', 'understrap' ),
+					),
+					'priority'          => apply_filters( 'understrap_sidebar_position_priority', 30 ),
+				)
+			)
+		);
+
+		$wp_customize->add_setting(
 			'understrap_offcanvas',
 			array(
 				'default'           => '1',
@@ -162,7 +229,6 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
 				)
 			)
 		);
-
 
 	}
 } // End of if function_exists( 'understrap_theme_customize_register' ).

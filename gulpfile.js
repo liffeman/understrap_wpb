@@ -193,6 +193,11 @@ gulp.task( 'scripts', function() {
 
 		// End - All mmeny-light stuff
 
+		// Start - All font awesome  stuff
+		paths.dev + '/js/font-awesome/js/all.min.js',
+
+		// End - All font awesome stuff
+
 		paths.dev + '/js/skip-link-focus-fix.js',
 
 		// Adding currently empty javascript file to add on for your own themes´ customizations
@@ -248,16 +253,21 @@ gulp.task( 'copy-assets', function( done ) {
 			.src( paths.node + '/mmenu-light/src/**/*.scss' )
 			.pipe( gulp.dest( paths.dev + '/sass/mmenu-light' ) );
 
-		////////////////// End Bootstrap 4 Assets /////////////////////////
+	////////////////// End Bootstrap 4 Assets /////////////////////////
 
+	////////////////// All Font Awesome  Assets /////////////////////////
+	// Copy all JS files
+	var stream = gulp
+		.src( paths.node + '/@fortawesome/fontawesome-pro/js/all.min.js' )
+		.pipe( gulp.dest( paths.js) );
 	// Copy all Font Awesome Fonts
 	gulp
-		.src( paths.node + '/font-awesome/fonts/**/*.{ttf,woff,woff2,eot,svg}' )
+		.src( paths.node + '/@fortawesome/fontawesome-pro/webfontsfonts/**/*.{ttf,woff,woff2,eot,svg}' )
 		.pipe( gulp.dest( paths.fonts ) );
 
 	// Copy all Font Awesome SCSS files
 	gulp
-		.src( paths.node + '/font-awesome/scss/*.scss' )
+		.src( paths.node + '/@fortawesome/fontawesome-pro/scss/*.scss' )
 		.pipe( gulp.dest( paths.dev + '/sass/fontawesome' )	);
 
 	done();
