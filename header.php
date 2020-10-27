@@ -14,6 +14,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 $menu = get_theme_mod('understrap_offcanvas');
 $nav_theme = get_theme_mod('understrap_navbar_scheme');
 $searchbox = get_theme_mod('understrap_searchbox');
+$offcanvastheme = get_theme_mod('understrap_offcanvas_theme');
 ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
@@ -115,12 +116,6 @@ $searchbox = get_theme_mod('understrap_searchbox');
 			<?php
 			wp_nav_menu(
 				array(
-					//'theme_location'  => 'primary',
-					//'container_class' => 'collapse navbar-collapse',
-					//'container_id'    => 'navbarNavDropdown',
-					//'menu_class'      => 'navbar-nav ml-auto',
-					//'fallback_cb'     => '',
-					//'menu_id'         => 'main-menu',
 					'depth'           => 4,
 					//'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
 				)
@@ -137,7 +132,7 @@ $searchbox = get_theme_mod('understrap_searchbox');
 					);
 
 					const navigator = menu.navigation({
-						theme: "light",
+						theme: <?php echo json_encode(get_theme_mod('understrap_offcanvas_theme')); ?>,
 						title: ""
 					});
 

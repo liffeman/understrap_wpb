@@ -229,9 +229,41 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
 				)
 			)
 		);
+		$wp_customize->add_setting(
+			'understrap_offcanvas_theme',
+			array(
+				'default'           => 'dark',
+				'type'              => 'theme_mod',
+				'sanitize_callback' => 'sanitize_text_field',
+				'capability'        => 'edit_theme_options',
+			)
+		);
 
+		$wp_customize->add_control(
+			new WP_Customize_Control(
+				$wp_customize,
+				'understrap_offcanvas_theme',
+				array(
+					'label'             => __( 'Theme color', 'understrap' ),
+					'description'       => __(
+						'Set the theme color of the Off Canvas Menu',
+						'understrap'
+					),
+					'section'           => 'understrap_theme_layout_options',
+					'settings'          => 'understrap_offcanvas_theme',
+					'type'              => 'select',
+					'sanitize_callback' => 'understrap_theme_slug_sanitize_select',
+					'choices'           => array(
+						'dark' => __( 'Dark theme', 'understrap' ),
+						'light'  => __( 'Light', 'understrap' ),
+					),
+					'priority'          => apply_filters( 'understrap_sidebar_position_priority', 45 ),
+				)
+			)
+		);
 	}
 } // End of if function_exists( 'understrap_theme_customize_register' ).
+
 add_action( 'customize_register', 'understrap_theme_customize_register' );
 
 /**
