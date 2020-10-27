@@ -110,6 +110,9 @@ if ( ! function_exists( 'understrap_setup' ) ) {
 		// Add support for responsive embedded content.
 		add_theme_support( 'responsive-embeds' );
 
+		//Add support for wide images
+		add_theme_support( 'align-wide' );
+
 		// Check and setup theme default settings.
 		understrap_setup_theme_default_settings();
 

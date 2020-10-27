@@ -140,6 +140,39 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
 			)
 		);
 
+		$wp_customize->add_setting(
+			'understrap_blog_view',
+			array(
+				'default'           => 'grid',
+				'type'              => 'theme_mod',
+				'sanitize_callback' => 'sanitize_text_field',
+				'capability'        => 'edit_theme_options',
+			)
+		);
+
+		$wp_customize->add_control(
+			new WP_Customize_Control(
+				$wp_customize,
+				'understrap_blog_view',
+				array(
+					'label'             => __( 'Blog view setting', 'understrap' ),
+					'description'       => __(
+						'Set the default view of the blog and archive page.',
+						'understrap'
+					),
+					'section'           => 'understrap_theme_layout_options',
+					'settings'          => 'understrap_blog_view',
+					'type'              => 'select',
+					'sanitize_callback' => 'understrap_theme_slug_sanitize_select',
+					'choices'           => array(
+						'grid' => __( 'Grid view', 'understrap' ),
+						'list'  => __( 'List view', 'understrap' ),
+					),
+					'priority'          => apply_filters( 'understrap_blog_view_priority', 25 ),
+				)
+			)
+		);
+
 		$wp_customize->add_control(
 			new WP_Customize_Control(
 				$wp_customize,
