@@ -30,7 +30,7 @@ $searchbox = get_theme_mod('understrap_searchbox');
 
 		<a class="skip-link sr-only sr-only-focusable" href="#content"><?php esc_html_e( 'Skip to content', 'understrap' ); ?></a>
 
-		<nav id="main-nav" class="navbar <?php echo $nav_theme; ?> sticky-top" aria-labelledby="main-nav-label">
+		<nav id="main-nav" class="navbar <?php echo $nav_theme; ?> shadow-lg sticky-top" aria-labelledby="main-nav-label">
 
 			<h2 id="main-nav-label" class="sr-only">
 				<?php esc_html_e( 'Main Navigation', 'understrap' ); ?>
@@ -71,8 +71,7 @@ $searchbox = get_theme_mod('understrap_searchbox');
 				<span class="navbar-toggler">
 					<a href="#my-menu"><i class="fas fa-bars"></i></a>
 				</span>
-				<?php endif;?>
-				<?php if ( '0' === $menu ) : ?>
+				<?php elseif ( '0' === $menu ) : ?>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'understrap' ); ?>">
 					<i class="fas fa-bars"></i>
 				</button>
@@ -93,6 +92,7 @@ $searchbox = get_theme_mod('understrap_searchbox');
 				);
 				?>
 			<?php endif; ?>
+
 			<?php if ( 'container' === $container ) : ?>
 			</div><!-- .container -->
 			<?php endif; ?>
@@ -115,12 +115,12 @@ $searchbox = get_theme_mod('understrap_searchbox');
 			<?php
 			wp_nav_menu(
 				array(
-					'theme_location'  => 'primary',
+					//'theme_location'  => 'primary',
 					//'container_class' => 'collapse navbar-collapse',
 					//'container_id'    => 'navbarNavDropdown',
 					//'menu_class'      => 'navbar-nav ml-auto',
-					'fallback_cb'     => '',
-					'menu_id'         => 'main-menu',
+					//'fallback_cb'     => '',
+					//'menu_id'         => 'main-menu',
 					'depth'           => 4,
 					//'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
 				)
@@ -136,7 +136,10 @@ $searchbox = get_theme_mod('understrap_searchbox');
 						"(min-width: 200px)"
 					);
 
-					const navigator = menu.navigation();
+					const navigator = menu.navigation({
+						theme: "light",
+						title: ""
+					});
 
 					const drawer = menu.offcanvas({
 						position: "right"

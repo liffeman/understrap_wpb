@@ -13,9 +13,32 @@ body {
 		}
 	}
 }
+/* searchbox */
 
+#searchbox {
+	background: $gray-300;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+}
 
 /* mmenu fix */
+#my-menu:not( .mm-spn ) {
+	display: none;
+}
+
+.mm-spn--light {
+	color: $body-color !important;
+	background: $light !important;
+	ul.mm-spn--open {
+		li {
+			&:hover {
+				background-color: $navbar-light-hover-color !important;
+			}
+		}
+	}
+}
+
+
 .mm-spn ul.mm-spn--parent {
 	left: -100%;
 }
