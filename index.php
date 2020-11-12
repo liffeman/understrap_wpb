@@ -15,11 +15,14 @@
 defined( 'ABSPATH' ) || exit;
 
 get_header();
+$page_for_posts_ID = get_option( 'page_for_posts');
 
 $container = get_theme_mod( 'understrap_container_type' );
 $view = get_theme_mod( 'understrap_blog_view' );
 $page_title = get_field ('page_title_visiblity');
 $our_title = get_the_title( get_option('page_for_posts', true) );
+$posts_page = get_post( get_option( 'page_for_posts' ) );
+$the_content = apply_filters( 'the_content', $posts_page->post_content );
 ?>
 
 <?php if ( is_front_page() && is_home() ) : ?>
@@ -36,6 +39,11 @@ $our_title = get_the_title( get_option('page_for_posts', true) );
 			<?php get_template_part( 'global-templates/left-sidebar-check' ); ?>
 
 			<main class="site-main" id="main">
+				<?php
+					if ( !empty($the_content) ) {
+						echo '<div class="entry-content pb-5">' . $the_content . '</div>';
+				  	  }
+				 ?>
 				<?php
 				if ( have_posts() ) {
 					if ($view == 'grid') {

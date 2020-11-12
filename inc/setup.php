@@ -307,3 +307,23 @@ function cp_change_post_object() {
 		$labels->menu_name = 'Case Stories';
 		$labels->name_admin_bar = 'Case Story';
 }
+
+
+if( ! function_exists('fix_no_editor_on_posts_page'))
+{
+	/**
+	 * Add the wp-editor back into WordPress after it was removed in 4.2.2.
+	 *
+	 * @param $post
+	 * @return void
+	 */
+	function fix_no_editor_on_posts_page($post)
+	{
+		if($post->ID != get_option('page_for_posts'))
+			return;
+
+		remove_action('edit_form_after_title', '_wp_posts_page_notice');
+		add_post_type_support('page', 'editor');
+	}
+	add_action('edit_form_after_title', 'fix_no_editor_on_posts_page', 0);
+}
