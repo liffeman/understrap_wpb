@@ -166,6 +166,12 @@ body {
 	justify-content: center;
 	padding-top: 2rem;
 	padding-bottom: 1rem;
+	&.post-navigation {
+		padding: 2rem;
+		background-color: $gray-100;
+		border: $card-border-width solid $card-border-color;
+		@include border-radius($card-border-radius);
+	}
 }
 
 

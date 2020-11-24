@@ -22,6 +22,21 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 			<div class="row">
 
+				<?php
+				wp_nav_menu(
+					array(
+						'theme_location'  => 'footer',
+						//'container_class' => 'navbar',
+						//'container_id'    => 'footer_menu',
+						'menu_class'      => 'nav justify-content-center',
+						'fallback_cb'     => '',
+						'menu_id'         => 'footer-menu',
+						'depth'           => 2,
+						'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
+					)
+				);
+				?>
+
 				<?php dynamic_sidebar( 'footerfull' ); ?>
 
 			</div>

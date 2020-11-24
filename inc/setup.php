@@ -47,6 +47,7 @@ if ( ! function_exists( 'understrap_setup' ) ) {
 		register_nav_menus(
 			array(
 				'primary' => __( 'Primary Menu', 'understrap' ),
+				'footer' => __('Footer Menu', 'understrap'),
 			)
 		);
 
@@ -158,3 +159,48 @@ if ( ! function_exists( 'understrap_all_excerpts_get_more_link' ) ) {
 		return $post_excerpt;
 	}
 }
+
+
+/**
+ * Filter the excerpt length to 20 words.
+ *
+ * @param int $length Excerpt length.
+ * @return int (Maybe) modified excerpt length.
+ */
+function understrap_excerpt_length( $length ) {
+	return 20;
+}
+add_filter( 'excerpt_length', 'understrap_excerpt_length');
+
+
+/**
+ * Add function for adding unsharp mask on images, using imagick
+ * @param $radius, $sigma, $amount, $unsharpThreshold
+ */
+function imagick_sharpen_resized_files( $resized_file ) {
+	if ( ! class_exists( 'Imagick' ) ) {
+		return $resized_file;
+	}
+	$image = new Imagick( $resized_file );
+	$size  = getimagesize( $resized_file );
+	if ( ! $size ) {
+		return new WP_Error( 'invalid_image', __( 'Could not read image size.' ), $resized_file );
+	}
+	list( $orig_w, $orig_h, $orig_type ) = $size;
+	switch ( $orig_type ) {
+		case IMAGETYPE_JPEG:
+			$image->normalizeImage();
+			$image->unsharpMaskImage( 0, 0.5, 1, 0.05 );
+			$image->setImageFormat( 'jpg' );
+			$image->setImageCompression( Imagick::COMPRESSION_JPEG );
+			$image->setImageCompressionQuality( 0.92 );
+			$image->writeImage( $resized_file );
+			break;
+		default:
+			return $resized_file;
+	}
+	// Remove the JPG from memory
+	$image->destroy();
+	return $resized_file;
+}
+add_filter( 'image_make_intermediate_size', 'imagick_sharpen_resized_files', 900 );
