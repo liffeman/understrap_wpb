@@ -48,15 +48,25 @@ body {
 
 /* custom logo */
 
-.custom-logo-link img {
-	max-height: 60px;
-	width: inherit;
-	&:hover {
-		transform: scale(1.2);
-		//transition: all .5s ease-in-out;
-		@include transition($btn-transition);
+.custom-logo-link {
+	width: 200px;
+	img {
+		max-height: 60px;
+		width: inherit;
+		&:hover {
+			transform: scale(1.05);
+			transition: all .5s ease-in-out;
+			//@include transition($btn-transition);
+		}
 	}
 }
+
+/* basic */
+h1 {
+	text-align: center;
+}
+
+
 
 
 /* searchbox */
@@ -160,6 +170,18 @@ body {
 .svg-inline--fa {
 	color: inherit;
 }
+
+.nav-link {
+	font-weight: $font-weight-bold;
+	text-transform: uppercase;
+	border-bottom: 14px solid transparent;
+	padding-top: 3.125rem;
+	&:hover {
+		transition: all .5s ease-in-out;
+		border-bottom-color: $primary;
+	}
+}
+
 
 /*Pagination and navs */
 .pagination {
