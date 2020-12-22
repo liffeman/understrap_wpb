@@ -1,0 +1,49 @@
+//Add your own editor styles here or comment out the next line if you want to pull in the whole Bootstrap stuff
+//@import "theme";
+
+@import "theme/theme_variables";  // <-------- Add your variables into this file. Also add variables to overwrite Bootstrap or UnderStrap variables here
+@import "assets/bootstrap4";      // <-------- Loads Bootstrap4
+@import "theme/gravityforms/forms";    // <-------- Gravity Forms - Bootstrap 4 support
+@import "theme/gravityforms/gravityforms";
+
+body.login {
+	background-color: $gray-100 !important;
+	color: $gray-700;
+	#login {
+		max-width: 26rem;
+		width: 90%;
+		form {
+			&#loginform {
+				border: none;
+				box-shadow: $box-shadow-lg;
+					p {
+						input[type="submit"] {
+							margin-top: 2rem;
+							&.button {
+								@extend .btn;
+								@extend .btn-block;
+							}
+							&.button-primary {
+								@extend .btn-primary;
+							}
+							&.button-large {
+								@extend .btn-lg;
+							}
+						    &:focus {
+								box-shadow: none;
+							}
+						}
+					}
+				label {
+					font-size: $font-size-sm * 0.9;
+				}
+			}
+		}
+		p {
+			&#nav,
+			&#backtoblog {
+			text-align: center;
+			}
+		}
+	}
+}

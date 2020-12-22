@@ -1,0 +1,74 @@
+/* Forms
+-------------------------------------------------------------- */
+input[type="submit"],
+input[type="button"] {
+  @extend .btn;
+  @extend .btn-primary;
+  @extend .btn-block;
+  @extend .btn-lg;
+  &:focus {
+	  box-shadow: none;
+  }
+}
+
+fieldset {
+  @extend .form-group;
+}
+
+select,
+textarea,
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"] {
+  @extend .form-control;
+
+  font-size: 0.9375rem;
+}
+
+label {
+  color: inherit;
+  display: inline;
+  font-size: $font-size-base;
+  //font-size: 0.9375rem;
+  //font-weight: 600;
+}
+
+input[type="file"] {
+  @extend .form-control-file;
+}
+
+select {
+  @extend .custom-select;
+}
+
+.required {
+  color: $red;
+}
+
+.search-form label {
+  @extend .form-group;
+
+  font-weight: normal;
+}
+
+.search-form .search-field {
+  @extend .form-control;
+}
+
+.search-form .search-submit {
+  @extend .btn;
+  @extend .btn-secondary;
+}
+
