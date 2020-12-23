@@ -10,40 +10,41 @@ defined( 'ABSPATH' ) || exit;
 ?>
 
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
+	<div class="card">
+	<?php echo get_the_post_thumbnail( $post->ID, 'large', array( 'class' => 'card-img-top' ) ) ; ?>
+		<div class="card-body single-card">
+		<header class="entry-header">
 
-	<header class="entry-header">
+			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+			<div class="entry-meta">
 
-		<div class="entry-meta">
+				<?php understrap_posted_on(); ?>
 
-			<?php understrap_posted_on(); ?>
+			</div><!-- .entry-meta -->
 
-		</div><!-- .entry-meta -->
+		</header><!-- .entry-header -->
 
-	</header><!-- .entry-header -->
+		<div class="entry-content">
 
-	<?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
+			<?php the_content(); ?>
 
-	<div class="entry-content">
+			<?php
+			wp_link_pages(
+				array(
+					'before' => '<div class="page-links">' . __( 'Pages:', 'understrap' ),
+					'after'  => '</div>',
+				)
+			);
+			?>
 
-		<?php the_content(); ?>
+		</div><!-- .entry-content -->
 
-		<?php
-		wp_link_pages(
-			array(
-				'before' => '<div class="page-links">' . __( 'Pages:', 'understrap' ),
-				'after'  => '</div>',
-			)
-		);
-		?>
+		<footer class="entry-footer">
 
-	</div><!-- .entry-content -->
+			<?php understrap_entry_footer(); ?>
 
-	<footer class="entry-footer">
-
-		<?php understrap_entry_footer(); ?>
-
-	</footer><!-- .entry-footer -->
-
+		</footer><!-- .entry-footer -->
+		</div>
+	</div>
 </article><!-- #post-## -->
