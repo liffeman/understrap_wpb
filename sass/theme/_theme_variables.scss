@@ -2,5 +2,181 @@
 // To overwrite a Bootstrap variable you don´t have to touch the Bootstrap folder.
 // Just copy a variable from src/sass/bootstrap4/_variables.scss, paste it here and edit the value.
 
+$white:    #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black:    #000 !default;
 
-$primary: #5533ff; // Thats a sample how you could change a BootStrap variable.
+
+$blue:    #0E098B;
+$red:	#AD0000;
+
+$primary: $red; // Thats a sample how you could change a BootStrap variable.
+$secondary: $blue;
+
+// Options
+//
+// Quickly modify global styling by enabling or disabling optional features.
+
+$enable-caret:                                true !default;
+$enable-rounded:                              false;
+$enable-shadows:                              false !default;
+$enable-gradients:                            false !default;
+$enable-transitions:                          true !default;
+$enable-prefers-reduced-motion-media-query:   true !default;
+$enable-hover-media-query:                    false !default; // Deprecated, no longer affects any compiled CSS
+$enable-grid-classes:                         true !default;
+$enable-pointer-cursor-for-buttons:           true !default;
+$enable-print-styles:                         true !default;
+$enable-responsive-font-sizes:                true;
+$enable-validation-icons:                     true !default;
+$enable-deprecation-messages:                 true !default;
+
+
+$spacer: 1rem;
+
+$post-padding:				10rem;
+$page-padding:			1rem;
+
+// Links
+//
+// Style anchor elements.
+
+$link-decoration:                         none !default;
+$link-hover-decoration:                   none;
+// Darken percentage for links with `.text-*` class (e.g. `.text-success`)
+$emphasized-link-hover-darken-percentage: 15% !default;
+
+
+
+
+
+
+$border-radius:               0;
+$border-radius-lg:           0;
+$border-radius-sm:         0;
+
+// Body
+//
+// Settings for the `<body>` element.
+
+$body-bg:                   $gray-300;
+$body-color:                $gray-900 !default;
+
+
+
+// Typography
+//
+// Font, line-height, and color for body text, headings, and more.
+
+// stylelint-disable value-keyword-case
+$font-family-sans-serif:     'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$font-family-base:            $font-family-sans-serif !default;
+// stylelint-enable value-keyword-case
+
+
+
+
+//$headings-margin-bottom:      $spacer / 2 !default;
+$headings-font-family:         'Khand', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$headings-font-weight:        700;
+$headings-line-height:        1;
+$headings-color:              null !default;
+
+$font-weight-lighter:         lighter !default;
+$font-weight-light:           300 !default;
+$font-weight-normal:          400 !default;
+$font-weight-bold:            700 !default;
+$font-weight-bolder:          bolder !default;
+
+
+// Navs
+
+$nav-link-padding-y:                0.75rem;
+$nav-link-padding-x:                0.75rem;
+//$nav-link-disabled-color:           $gray-600 !default;
+
+$navbar-nav-link-padding-x:         1rem;
+
+$navbar-dark-color: 					$white;
+$navbar-dark-hover-color:           $white;
+$navbar-dark-active-color:          $white !default;
+$navbar-dark-disabled-color:        rgba($white, .25) !default;
+$navbar-dark-toggler-icon-bg:      none;
+$navbar-dark-toggler-border-color:  rgba($white, .1) !default;
+
+$navbar-light-color:               $black;
+$navbar-light-hover-color:         $black;
+$navbar-light-active-color:         $black;
+$navbar-light-disabled-color:       rgba($black, .3) !default;
+$navbar-light-toggler-icon-bg:      none;
+$navbar-light-toggler-border-color: rgba($black, .1) !default;
+
+
+// Pagination
+
+$pagination-padding-y:              	.5rem !default;
+$pagination-padding-x:              	.75rem !default;
+$pagination-padding-y-sm:         .25rem !default;
+$pagination-padding-x-sm:         .5rem !default;
+$pagination-padding-y-lg:           .75rem !default;
+$pagination-padding-x-lg:           1.5rem !default;
+$pagination-line-height:            	1.25 !default;
+
+$pagination-color:                  		$body-color;
+$pagination-bg:                     		$gray-500;
+$pagination-border-width:           none;
+
+$pagination-focus-box-shadow:     none;
+$pagination-focus-outline:          		0;
+
+$pagination-hover-color:            	$body-color;
+$pagination-hover-bg:               	$gray-700;
+
+$pagination-active-color:           $white;
+$pagination-active-bg:             $primary;
+
+
+// Tables
+//
+// Customizes the `.table` component with basic values, each used across all table variations.
+
+$table-cell-padding:          .75rem !default;
+$table-cell-padding-sm:       .3rem !default;
+
+$table-color:                 $body-color !default;
+$table-bg:                    null !default;
+$table-accent-bg:             rgba($black, .025) !default;
+$table-hover-color:           $table-color !default;
+$table-hover-bg:              rgba($black, .075) !default;
+$table-active-bg:             $table-hover-bg !default;
+
+//$table-border-width:          $border-width !default;
+//$table-border-color:          $border-color !default;
+
+$table-head-bg:               $gray-200 !default;
+$table-head-color:            $gray-700 !default;
+$table-th-font-weight:        $font-weight-bold;
+
+$table-dark-color:            $white !default;
+$table-dark-bg:               $gray-800 !default;
+$table-dark-accent-bg:        rgba($white, .05) !default;
+$table-dark-hover-color:      $table-dark-color !default;
+$table-dark-hover-bg:         rgba($white, .075) !default;
+$table-dark-border-color:     lighten($table-dark-bg, 7.5%) !default;
+
+$table-striped-order:         odd !default;
+
+//$table-caption-color:         $text-muted !default;
+
+//$table-bg-level:              -9 !default;
+//$table-border-level:          -6 !default;
+

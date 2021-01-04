@@ -19,6 +19,8 @@ get_header();
 $container = get_theme_mod( 'understrap_container_type' );
 $view = get_theme_mod( 'understrap_blog_view' );
 $our_title = get_the_title( get_option('page_for_posts', true) );
+$posts_page = get_post( get_option( 'page_for_posts' ) );
+$the_content = apply_filters( 'the_content', $posts_page->post_content );
 ?>
 
 <?php if ( is_front_page() && is_home() ) : ?>
@@ -35,6 +37,19 @@ $our_title = get_the_title( get_option('page_for_posts', true) );
 			<?php get_template_part( 'global-templates/left-sidebar-check' ); ?>
 
 			<main class="site-main" id="main">
+			<?php
+			if ( !empty($our_title) ) {
+				echo '<header class="entry-header"><h1 class="entry-title">' . $our_title . '</h1></header>';
+				}
+			?>
+			<?php
+				if ( !empty($the_content) ) {
+					echo '<div class="entry-content pb-5">' . $the_content . '</div>';
+					}
+			 ?>
+
+			<?php understrap_category_filter () ;?>
+
 				<?php
 				if ( have_posts() ) {
 					if ($view == 'grid') {

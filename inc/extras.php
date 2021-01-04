@@ -97,10 +97,10 @@ if ( ! function_exists( 'understrap_post_nav' ) ) {
 			<div class="row nav-links justify-content-between">
 				<?php
 				if ( get_previous_post_link() ) {
-					previous_post_link( '<span class="nav-previous">%link</span>', _x( '<i class="fa fa-angle-left"></i>&nbsp;%title', 'Previous post link', 'understrap' ) );
+					previous_post_link( '<span class="nav-previous">%link</span>', _x( '<i class="far fa-chevron-circle-left fa-lg"></i>&nbsp;%title', 'Previous post link', 'understrap' ) );
 				}
 				if ( get_next_post_link() ) {
-					next_post_link( '<span class="nav-next">%link</span>', _x( '%title&nbsp;<i class="fa fa-angle-right"></i>', 'Next post link', 'understrap' ) );
+					next_post_link( '<span class="nav-next">%link</span>', _x( '%title&nbsp;<i class="far fa-chevron-circle-right fa-lg"></i>', 'Next post link', 'understrap' ) );
 				}
 				?>
 			</div><!-- .nav-links -->
@@ -108,6 +108,46 @@ if ( ! function_exists( 'understrap_post_nav' ) ) {
 		<?php
 	}
 }
+
+
+
+function pagination($pages = '', $range = 4) {
+
+	$showitems = ($range * 2)+1;
+
+	global $paged;
+	if(empty($paged)) $paged = 1;
+
+	if($pages == '')
+	{
+		global $wp_query;
+		$pages = $wp_query->max_num_pages;
+		if(!$pages)
+		{
+			$pages = 1;
+		}
+	}
+
+	if(1 != $pages)
+	{
+		echo "<div class=\"pagination\"><span>Page ".$paged." of ".$pages."</span>";
+		if($paged > 2 && $paged > $range+1 && $showitems < $pages) echo "<a href='".get_pagenum_link(1)."'>&laquo; First</a>";
+		if($paged > 1 && $showitems < $pages) echo "<a href='".get_pagenum_link($paged - 1)."'>&lsaquo; Previous</a>";
+
+		for ($i=1; $i <= $pages; $i++)
+		{
+			if (1 != $pages &&( !($i >= $paged+$range+1 || $i <= $paged-$range-1) || $pages <= $showitems ))
+			{
+				echo ($paged == $i)? "<span class=\"current\">".$i."</span>":"<a href='".get_pagenum_link($i)."' class=\"inactive\">".$i."</a>";
+			}
+		}
+
+		if ($paged < $pages && $showitems < $pages) echo "<a href=\"".get_pagenum_link($paged + 1)."\">Next &rsaquo;</a>";
+		if ($paged < $pages-1 &&  $paged+$range-1 < $pages && $showitems < $pages) echo "<a href='".get_pagenum_link($pages)."'>Last &raquo;</a>";
+		echo "</div>\n";
+	}
+}
+
 
 if ( ! function_exists( 'understrap_pingback' ) ) {
 	/**

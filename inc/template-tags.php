@@ -24,8 +24,7 @@ if ( ! function_exists( 'understrap_posted_on' ) ) {
 		$posted_on   = apply_filters(
 			'understrap_posted_on',
 			sprintf(
-				'<span class="posted-on">%1$s %2$s</span>',
-				esc_html_x( 'Posted on', 'post date', 'understrap' ),
+				'<span class="posted-on">%1$s</span>',
 				apply_filters( 'understrap_posted_on_time', $time_string )
 			)
 		);
@@ -33,6 +32,22 @@ if ( ! function_exists( 'understrap_posted_on' ) ) {
 	}
 }
 
+if ( ! function_exists( 'understrap_entry_header' ) ) {
+	/**
+	 * Prints HTML with meta information for the categories, tags and comments.
+	 */
+	function understrap_entry_header() {
+		// Hide category and tag text for pages.
+		if ( 'post' === get_post_type() ) {
+			/* translators: used between list items, there is a space after the comma */
+			$categories_list = get_the_category_list( esc_html__( ' ', 'understrap' ) );
+			if ( $categories_list && understrap_categorized_blog() ) {
+				/* translators: %s: Categories of current post */
+				printf( '<div class="cat-links">' . $categories_list . '</div>' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+			}
+		};
+	}
+}
 
 if ( ! function_exists( 'understrap_entry_footer' ) ) {
 	/**
@@ -42,17 +57,20 @@ if ( ! function_exists( 'understrap_entry_footer' ) ) {
 		// Hide category and tag text for pages.
 		if ( 'post' === get_post_type() ) {
 			/* translators: used between list items, there is a space after the comma */
-			$categories_list = get_the_category_list( esc_html__( ', ', 'understrap' ) );
-			if ( $categories_list && understrap_categorized_blog() ) {
-				/* translators: %s: Categories of current post */
-				printf( '<span class="cat-links">' . esc_html__( 'Posted in %s', 'understrap' ) . '</span>', $categories_list ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-			}
-			/* translators: used between list items, there is a space after the comma */
 			$tags_list = get_the_tag_list( '', esc_html__( ', ', 'understrap' ) );
 			if ( $tags_list ) {
 				/* translators: %s: Tags of current post */
-				printf( '<span class="tags-links">' . esc_html__( 'Tagged %s', 'understrap' ) . '</span>', $tags_list ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+				printf( '<div class="tags-links">' . $tags_list . '</div>' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 			}
+			//$author = get_the_author();
+			$author = get_the_author_meta( 'display_name' );
+			$user_email = get_the_author_meta( 'user_email' );
+
+			if ( $author ) {
+				/* translators: %s: Tags of current post */
+				printf( '<div class="author-meta">' . $author . ', '. $user_email . '</div>' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+			}
+
 		}
 		if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
 			echo '<span class="comments-link">';
@@ -65,8 +83,8 @@ if ( ! function_exists( 'understrap_entry_footer' ) ) {
 				esc_html__( 'Edit %s', 'understrap' ),
 				the_title( '<span class="sr-only">"', '"</span>', false )
 			),
-			'<span class="edit-link">',
-			'</span>'
+			'<div class="edit-link">',
+			'</div>'
 		);
 	}
 }
@@ -144,3 +162,33 @@ if ( ! function_exists( 'understrap_body_attributes' ) ) {
 		echo trim( $attributes ); // phpcs:ignore WordPress.Security.EscapeOutput
 	}
 }
+
+
+if ( ! function_exists( 'understrap_category_filter' ) ) {
+	function understrap_category_filter() {
+	$args = array(
+		//'show_option_all'   => '',
+		//'show_option_none'  => '',
+		'orderby'           => 'name',
+		'order'             => 'ASC',
+		//'show_count'        => 0,
+		//'hide_empty'        => true,
+		//'exclude'           => '1',
+		//'hierarchical'      => 0,
+		//'depth'             => 1,
+		//'number'            => 12,
+		'parent'  => 0
+		);
+
+	$categories = get_categories( $args );
+    ?>
+	<div class="cat-list flex-wrap" role="group" aria-label="Category button group">
+	  <a class="cat-list_item btn btn-primary" role="button" href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>" data-slug="">Alla</a>
+	  <?php foreach($categories as $category) : ?>
+		  <a class="cat-list_item btn btn-dark" role="button" href="<?php echo esc_url( get_category_link( $category->term_id ) ) ?>" data-slug="<?= $category->slug; ?>">
+			  <?= $category->name; ?>
+			</a>
+		<?php endforeach; ?>
+		</div>
+ 	 <?php }
+ }

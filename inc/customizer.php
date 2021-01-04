@@ -133,7 +133,7 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
 		$wp_customize->add_setting(
 			'understrap_navbar_scheme',
 			array(
-				'default'           => 'navbar-dark bg-dark',
+				'default'           => 'navbar-dark',
 				'type'              => 'theme_mod',
 				'sanitize_callback' => 'sanitize_text_field',
 				'capability'        => 'edit_theme_options',
@@ -188,8 +188,8 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
 					'type'              => 'select',
 					'sanitize_callback' => 'understrap_theme_slug_sanitize_select',
 					'choices'           => array(
-						'navbar-dark bg-dark' => __( 'Dark theme', 'understrap' ),
-						'navbar-light bg-light'  => __( 'Light theme', 'understrap' ),
+						'navbar-dark' => __( 'Dark theme', 'understrap' ),
+						'navbar-light'  => __( 'Light theme', 'understrap' ),
 						'navbar-dark bg-primary'  => __( 'Primary color theme', 'understrap' ),
 					),
 					'priority'          => apply_filters( 'understrap_sidebar_position_priority', 35 ),

@@ -33,22 +33,21 @@ function register_acf_block_types() {
         'render_template'   => 'block-templates/block-countdown.php',
         'enqueue_style'     => get_template_directory_uri() . '/css/custom-editor-style.css',
         'category'          => 'custom',
-        'icon'              => 'admin-post',
+        'icon'              => 'backup',
         'keywords'          => array( 'countdown'),
         'align'				=> 'wide',
     ));
 
-	// register a post list block.
+	// register a standings table block.
 		acf_register_block_type(array(
-			'name'              => 'services',
-			'title'             => __('Services'),
-			'description'       => __('A block with a list of services.'),
-			'render_template'   => 'block-templates/services.php',
+			'name'              => 'standings',
+			'title'             => __('Standings table'),
+			'description'       => __('A block with a table for results and standings.'),
+			'render_template'   => 'block-templates/block-table.php',
 			'enqueue_style'     => get_template_directory_uri() . '/css/custom-editor-style.css',
 			'category'          => 'custom',
-			'icon'              => 'admin-post',
-			'keywords'          => array( 'services','posts', 'list' ),
-			'align'				=> 'wide',
+			'icon'              => 'table',
+			'keywords'          => array( 'table','standings', 'result' )
 		));
 
 		// register a case stories block.

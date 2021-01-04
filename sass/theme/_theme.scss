@@ -1,1 +1,600 @@
 // This is an empty scss file for your custom styles - Please add your super duper awesome mega design styles here
+
+body {
+	&.wp-admin {
+	}
+}
+
+.admin-bar {
+	.mm-ocd {
+	top: 32px !important;
+	@media screen and (max-width: 782px) {
+			top: 46px !important;
+		}
+	}
+}
+
+.main-page-header {
+	background: $blue;
+	padding: $spacer 0;
+	.header-area {
+		display: flex;
+		flex-direction: row;
+		justify-content: stretch;
+		@include media-breakpoint-down(md) {
+			flex-direction: column;
+			align-items: center;
+		}
+		.custom-logo-link {
+
+		}
+		.adplace {
+			display: block;
+			background: $white;
+			width: 100%;
+			min-height: 50px;
+			max-height: 120px;
+			margin-top: $spacer / 2;
+			margin-bottom: $spacer / 2;
+		}
+	}
+}
+.page .entry-content .alignwide {
+	max-width: 100vw;
+	margin-left: -$page-padding;
+	margin-right: -$page-padding;
+	width: auto;
+	@include media-breakpoint-down(md) {
+		margin-left: -$page-padding / 2;
+		margin-right: -$page-padding / 2;
+	}
+}
+
+.single .entry-content .alignwide {
+	max-width: 100vw;
+	margin-left: -$post-padding;
+	margin-right: -$post-padding;
+	width: auto;
+	@include media-breakpoint-down(md) {
+		margin-left: -$post-padding / 2;
+		margin-right: -$post-padding / 2;
+	}
+}
+
+.entry-content .alignfull {
+	width: 100vw !important;
+	margin-left: calc(50% - 50vw);
+	margin-right: calc(50% - 50vw);
+	img {
+		width: 100vw;
+		max-width: 100vw;
+	}
+}
+
+/* custom logo */
+
+.custom-logo-link img {
+	//max-height: 60px;
+	max-width: 300px;
+	&:hover {
+		//transform: scale(1.1);
+		//transition: all .5s ease-in-out;
+		//@include transition($btn-transition);
+	}
+}
+
+
+/* searchbox */
+
+#searchbox {
+	background: $black;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+}
+
+/* mmenu fix */
+#my-menu:not( .mm-spn ) {
+	display: none;
+}
+
+.mm-spn--light {
+@extend .navbar-light;
+@extend .bg-light;
+//	color: $body-color !important;
+//	background: $light !important;
+	ul.mm-spn--open {
+		background-color: $light !important;
+		li.menu-item {
+			font-weight: $font-weight-base;
+			&.current-menu-item,
+			&.current-menu-ancestor,
+			&.current-menu-parent  {
+				background-color: $navbar-dark-hover-color !important;
+				color: $black!important;
+				font-weight: $font-weight-bold;
+				&.menu-item:hover {
+					background-color: $navbar-dark-hover-color !important;
+					color: $navbar-light-hover-color !important;
+				}
+			}
+			&:hover {
+				background-color: $navbar-dark-hover-color !important;
+				color: $navbar-light-hover-color !important;
+			}
+		}
+	}
+}
+
+.mm-spn--dark {
+	@extend .navbar-dark;
+	@extend .bg-dark;
+	//	color: $body-color !important;
+	//	background: $light !important;
+		ul.mm-spn--open {
+			background-color: $dark !important;
+			li.menu-item {
+				font-weight: $font-weight-base;
+				&.current-menu-item,
+				&.current-menu-ancestor,
+				&.current-menu-parent  {
+					background-color: $navbar-light-hover-color !important;
+					color: $white!important;
+					font-weight: $font-weight-bold;
+					&.menu-item:hover {
+						background-color: $navbar-light-hover-color !important;
+						color: $navbar-dark-hover-color !important;
+					}
+				}
+				&:hover {
+					background-color: $navbar-light-hover-color !important;
+					color: $navbar-dark-hover-color !important;
+				}
+			}
+		}
+	}
+
+
+.mm-spn ul.mm-spn--parent {
+	left: -100%;
+}
+
+
+//navbar fix //
+.navbar {
+	padding-top: 0;
+	padding-bottom: 0;
+}
+// Navbar themes
+//
+// Styles for switching between navbars with light or dark background.
+
+// Dark links against a light background
+.navbar-light {
+	background-color: $light;
+  .navbar-brand {
+	color: $navbar-light-brand-color;
+
+	@include hover-focus() {
+	  color: $navbar-light-brand-hover-color;
+	}
+  }
+
+  .navbar-nav {
+	.nav-link {
+	  color: $navbar-light-color;
+
+	  @include hover-focus() {
+		color: $navbar-light-hover-color;
+	  }
+
+	  &.disabled {
+		color: $navbar-light-disabled-color;
+	  }
+	}
+
+	.show > .nav-link,
+	.active > .nav-link,
+	.nav-link.show,
+	.nav-link.active {
+	  color: $navbar-light-active-color;
+	}
+  }
+
+  .navbar-toggler {
+	color: $navbar-light-color;
+	border-color: $navbar-light-toggler-border-color;
+  }
+
+  .navbar-toggler-icon {
+	background-image: escape-svg($navbar-light-toggler-icon-bg);
+  }
+
+  .navbar-text {
+	color: $navbar-light-color;
+	a {
+	  color: $navbar-light-active-color;
+
+	  @include hover-focus() {
+		color: $navbar-light-active-color;
+	  }
+	}
+  }
+}
+
+// White links against a dark background
+.navbar-dark {
+	background-color: $black;
+  .navbar-brand {
+	color: $navbar-dark-brand-color;
+
+	@include hover-focus() {
+	  color: $navbar-dark-brand-hover-color;
+	}
+  }
+
+  .navbar-nav {
+	.nav-link {
+		background-color: inherit;
+	  color: $navbar-dark-color;
+
+	  @include hover-focus() {
+		  background-color: $primary;
+		color: $navbar-dark-hover-color;
+	  }
+
+	  &.disabled {
+		color: $navbar-dark-disabled-color;
+	  }
+	}
+
+	.show > .nav-link,
+	.active > .nav-link,
+	.nav-link.show,
+	.nav-link.active {
+	  color: $navbar-dark-active-color;
+	  background-color: $gray-700;
+	}
+  }
+
+  .navbar-toggler,
+  .navbar-toggler-search,
+  .navbar-toggler-offcanvas {
+	color: $white;
+	//border-color: $navbar-dark-toggler-border-color;
+	border: none;
+	@include hover-focus() {
+		background-color: $primary;
+	}
+  }
+
+  .navbar-toggler-icon {
+	//background-image: escape-svg($navbar-dark-toggler-icon-bg);
+  }
+
+  .navbar-text {
+	color: $navbar-dark-color;
+	a {
+	  color: $navbar-dark-active-color;
+
+	  @include hover-focus() {
+		color: $navbar-dark-active-color;
+	  }
+	}
+  }
+}
+
+
+.navbar-nav {
+	font-family: $headings-font-family;
+	text-transform: uppercase;
+	font-size: $font-size-lg;
+	font-weight: $font-weight-bold;
+}
+.navbar-toggler {
+	border: none;
+	&:focus {
+		outline: none;
+	}
+}
+
+// Button for toggling the navbar when in its collapsed state
+.navbar-toggler,
+.navbar-toggler-search,
+.navbar-toggler-offcanvas {
+  padding: $navbar-nav-link-padding-x;
+  @include font-size($navbar-toggler-font-size);
+  line-height: 1;
+  background-color: transparent; // remove default button style
+  border: $border-width solid transparent; // remove default button style
+  width: ($navbar-nav-link-padding-x * 2) + $navbar-toggler-font-size;
+  display: inline-flex;
+  justify-content: center;
+  @include hover-focus() {
+	text-decoration: none;
+  }
+}
+
+
+.navbar-dark .navbar-toggler,
+.navbar-dark .navbar-toggler a {
+	color: $light;
+	&:hover {
+		color: $gray-300;
+	}
+}
+
+.navbar-light .navbar-toggler,
+.navbar-light .navbar-toggler a {
+	color: $gray-700;
+	&:hover {
+		color: $gray-900;
+	}
+}
+
+.svg-inline--fa {
+	color: inherit;
+}
+
+.nav-link {
+	padding-bottom: $nav-link-padding-y *0.75;
+	padding-top: $nav-link-padding-y;
+	padding-left: $nav-link-padding-x;
+	padding-right: $nav-link-padding-x;
+}
+/*Pagination and navs */
+.pagination {
+	justify-content: center;
+	padding-top: 2rem;
+	padding-bottom: 1rem;
+	font-family: $headings-font-family;
+	font-weight: $font-weight-bold;
+	&.post-navigation {
+		padding: 2rem;
+		background-color: $gray-100;
+		border: $card-border-width solid $card-border-color;
+		@include border-radius($card-border-radius);
+	}
+	.page-item {
+		margin: 0.15rem;
+		.page-link {
+			text-align: center;
+			min-width: 2.25rem;
+		}
+	}
+}
+
+/* Zoom image */
+.image-wrapper {
+	overflow: hidden;
+	.zoom-image {
+		transition: transform 0.7s;
+		&:hover {
+		transform: scale(1.15);
+		}
+	}
+}
+
+/* content */
+.single {
+	.card-body.single-card {
+		padding-left: $post-padding;
+		padding-right: $post-padding;
+		@include media-breakpoint-down(md) {
+			padding-left: $post-padding / 2;
+			padding-right: $post-padding / 2;
+		}
+	}
+}
+
+.entry-meta,
+.entry-footer {
+	font-family: $headings-font-family;
+	//font-size: $font-size-sm;
+	margin-bottom: 1rem;
+}
+
+.page {
+	article {
+		padding-left: $page-padding;
+		padding-right: $page-padding;
+		@include media-breakpoint-down(md) {
+			padding-left: $page-padding / 2;
+			padding-right: $page-padding / 2;
+		}
+	}
+}
+
+/* Header */
+header.entry-header {
+	padding-top: 2rem;
+}
+
+
+
+/* Post navigation */
+.navigation {
+	&.post-navigation {
+		padding: 2rem;
+		margin-top: 1px;
+		font-family: $headings-font-family;
+		font-weight: $font-weight-bold;
+		@extend .card;
+	}
+}
+
+/* image captions */
+.featured-image-caption, {
+	width: 100%;
+	max-width: 780px;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: $font-size-sm;
+	color: $gray-500;
+	margin-top: 0.5rem;
+	margin-bottom: 1rem;
+}
+figcaption {
+	font-size: $font-size-sm;
+	color: $gray-500;
+	width: 100%;
+	max-width: 780px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.wp-caption-text {
+	font-size: $font-size-sm;
+}
+/* Categories */
+.categories {
+	position: absolute;
+	display: flex;
+	flex-wrap: wrap;
+	z-index: 99999;
+	.cat-label {
+		background-color: $primary;
+		color: $white;
+		padding: 0.25rem 0.5rem 0.15rem 0.5rem;
+		margin: 2px;
+		font-family: $headings-font-family;
+		font-size: $font-size-lg;
+		text-transform: uppercase;
+		font-weight: bold;
+	}
+}
+
+.cat-list {
+	margin-bottom: 3rem;
+	.cat-list_item {
+			font-family: $headings-font-family;
+			margin-bottom: 0.5rem;
+			text-transform: uppercase;
+			font-weight: $font-weight-bold;
+	}
+}
+
+
+.cat-links {
+	//margin-bottom: 1rem;
+	a {
+		background-color: $link-color;
+		color: $white !important;
+		padding: 0.25rem 0.5rem 0.15rem 0.5rem;
+		margin: 2px;
+		font-family: $headings-font-family;
+		font-size: $font-size-lg;
+		text-transform: uppercase;
+		font-weight: bold;
+		&:hover {
+			@include hover-focus() {
+				text-decoration: none;
+				background-color: $link-hover-color;
+				color: $white;
+			}
+		}
+	}
+}
+
+.tags-links {
+	border-bottom: 1px solid $gray-300;
+	padding-bottom: 1rem;
+	margin-bottom: 1rem;
+	padding-top: 1rem;
+	a {
+		font-weight: $font-weight-bold;
+		font-size: $h5-font-size;
+	}
+}
+
+
+/* Table */
+
+table.standings {
+	font-size: $font-size-sm;
+	white-space: nowrap;
+	thead th{
+		padding: 0.75rem 0.75rem 0.5rem 0.75rem;
+		font-size: $font-size-base;
+		&.total-col {
+			border-left-color: $white;
+		}
+		&.race-col {
+			border-left-color: $white;
+		}
+		&.pos-col {
+			border-right-color: $white;
+		}
+	}
+	.total-col {
+		font-weight: $font-weight-bold;
+		text-align: center;
+		width: 5rem;
+		border-left: 1px solid $table-border-color;
+	}
+	.pos-col {
+		text-align: center;
+		width: 3rem;
+		font-weight: $font-weight-bold;
+		border-right: 1px solid $table-border-color;
+	}
+	.race-col,
+	.race-col-ss {
+		max-width: 2rem;
+		text-align: center;
+	}
+	.race-col {
+		border-left: 1px solid $table-border-color;
+	}
+}
+
+
+/* Card */
+
+.card {
+	border: none;
+	a {
+		&:hover {
+			color: $link-hover-color;
+		}
+	}
+	&.ajax-post {
+		a {
+			color: $body-color;
+		}
+	}
+}
+
+
+
+/* Footer */
+
+.wrapper {
+	&#wrapper-footer-full,
+	&#wrapper-footer {
+	background-color: $black;
+	color: $light;
+	}
+}
+
+.footer-widget {
+	align-self: center;
+	.menu {
+		font-family: $headings-font-family;
+		font-weight: $font-weight-bold;
+		list-style: none;
+		padding-left: 0;
+		display: flex;
+		font-size: $font-size-lg;
+		a {
+			display: block;
+			padding: $nav-link-padding-y / 2  $nav-link-padding-x;
+			color: $white;
+			background-color: $black;
+			text-transform: uppercase;
+			@include hover-focus() {
+				color: $primary;
+				//background-color: $primary;
+				text-decoration: none;
+			  }
+		}
+	}
+}

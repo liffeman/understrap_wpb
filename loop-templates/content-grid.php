@@ -9,55 +9,31 @@
 defined( 'ABSPATH' ) || exit;
 ?>
 
-<article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
-<div class="card">
+<div class="card ajax-post">
+	<div class="categories">
+		<?php
+		foreach((get_the_category()) as $category){
+			echo '<div class="cat-label">' . $category->name.'</div>';
+			}
+		?>
+	</div>
+	<a href="<?php the_permalink( );?>">
 	<?php
 	// Must be inside a loop.
 
 	if ( has_post_thumbnail($post->ID) ) {
-		the_post_thumbnail('grid_image', array('class' => 'card-img-top'));
+		echo '<div class="card-image-top image-wrapper">';
+		the_post_thumbnail('grid_image', array('class' => 'zoom-image'));
+		echo '</div>';
 	}
 	?>
 	<div class="card-body">
-	<header class="card-entry-header">
 
-		<?php
-		the_title(
-			sprintf( '<h5 class="card-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ),
-			'</a></h5>'
-		);
-		?>
+		<h5 class="card-title"><?php	the_title();?></h5>
 
-		<?php if ( 'post' === get_post_type() ) : ?>
-
-			<div class="entry-meta">
+			<div class="entry-meta mb-0">
 				<?php understrap_posted_on(); ?>
 			</div><!-- .entry-meta -->
-
-		<?php endif; ?>
-
-	</header><!-- .entry-header -->
-
-	<div class="card-text">
-
-		<?php the_excerpt(); ?>
-
-		<?php
-		wp_link_pages(
-			array(
-				'before' => '<div class="page-links">' . __( 'Pages:', 'understrap' ),
-				'after'  => '</div>',
-			)
-		);
-		?>
-
-	</div><!-- .entry-content -->
-
-	<footer class="entry-footer">
-
-		<?php understrap_entry_footer(); ?>
-
-	</footer><!-- .entry-footer -->
 	</div>
+	</a>
 </div>
-</article><!-- #post-## -->

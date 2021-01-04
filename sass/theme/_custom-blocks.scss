@@ -1,0 +1,44 @@
+.custom-block{
+	&.countdown {
+		.container {
+			padding: 2.5rem 1rem;
+
+			.countdown-title {
+				text-align: center;
+			}
+
+			.event-logo {
+				img {
+					max-width: 300px;
+					width: auto;
+					max-height: 300px;
+				}
+			}
+			.countdown-content {
+				width: 100%;
+				padding: 2rem;
+				font-size: $h1-font-size;
+				font-weight: $font-weight-bold;
+				text-align: center;
+				.label {
+					display: block;
+					font-size: $font-size-sm;
+					font-weight: $font-weight-base;
+				}
+			}
+		}
+	}
+}
+
+
+table.standings {
+	width: 100%;
+	thead {
+		font-family: $headings-font-family;
+		th {
+			background-color: $gray-300;
+			padding: 0.25rem;
+
+		}
+	}
+}

@@ -14,7 +14,7 @@ defined( 'ABSPATH' ) || exit;
  *
  * @link https://developer.wordpress.org/reference/hooks/dynamic_sidebar_params/
  */
-add_filter( 'dynamic_sidebar_params', 'understrap_widget_classes' );
+//add_filter( 'dynamic_sidebar_params', 'understrap_widget_classes' );
 
 if ( ! function_exists( 'understrap_widget_classes' ) ) {
 

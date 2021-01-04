@@ -27,7 +27,15 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 					<div class="site-info">
 
-						<?php understrap_site_info(); ?>
+						<?php //understrap_site_info(); ?>
+						<p class="footer-copyright text-muted text-center small">&copy;
+							<?php
+							echo date_i18n(
+								/* translators: Copyright date format, see https://secure.php.net/date */
+								_x( 'Y', 'copyright date format', 'understrap' )
+							);
+							?>
+							<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php echo bloginfo( 'name' ); ?></a>/CB Media Sweden</p>
 
 					</div><!-- .site-info -->
 

@@ -35,7 +35,7 @@ $offcanvastheme = get_theme_mod('understrap_offcanvas_theme');
 	<?php if ( 'container' === $container ) : ?>
 		<div class="container">
 	<?php endif; ?>
-	<div class="col-md-3">
+	<div class="header-area">
 	<!-- Your site title as branding in the menu -->
 	<?php if ( ! has_custom_logo() ) { ?>
 
@@ -54,8 +54,6 @@ $offcanvastheme = get_theme_mod('understrap_offcanvas_theme');
 		the_custom_logo();
 	}
 	?>
-	</div>
-	<div class="col-md-9">
 		<div class="adplace">
 		</div>
 	</div>
@@ -75,7 +73,7 @@ $offcanvastheme = get_theme_mod('understrap_offcanvas_theme');
 		<?php endif; ?>
 		<!-- The WordPress Menu goes here -->
 		<div class="main-navigation">
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'understrap' ); ?>">
+			<button class="navbar-toggler invisible" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'understrap' ); ?>">
 			<i class="fas fa-bars"></i>
 		</button>
 		<?php
@@ -96,15 +94,15 @@ $offcanvastheme = get_theme_mod('understrap_offcanvas_theme');
 		<div class="second-navigation">
 			<div class="nav-buttons">
 			<?php if ( 'show' === $searchbox ) : ?>
-			<span class="navbar-toggler-search">
-				<button class="search-btn" type="button" data-toggle="collapse" data-target="#searchbox" aria-expanded="false" aria-controls="searchbox">
+			<span class="navbar-toggler-icon-2">
+				<a class="navbar-toggler-search" role="button" data-toggle="collapse" href="#searchbox" aria-expanded="false" aria-controls="searchbox">
 					<i class="fas fa-search"></i>
-				  </button>
+				  </a>
 			</span>
 			<?php endif; ?>
 			<?php if ( '1' === $menu ) : ?>
-			<span class="navbar-toggler-offlinecanvas">
-				<a href="#my-menu"><i class="fas fa-bars"></i></a>
+			<span class="navbar-toggler-icon-2">
+				<a class="navbar-toggler-offcanvas" href="#my-menu"><i class="fas fa-bars"></i></a>
 			</span>
 			<?php endif; ?>
 		</div>
@@ -134,7 +132,7 @@ $offcanvastheme = get_theme_mod('understrap_offcanvas_theme');
 			array(
 				'theme_location'  => 'offcanvas',
 				'depth'           => 4,
-				'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
+				//'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
 			)
 		);
 		?>
