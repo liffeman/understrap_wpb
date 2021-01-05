@@ -46,10 +46,33 @@ function register_acf_block_types() {
 			'render_template'   => 'block-templates/block-table.php',
 			'enqueue_style'     => get_template_directory_uri() . '/css/custom-editor-style.css',
 			'category'          => 'custom',
-			'icon'              => 'table',
+			'icon'              => 'editor-ol',
 			'keywords'          => array( 'table','standings', 'result' )
 		));
 
+		// register a standings table block.
+		acf_register_block_type(array(
+			'name'              => 'files',
+			'title'             => __('Files (PDF)'),
+			'description'       => __('A block for listing files.'),
+			'render_template'   => 'block-templates/block-files.php',
+			'enqueue_style'     => get_template_directory_uri() . '/css/custom-editor-style.css',
+			'category'          => 'custom',
+			'icon'              => 'pdf',
+			'keywords'          => array( 'files','pdf', 'media' )
+		));
+
+		// register a standings table block.
+		acf_register_block_type(array(
+			'name'              => 'showposts',
+			'title'             => __('Show posts'),
+			'description'       => __('A block for listing posts.'),
+			'render_template'   => 'block-templates/block-showposts.php',
+			'enqueue_style'     => get_template_directory_uri() . '/css/custom-editor-style.css',
+			'category'          => 'custom',
+			'icon'              => 'admin-post',
+			'keywords'          => array( 'posts' )
+		));
 		// register a case stories block.
 		acf_register_block_type(array(
 			'name'              => 'casestories',

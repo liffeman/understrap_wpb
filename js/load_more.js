@@ -1,5 +1,4 @@
 jQuery(function($){
-
 	$('.post-listing').append( '<span class="load-more"></span>' );
 	var button = $('.post-listing .load-more');
 	var page = 2;

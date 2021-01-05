@@ -192,3 +192,41 @@ if ( ! function_exists( 'understrap_category_filter' ) ) {
 		</div>
  	 <?php }
  }
+
+
+
+// Showing the list of child pages
+// Check if current page has children pages
+if ( ! function_exists( 'understrap_subpage_nav' ) ) {
+	function understrap_subpage_nav() {
+	$id = get_the_ID();
+	$postID = get_queried_object_id();
+	$children = get_pages('child_of='.$post->ID.'&parent='.$post->ID);
+
+	// if current page got children pages :
+	if (sizeof($children) > 0){
+		$args = array(
+			'post_status'       => ' publish',
+			'post_type'         => 'page',
+			'posts_per_page'    => -1,
+			'post_parent'       => $post->ID,
+			'order'             => 'ASC',
+			'orderby'           => 'date',
+		);
+	}
+
+	$parent = new WP_Query( $args );
+
+		// Showing a list in the template
+	if ( $parent->have_posts() ):
+	?>
+			<nav class="subpage-list">
+				<?php while ( $parent->have_posts() ) : $parent->the_post(); ?>
+					<a class="item-from-list" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title();?></a>
+				<?php endwhile; ?>
+			</nav>
+	<?php wp_reset_query(); ?>
+	<?php endif ;?>
+	<?php
+	}
+}

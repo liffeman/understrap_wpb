@@ -24,7 +24,6 @@ if( !empty($block['className']) ) {
 if( !empty($block['align']) ) {
 	$className .= ' align' . $block['align'];
 }
-$className .= ' ' .$countdown_color;
 
 $section_anchor = $id;
 

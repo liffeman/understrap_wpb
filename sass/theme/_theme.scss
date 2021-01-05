@@ -4,7 +4,11 @@ body {
 	&.wp-admin {
 	}
 }
-
+.home {
+	#page-wrapper {
+		padding-top: 0;
+	}
+}
 .admin-bar {
 	.mm-ocd {
 	top: 32px !important;
@@ -82,7 +86,60 @@ body {
 		//@include transition($btn-transition);
 	}
 }
+/* Breadcrumb */
+.breadcrumbs {
+	max-width: 1140px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	margin-bottom: 0.75rem;
+	margin-top: -1rem;
+	font-family: $headings-font-family;
+	color: $gray-700;
+	a {
+		color: $gray-700;
+		@include hover-focus() {
+			color: $link-hover-color;
+		}
+	}
+	.current-item {
+		color: $primary;
+	}
+}
 
+/* buttons */
+.btn {
+
+}
+
+/* subpage nav */
+.subpages {
+	display: flex;
+	flex-direction: row;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	@extend .navbar-nav;
+	.page_item {
+		display: inline-flex;
+		a {
+			padding: 0.25rem 0.5rem 0.15rem 0.5rem;
+			margin: 2px;
+			flex-wrap: nowrap;
+			white-space: nowrap;
+			background-color: $gray-900;
+			color: $white;
+
+			@include hover-focus() {
+			background-color: $primary;
+			color: $navbar-dark-hover-color;
+			}
+		}
+		&.current_page_item a {
+			color: $navbar-dark-active-color;
+			background-color: $primary;
+		}
+	}
+}
 
 /* searchbox */
 
@@ -421,7 +478,32 @@ header.entry-header {
 		@extend .card;
 	}
 }
+/* Carousel */
+.carousel-control-next-icon,
+.carousel-control-prev-icon
+ {
+	background-color: $gray-900;
+	padding: 0.25rem;
+}
 
+.carousel-caption {
+	background-color: rgba($black, 0.8);
+	padding: 1rem 2rem;
+	max-width: 1100px;
+	margin-left: auto;
+	margin-right: auto;
+	bottom: 0;
+	text-align: left;
+	.categories {
+		top: -3rem;
+		left: 2rem;
+	}
+}
+.alignfull {
+	.carousel-caption {
+		bottom: 3rem;
+	}
+}
 /* image captions */
 .featured-image-caption, {
 	width: 100%;
@@ -461,7 +543,37 @@ figcaption {
 		font-weight: bold;
 	}
 }
+.block-post-list {
+	.categories {
+	position: initial;
+	margin-bottom: 1rem;
+	.cat-label {
+		font-size: $font-size-base;
+		}
+	}
+	.image-wrapper {
+		max-width: 100%;
+		@include media-breakpoint-up(md) {
+			max-width: 100px;
+		}
+		@include media-breakpoint-up(lg) {
+			max-width: 100%;
+		}
 
+	}
+	a {
+		color: $body-color;
+		&:hover {
+			color: $link-hover-color;
+		}
+	}
+	.card-title {
+		margin-bottom: 0;
+	}
+	.card-body {
+		width: 100%;
+	}
+}
 .cat-list {
 	margin-bottom: 3rem;
 	.cat-list_item {
@@ -471,7 +583,6 @@ figcaption {
 			font-weight: $font-weight-bold;
 	}
 }
-
 
 .cat-links {
 	//margin-bottom: 1rem;
@@ -509,16 +620,18 @@ figcaption {
 /* Table */
 
 table.standings {
-	font-size: $font-size-sm;
+	//font-size: $font-size-sm;
 	white-space: nowrap;
+	border: 1px solid $table-border-color;
 	thead th{
-		padding: 0.75rem 0.75rem 0.5rem 0.75rem;
-		font-size: $font-size-base;
+		//padding: 0.75rem 0.75rem 0.5rem 0.75rem;
+		font-size: $font-size-lg;
 		&.total-col {
 			border-left-color: $white;
 		}
 		&.race-col {
 			border-left-color: $white;
+			font-size: 1.5rem;
 		}
 		&.pos-col {
 			border-right-color: $white;
@@ -560,6 +673,30 @@ table.standings {
 		a {
 			color: $body-color;
 		}
+	}
+	&.file {
+		background: $gray-300;
+		font-family: $headings-font-family;
+		font-weight: $font-weight-bold;
+		.file-image {
+			background: $gray-300;
+			margin-left: auto;
+			margin-right: auto;
+			img {
+				max-height: 10rem;
+				width: auto;
+			}
+		}
+		.card-body {
+			background: $gray-900;
+			line-height: 1;
+		}
+	   a {
+		   color: $white;
+		   &:hover {
+			   color: $gray-500;
+		   }
+	   }
 	}
 }
 

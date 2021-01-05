@@ -180,3 +180,34 @@ $table-striped-order:         odd !default;
 //$table-bg-level:              -9 !default;
 //$table-border-level:          -6 !default;
 
+
+// Buttons
+
+$btn-font-family:             $headings-font-family;
+$btn-font-weight:            $font-weight-bold;
+$btn-box-shadow:          0 10px 10px rgba($black, .75);
+
+
+
+
+
+// Carousel
+
+//$carousel-control-color:             $white !default;
+$carousel-control-width:             2rem;
+//$carousel-control-opacity:           .5 !default;
+//$carousel-control-hover-opacity:     .9 !default;
+//$carousel-control-transition:        opacity .15s ease !default;
+
+
+$carousel-caption-width:             100%;
+$carousel-caption-color:             $white !default;
+
+$carousel-control-icon-width:        2rem;
+
+$carousel-control-prev-icon-bg:      none;
+$carousel-control-next-icon-bg:      none;
+
+//$carousel-transition-duration:       .6s !default;
+//$carousel-transition:                transform $carousel-transition-duration ease-in-out !default; // Define transform transition first if using multiple transitions (e.g., `transform 2s ease, opacity .5s ease-out`)
+

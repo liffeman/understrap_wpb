@@ -213,12 +213,13 @@ if ( ! function_exists( 'understrap_setup' ) ) {
 
 function use_new_image_size() {
 	if ( function_exists( 'add_image_size' ) ) {
-		//add_image_size( 'heroimage', 1920 ); // 1920 pixels wide (and unlimited height)
+		add_image_size( 'heroimage', 1920, 1080, true ); // 1920 pixels wide (and unlimited height)
 		//add_image_size( 'puff', 400 ); // 400 pixels wide (and unlimited height)
 		add_image_size( 'grid_image', 400, 300, true ); // 400 pixels wide and  200px height, cropped
 		//add_image_size( 'gallery_image', 300, 300, true ); // 300 pixels wide and height, cropped
 		//add_image_size( 'standard', 460 ); // 400 pixels wide (and unlimited height)
 		add_image_size( 'header_image', 1150, 450, true ); // 1500 pixels wide and 640 px height, cropped
+		add_image_size( 'slider_image', 1000, 450, true ); // 1500 pixels wide and 640 px height, cropped
 	}
 }
 
@@ -226,7 +227,8 @@ add_action( 'after_setup_theme', 'use_new_image_size' );
 
 function create_custom_image_size($sizes){
 	$custom_sizes = array(
-	'grid_image' => 'Grid Image size'
+		'grid_image' => 'Grid Image size',
+		'slider_image' => 'Carousel Image size'
 	);
 	return array_merge( $sizes, $custom_sizes );
 }
@@ -248,13 +250,13 @@ if ( ! function_exists( 'understrap_custom_excerpt_more' ) ) {
 	 */
 	function understrap_custom_excerpt_more( $more ) {
 		if ( ! is_admin() ) {
-			$more = '';
+			$more = '…';
 		}
 		return $more;
 	}
 }
 
-add_filter( 'wp_trim_excerpt', 'understrap_all_excerpts_get_more_link' );
+//add_filter( 'wp_trim_excerpt', 'understrap_all_excerpts_get_more_link' );
 
 if ( ! function_exists( 'understrap_all_excerpts_get_more_link' ) ) {
 	/**
@@ -339,6 +341,51 @@ function imagick_sharpen_resized_files( $resized_file ) {
 }
 add_filter( 'image_make_intermediate_size', 'imagick_sharpen_resized_files', 900 );
 
+
+
+/**
+ * Patch to prevent black PDF backgrounds.
+ *
+ * https://core.trac.wordpress.org/ticket/45982
+ */
+require_once ABSPATH . 'wp-includes/class-wp-image-editor.php';
+require_once ABSPATH . 'wp-includes/class-wp-image-editor-imagick.php';
+
+// phpcs:ignore PSR1.Classes.ClassDeclaration.MissingNamespace
+final class ExtendedWpImageEditorImagick extends WP_Image_Editor_Imagick
+{
+	/**
+	 * Add properties to the image produced by Ghostscript to prevent black PDF backgrounds.
+	 *
+	 * @return true|WP_error
+	 */
+	// phpcs:ignore PSR1.Methods.CamelCapsMethodName.NotCamelCaps
+	protected function pdf_load_source()
+	{
+		$loaded = parent::pdf_load_source();
+
+		try {
+			$this->image->setImageAlphaChannel(Imagick::ALPHACHANNEL_REMOVE);
+			$this->image->setBackgroundColor('#ffffff');
+		} catch (Exception $exception) {
+			error_log($exception->getMessage());
+		}
+
+		return $loaded;
+	}
+}
+
+/**
+ * Filters the list of image editing library classes to prevent black PDF backgrounds.
+ *
+ * @param array $editors
+ * @return array
+ */
+add_filter('wp_image_editors', function (array $editors): array {
+	array_unshift($editors, ExtendedWpImageEditorImagick::class);
+
+	return $editors;
+});
 
 
 
