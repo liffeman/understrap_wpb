@@ -54,7 +54,8 @@ $offcanvastheme = get_theme_mod('understrap_offcanvas_theme');
 		the_custom_logo();
 	}
 	?>
-		<div class="adplace">
+		<?php get_template_part( 'sidebar-templates/sidebar', 'header' ); ?>
+		<div class="adplaces">
 		</div>
 	</div>
 	<!-- end custom logo -->

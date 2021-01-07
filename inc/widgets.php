@@ -170,5 +170,17 @@ if ( ! function_exists( 'understrap_widgets_init' ) ) {
 			)
 		);
 
+		register_sidebar(
+			array(
+				'name'          => __( 'Header Ad', 'understrap' ),
+				'id'            => 'header_ad',
+				'description'   => __( 'Ad an image as an Ad in the header area', 'understrap' ),
+				'before_widget' => '<div id="%1$s" class="header-widget adplace %2$s">',
+				'after_widget'  => '</div><!-- .header-widget -->',
+				'before_title'  => '<h3 class="widget-title">',
+				'after_title'   => '</h3>',
+			)
+		);
+
 	}
 } // End of function_exists( 'understrap_widgets_init' ).

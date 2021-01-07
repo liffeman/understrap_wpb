@@ -35,7 +35,7 @@ function register_acf_block_types() {
         'category'          => 'custom',
         'icon'              => 'backup',
         'keywords'          => array( 'countdown'),
-        'align'				=> 'wide',
+        'align'				=> 'full'
     ));
 
 	// register a standings table block.
@@ -47,7 +47,8 @@ function register_acf_block_types() {
 			'enqueue_style'     => get_template_directory_uri() . '/css/custom-editor-style.css',
 			'category'          => 'custom',
 			'icon'              => 'editor-ol',
-			'keywords'          => array( 'table','standings', 'result' )
+			'keywords'          => array( 'table','standings', 'result' ),
+			'align'				=> 'wide'
 		));
 
 		// register a standings table block.
@@ -73,30 +74,18 @@ function register_acf_block_types() {
 			'icon'              => 'admin-post',
 			'keywords'          => array( 'posts' )
 		));
-		// register a case stories block.
-		acf_register_block_type(array(
-			'name'              => 'casestories',
-			'title'             => __('Case Stories'),
-			'description'       => __('A block with a list of case stories in a grid layout.'),
-			'render_template'   => 'block-templates/casestories.php',
-			'enqueue_style'     => get_template_directory_uri() . '/css/custom-editor-style.css',
-			'category'          => 'custom',
-			'icon'              => 'admin-post',
-			'keywords'          => array('casestories','cases','posts', 'list' ),
-			'align'				=> 'wide',
-		));
 
-		// register a post list block.
+		// register a standings table block.
 		acf_register_block_type(array(
-			'name'              => 'relatedposts',
-			'title'             => __('Related posts'),
-			'description'       => __('A block with posts grid layout.'),
-			'render_template'   => 'block-templates/related-posts.php',
+			'name'              => 'ads',
+			'title'             => __('Ads'),
+			'description'       => __('A block for adding space for ads.'),
+			'render_template'   => 'block-templates/block-ads.php',
 			'enqueue_style'     => get_template_directory_uri() . '/css/custom-editor-style.css',
 			'category'          => 'custom',
-			'icon'              => 'admin-post',
-			'keywords'          => array('related', 'posts', 'list' ),
-			'align'				=> 'wide',
+			'icon'              => 'megaphone',
+			'keywords'          => array( 'ads' ),
+			'align'				=> 'wide'
 		));
 }
 

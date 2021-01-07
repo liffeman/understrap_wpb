@@ -22,7 +22,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 <div class="breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">
 	<?php if(function_exists('bcn_display'))
 	{
-		bcn_display();
+		if(! get_field('hide_breadcrumb')) {
+			bcn_display();
+		}
 	}?>
 </div>
 	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
@@ -38,6 +40,8 @@ $container = get_theme_mod( 'understrap_container_type' );
 			<?php get_template_part( 'global-templates/left-sidebar-check' ); ?>
 
 			<main class="site-main" id="main">
+
+			<?php if(! get_field('hide_pagelist')) : ?>
 				<?php
 				if ( $post->post_parent ) {
 					$children = wp_list_pages( array(
@@ -60,7 +64,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 						<?php echo $children; ?>
 					</ul>
 				<?php endif; ?>
-
+				<?php endif; ?>
 				<?php
 				while ( have_posts() ) {
 					the_post();
