@@ -11,6 +11,7 @@ defined( 'ABSPATH' ) || exit;
 
 <div class="col mb-3">
 	<div class="card block-post h-100">
+	<?php if (get_field('show_cats')):?>
 	<div class="categories">
 		<?php
 		foreach((get_the_category()) as $category){
@@ -18,6 +19,7 @@ defined( 'ABSPATH' ) || exit;
 			}
 		?>
 	</div>
+	<?php endif ; ?>
 	<a href="<?php the_permalink( );?>">
 	<?php
 	// Must be inside a loop.

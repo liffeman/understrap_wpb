@@ -1,0 +1,130 @@
+{
+    "key": "group_5fe3501c5f509",
+    "title": "Block - Countdown",
+    "fields": [
+        {
+            "key": "field_5fec3baa001e1",
+            "label": "Rubrik",
+            "name": "event_title",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "Lägg till en rubrik för nedräkningen",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5fec3bc2001e2",
+            "label": "Bild\/logotyp",
+            "name": "event_logo",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_5fe3502fc2ad6",
+            "label": "Datum",
+            "name": "date_to_count",
+            "type": "date_time_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "display_format": "j F, Y H:i:s",
+            "return_format": "j F, Y H:i:s",
+            "first_day": 1
+        },
+        {
+            "key": "field_5fec4bfa8aa4a",
+            "label": "Meddelande",
+            "name": "event_message",
+            "type": "textarea",
+            "instructions": "Meddelande som visas när nedräkningen är avslutad.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_5fec4fdd54120",
+            "label": "Färg",
+            "name": "event_color",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "bg-primary text-light": "Röd",
+                "bg-secondary text-light": "Blå",
+                "bg-dark text-light": "Grå",
+                "bg-light text-dark": "Ljus"
+            },
+            "default_value": "bg-primary text-light",
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 1,
+            "ajax": 0,
+            "return_format": "value",
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/coundown"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1610027323
+}

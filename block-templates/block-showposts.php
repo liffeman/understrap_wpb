@@ -38,6 +38,12 @@ $section_anchor = $id;
 						// The Query
 
 						$number = get_field('number_of_posts');
+						$skip_posts = get_field('skip_posts');
+						if ($skip_posts) {
+							$offset = $skip_posts;
+						} else {
+							$offset = 0;
+						}
 						$cat = get_field('show_cat');
 						if ($cat) {
 							$filter = $cat;
@@ -54,12 +60,14 @@ $section_anchor = $id;
 								'post_in' => $sticky,
 								'ignore_sticky_posts' => 1,
 								'cat' => $filter,
+								'offset' => $offset,
 							);
 						} else {
 							$args = array (
 								'post_type' => 'post',
 								'posts_per_page' => $number,
 								'cat' => $filter,
+								'offset' => $offset,
 							);
 						}
 						$the_query = new WP_Query( $args);

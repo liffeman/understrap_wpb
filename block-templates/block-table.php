@@ -105,35 +105,46 @@ echo '<a class="anchor" id="' . $section_anchor . '"></a>';
 			if( $repeater ): ?>
 
 				<?php foreach( $repeater as $i => $row ): ?>
-					<tr>
+					<?php
+						if ($row['R_col_1']) {$cell_1 =  'R'; } else { if($row['col_1']){ $cell_1 = $row['col_1']; } else { $cell_1 = ' - '; } }
+						if ($row['R_col_2']) {$cell_2 =  'R'; } else { if($row['col_2']){ $cell_2 = $row['col_2']; } else { $cell_2 = ' - '; } }
+						if ($row['R_col_3']) {$cell_3 =  'R'; } else { if($row['col_3']){ $cell_3 = $row['col_3']; } else { $cell_3 = ' - '; } }
+						if ($row['R_col_4']) {$cell_4 =  'R'; } else { if($row['col_4']){ $cell_4 = $row['col_4']; } else { $cell_4 = ' - '; } }
+						if ($row['R_col_5']) {$cell_5 =  'R'; } else { if($row['col_5']){ $cell_5 = $row['col_5']; } else { $cell_5 = ' - '; } }
+						if ($row['R_col_6']) {$cell_6 =  'R'; } else { if($row['col_6']){ $cell_6 = $row['col_6']; } else { $cell_6 = ' - '; } }
+						if ($row['R_col_7']) {$cell_7 =  'R'; } else { if($row['col_7']){ $cell_7 = $row['col_7']; } else { $cell_7 = ' - '; } }
+						if ($row['R_col_8']) {$cell_8 =  'R'; } else { if($row['col_8']){ $cell_8 = $row['col_8']; } else { $cell_8 = ' - '; } }
+					?>
+
+						<tr>
 						<td class="pos-col"><?php
 							$placering += 1;
 							echo $placering
 						?></td>
 						<td class="driver-col"><span class="flag-icon flag-icon-<?php echo strtolower($row['driver_country_land']);?> mr-2"></span> <?php echo $row['driver'];?></td>
 						<?php if ( get_field('show_team') ):?><td><?php echo $row['team'];?></td><?php endif; ?>
-						<?php if ($num_of_races > 0) :?><td class="race-col race1"><?php echo $row['col_1'];?></td>
+						<?php if ($num_of_races > 0) :?><td class="race-col race1"><?php echo $cell_1; ?></td>
 							<?php if ( get_field('show_ss') ):?><?php if ($num_of_races > 0) :?><td class="race-col-ss ss1"><?php echo $row['ss_col_1'];?></td><?php endif;?><?php endif; ?>
 						<?php endif;?>
-						<?php if ($num_of_races > 1) :?><td class="race-col race2"><?php echo $row['col_2'];?></td>
+						<?php if ($num_of_races > 1) :?><td class="race-col race2"><?php echo $cell_2; ?></td>
 							<?php if ( get_field('show_ss') ):?><?php if ($num_of_races > 1) :?><td class="race-col-ss ss2"><?php echo $row['ss_col_2'];?></td><?php endif;?><?php endif; ?>
 						<?php endif;?>
-						<?php if ($num_of_races > 2) :?><td class="race-col race3"><?php echo $row['col_3'];?></td>
+						<?php if ($num_of_races > 2) :?><td class="race-col race3"><?php echo $cell_3; ?></td>
 							<?php if ( get_field('show_ss') ):?><?php if ($num_of_races > 2) :?><td class="race-col-ss ss3"><?php echo $row['ss_col_3'];?></td><?php endif;?><?php endif; ?>
 						<?php endif;?>
-						<?php if ($num_of_races > 3) :?><td class="race-col race4"><?php echo $row['col_4'];?></td>
+						<?php if ($num_of_races > 3) :?><td class="race-col race4"><?php echo $cell_4; ?></td>
 							<?php if ( get_field('show_ss') ):?><?php if ($num_of_races > 3) :?><td class="race-col-ss ss4"><?php echo $row['ss_col_4'];?></td><?php endif;?><?php endif; ?>
 						<?php endif;?>
-						<?php if ($num_of_races > 4) :?><td class="race-col race5"><?php echo $row['col_5'];?></td>
+						<?php if ($num_of_races > 4) :?><td class="race-col race5"><?php echo $cell_5; ?></td>
 							<?php if ( get_field('show_ss') ):?><?php if ($num_of_races > 4) :?><td class="race-col-ss ss5"><?php echo $row['ss_col_5'];?></td><?php endif;?><?php endif; ?>
 						<?php endif;?>
-						<?php if ($num_of_races > 5) :?><td class="race-col race6"><?php echo $row['col_6'];?></td>
+						<?php if ($num_of_races > 5) :?><td class="race-col race6"><?php echo $cell_6; ?></td>
 							<?php if ( get_field('show_ss') ):?><?php if ($num_of_races > 5) :?><td class="race-col-ss ss6"><?php echo $row['ss_col_6'];?></td><?php endif;?><?php endif; ?>
 						<?php endif;?>
-						<?php if ($num_of_races > 6) :?><td class="race-col race7"><?php echo $row['col_7'];?></td>
+						<?php if ($num_of_races > 6) :?><td class="race-col race7"><?php echo $cell_7; ?></td>
 							<?php if ( get_field('show_ss') ):?><?php if ($num_of_races > 6) :?><td class="race-col-ss ss7"><?php echo $row['ss_col_7'];?></td><?php endif;?><?php endif; ?>
 						<?php endif;?>
-						<?php if ($num_of_races > 7) :?><td class="race-col race8"><?php echo $row['col_8'];?></td>
+						<?php if ($num_of_races > 7) :?><td class="race-col race8"><?php echo $cell_8; ?></td>
 							<?php if ( get_field('show_ss') ):?><?php if ($num_of_races > 7) :?><td class="race-col-ss ss8"><?php echo $row['ss_col_8'];?></td><?php endif;?><?php endif; ?>
 						<?php endif;?>
 						<td class="total-col"><?php echo $row['total'];?></td>
@@ -146,6 +157,4 @@ echo '<a class="anchor" id="' . $section_anchor . '"></a>';
 		</div>
 	</div>
 </div>
-
-
 

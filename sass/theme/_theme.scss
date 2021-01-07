@@ -150,8 +150,7 @@ body {
 .subpages {
 	display: flex;
 	flex-direction: row;
-	margin-top: 1rem;
-	margin-bottom: 1rem;
+	margin: 1rem;
 	@extend .navbar-nav;
 	.page_item {
 		display: inline-flex;
@@ -703,7 +702,8 @@ table.standings {
 			color: $link-hover-color;
 		}
 	}
-	&.ajax-post {
+	&.ajax-post,
+	&.block-post {
 		a {
 			color: $body-color;
 		}

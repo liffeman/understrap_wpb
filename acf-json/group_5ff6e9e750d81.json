@@ -1,0 +1,68 @@
+{
+    "key": "group_5ff6e9e750d81",
+    "title": "Sidinställningar",
+    "fields": [
+        {
+            "key": "field_5ff6ea05dffa5",
+            "label": "Dölj brödsmulor",
+            "name": "hide_breadcrumb",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "formula": "",
+            "calculated_format": "",
+            "blank_if_zero": 0,
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "Göm",
+            "ui_off_text": "Visa"
+        },
+        {
+            "key": "field_5ff6ea3cdffa6",
+            "label": "Dölj sidans undermeny",
+            "name": "hide_pagelist",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "formula": "",
+            "calculated_format": "",
+            "blank_if_zero": 0,
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "Göm",
+            "ui_off_text": "Visa"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "side",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1610027619
+}
