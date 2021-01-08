@@ -44,7 +44,7 @@ $the_content = apply_filters( 'the_content', $posts_page->post_content );
 			?>
 			<?php
 				if ( !empty($the_content) ) {
-					echo '<div class="entry-content pb-5">' . $the_content . '</div>';
+					echo '<div class="entry-content">' . $the_content . '</div>';
 					}
 			 ?>
 

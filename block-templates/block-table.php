@@ -48,7 +48,6 @@ echo '<a class="anchor" id="' . $section_anchor . '"></a>';
 ?>
 <div id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?>">
 	<div class="container">
-		<?php echo $num_of_races;?>
 		<div style="overflow-x:auto;">
 		<table class="standings table table-striped">
 			<thead class="standingshead">
