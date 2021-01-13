@@ -46,6 +46,14 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
 			)
 		);
 
+		$wp_customize->add_section( 'analytics' , array(
+			'title'      => __( 'Google Analytics', 'understrap' ),
+			'capability'  => 'edit_theme_options',
+			'description' => __( 'Add Analytics settings', 'understrap' ),
+			'priority'   => 170,
+		) );
+
+
 		/**
 		 * Select sanitization function
 		 *
@@ -75,6 +83,7 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
 				'capability'        => 'edit_theme_options',
 			)
 		);
+
 
 		$wp_customize->add_control(
 			new WP_Customize_Control(
@@ -294,6 +303,96 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
 				)
 			)
 		);
+
+		$wp_customize->add_setting(
+			'analytics_ua_id',
+			array(
+				'default'           => '',
+				'type'              => 'theme_mod',
+				'sanitize_callback' => 'sanitize_text_field',
+				'capability'        => 'edit_theme_options',
+			)
+		);
+
+
+		$wp_customize->add_control(
+			new WP_Customize_Control(
+				$wp_customize,
+				'analytics_ua_id',
+				array(
+					'label'             => __( 'Google Analytics Tracking ID', 'understrap' ),
+					'description'       => __(
+						'Add your Google Analytics Tracking ID (UA-XXXXX)',
+						'understrap'
+					),
+					'section'           => 'analytics',
+					'settings'          => 'analytics_ua_id',
+					'type'              => 'text',
+					'sanitize_callback' => 'understrap_theme_slug_sanitize_select',
+				)
+			)
+		);
+
+		$wp_customize->add_setting(
+			'analytics_ga4_id',
+			array(
+				'default'           => '',
+				'type'              => 'theme_mod',
+				'sanitize_callback' => 'sanitize_text_field',
+				'capability'        => 'edit_theme_options',
+			)
+		);
+
+
+		$wp_customize->add_control(
+			new WP_Customize_Control(
+				$wp_customize,
+				'analytics_ga4_id',
+				array(
+					'label'             => __( 'Google Analytics 4 Tracking ID', 'understrap' ),
+					'description'       => __(
+						'Add your Google Analytics 4 Tracking ID (G-XXXXX)',
+						'understrap'
+					),
+					'section'           => 'analytics',
+					'settings'          => 'analytics_ga4_id',
+					'type'              => 'text',
+					'sanitize_callback' => 'understrap_theme_slug_sanitize_select',
+				)
+			)
+		);
+
+		$wp_customize->add_setting(
+			'analytics_gtm_id',
+			array(
+				'default'           => '',
+				'type'              => 'theme_mod',
+				'sanitize_callback' => 'sanitize_text_field',
+				'capability'        => 'edit_theme_options',
+			)
+		);
+
+
+		$wp_customize->add_control(
+			new WP_Customize_Control(
+				$wp_customize,
+				'analytics_gtm_id',
+				array(
+					'label'             => __( 'Google Tag Manager ID', 'understrap' ),
+					'description'       => __(
+						'Add your Google Tag Manager ID (GTM-XXXXX)',
+						'understrap'
+					),
+					'section'           => 'analytics',
+					'settings'          => 'analytics_gtm_id',
+					'type'              => 'text',
+					'sanitize_callback' => 'understrap_theme_slug_sanitize_select',
+				)
+			)
+		);
+
+
+
 	}
 } // End of if function_exists( 'understrap_theme_customize_register' ).
 

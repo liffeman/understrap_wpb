@@ -21,6 +21,7 @@ $understrap_includes = array(
 	'/template-tags.php',                   // Custom template tags for this theme.
 	'/pagination.php',                      // Custom pagination for this theme.
 	'/hooks.php',                           // Custom hooks.
+	'/custom-post-types.php',			// Custom blocks
 	'/custom-blocks.php',			// Custom blocks
 	'/extras.php',                          // Custom functions that act independently of the theme templates.
 	'/customizer.php',                      // Customizer additions.
