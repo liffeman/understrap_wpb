@@ -35,6 +35,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 			echo '<div class="row card">';
 		}
 		?>
+		<?php get_template_part( 'loop-templates/content','featuredimage' ); ?>
 
 			<!-- Do the left sidebar check -->
 			<?php get_template_part( 'global-templates/left-sidebar-check' ); ?>

@@ -78,7 +78,10 @@ body {
 	}
 }
 
-
+/* Video gallery */
+figure.wp-block-embed.alignwide.is-type-video {
+	margin: 0;
+}
 
 /* Ads */
 .ads {
@@ -585,7 +588,7 @@ figcaption {
 		}
 	}
 	.image-wrapper {
-		max-width: 100%;
+		max-width: 40% !important;
 		@include media-breakpoint-up(md) {
 			max-width: 100px;
 		}
@@ -601,6 +604,7 @@ figcaption {
 		}
 	}
 	.card-title {
+		font-size: $h5-font-size;
 		margin-bottom: 0;
 	}
 	.card-body {

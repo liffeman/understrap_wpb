@@ -75,6 +75,18 @@ function register_acf_block_types() {
 			'keywords'          => array( 'posts' )
 		));
 
+		// register a video gallery  block.
+		acf_register_block_type(array(
+			'name'              => 'videogallery',
+			'title'             => __('Video Gallery'),
+			'description'       => __('A block for showing videoposts as a grid view.'),
+			'render_template'   => 'block-templates/block-showvideos.php',
+			'enqueue_style'     => get_template_directory_uri() . '/css/custom-editor-style.css',
+			'category'          => 'custom',
+			'icon'              => 'grid-view',
+			'keywords'          => array( 'video' )
+		));
+
 		// register a standings table block.
 		acf_register_block_type(array(
 			'name'              => 'ads',

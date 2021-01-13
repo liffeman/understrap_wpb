@@ -33,8 +33,6 @@ $current_category = single_cat_title("", false);
 				?>
 			</header><!-- .page-header -->
 
-			<?php// understrap_category_filter () ;?>
-
 			<?php
 			// get the category object for the current category
 			$thisTrueCat = get_category( get_query_var( 'cat' ) );
