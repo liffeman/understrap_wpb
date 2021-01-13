@@ -175,6 +175,14 @@ figure.wp-block-embed.alignwide.is-type-video {
 			background-color: $primary;
 		}
 	}
+	.children {
+		padding: 0;
+		.page_item {
+			a {
+				opacity: 0.7
+			}
+		}
+	}
 }
 
 /* searchbox */
@@ -656,6 +664,11 @@ figcaption {
 
 
 /* Table */
+.wp-block-table table {
+	@extend .table;
+}
+
+
 
 table.standings {
 	//font-size: $font-size-sm;
