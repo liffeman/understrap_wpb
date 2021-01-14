@@ -159,7 +159,7 @@ if ( ! function_exists( 'understrap_setup' ) ) {
 		  array(
 			  'name'  => __( 'Blue', 'understrap' ),
 			  'slug'  => 'blue',
-			  'color'	=> '#AD0000',
+			  'color'	=> '#0E098B',
 		  ),
 		  array(
 			  'name'  => __( 'Gray 100', 'understrap' ),
