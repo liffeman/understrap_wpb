@@ -13,7 +13,7 @@ defined( 'ABSPATH' ) || exit;
 	<?php
 	// Must be inside a loop.
 	if ( has_post_thumbnail($post->ID) ) {
-		the_post_thumbnail('slider-image', array('class' => 'd-block w-100'));
+		the_post_thumbnail('slider_image', array('class' => 'd-block w-100'));
 	}
 	?>
 

@@ -12,8 +12,8 @@ defined( 'ABSPATH' ) || exit;
 
 $container = get_theme_mod( 'understrap_container_type' );
 ?>
-
 <?php get_template_part( 'sidebar-templates/sidebar', 'footerfull' ); ?>
+<?php mc_modal_popup();?>
 
 <div class="wrapper" id="wrapper-footer">
 

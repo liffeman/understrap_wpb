@@ -230,3 +230,84 @@ if ( ! function_exists( 'understrap_subpage_nav' ) ) {
 	<?php
 	}
 }
+
+
+
+
+// Add Mailchim form as modal popup //
+if ( ! function_exists( 'mc_modal_popup' ) ) {
+	function mc_modal_popup() {
+?>
+<!-- Button trigger modal -->
+	<div class="subsribe-footer p-3">
+		<div class="container">
+			<div class="d-flex justify-content-center">
+				<button type="button" class="btn btn-lg btn-outline-light" data-toggle="modal" data-target="#mailchimpmodal">Prenumerera på rallynyheter</button>
+			</div>
+		</div>
+	</div>
+<!-- Modal -->
+	<div class="modal fade" id="mailchimpmodal" tabindex="-1" aria-labelledby="mailchimpmodalLabel" aria-hidden="true">
+	  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+		<div class="modal-content">
+		  <div class="modal-header">
+			<h3 class="modal-title" id="mailchimpmodalLabel">Rallynyheter från Worldrally</h3>
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			  <span aria-hidden="true">&times;</span>
+			</button>
+		  </div>
+		  <div class="modal-body">
+			<!-- Begin Mailchimp Signup Form -->
+				<link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
+				<style type="text/css">
+					#mc-embedded-subscribe-form input[type=checkbox]{display: inline; width: auto;margin-right: 10px;}
+					#mergeRow-gdpr {margin-top: 20px;}
+					#mergeRow-gdpr fieldset label {font-weight: normal;}
+					#mc-embedded-subscribe-form .mc_fieldset{border:none;min-height: 0px;padding-bottom:0px;}
+				</style>
+				<div id="mc_embed_signup">
+				<form action="https://worldrally.us20.list-manage.com/subscribe/post?u=4568c6c5e659fa2c20ff9f977&amp;id=3506a9b70e" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+					<div id="mc_embed_signup_scroll">
+				<div class="indicates-required"><span class="asterisk">*</span> får ej vara tomt</div>
+				<div class="mc-field-group">
+					<label for="mce-EMAIL">E-postadress  <span class="asterisk">*</span>
+				</label>
+					<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+				</div>
+				<div class="mc-field-group">
+					<label for="mce-FNAME">Förnamn </label>
+					<input type="text" value="" name="FNAME" class="" id="mce-FNAME">
+				</div>
+				<div class="mc-field-group">
+					<label for="mce-LNAME">Efternamn </label>
+					<input type="text" value="" name="LNAME" class="" id="mce-LNAME">
+				</div>
+				<div id="mergeRow-gdpr" class="mergeRow gdpr-mergeRow content__gdprBlock mc-field-group">
+					<div class="content__gdpr">
+						<label>Samtycke enligt GDPR</label>
+						<p>Vi följer GDPR och därför sparar vi ingen data om du inte först samtycker till att vi använder dina uppgifter till minst en av följande anledningar:</p>
+						<fieldset class="mc_fieldset gdprRequired mc-field-group" name="interestgroup_field">
+						<label class="checkbox subfield" for="gdpr_51862"><input type="checkbox" id="gdpr_51862" name="gdpr[51862]" value="Y" class="av-checkbox gdpr"><span>E-postutskick</span> </label><label class="checkbox subfield" for="gdpr_51866"><input type="checkbox" id="gdpr_51866" name="gdpr[51866]" value="Y" class="av-checkbox gdpr"><span>Anpassad annonsering online</span> </label>
+						</fieldset>
+						<p class="text-muted small">Du kan när som helst välja att avbryta din prenumeration genom att klicka på länken i sidfoten på våra e-postutskick. För mer info om våra integritetsvillkor, se vår hemsida.</p>
+					</div>
+					<div class="content__gdprLegal text-muted small">
+						<p>Vi använder Mailchimp som plattform för e-postmarknadsföring. Genom att ge samtycke och klicka på prenumerera, så godkänner ni även att era uppgifter hanteras av Mailchimp. <a href="https://mailchimp.com/legal/" target="_blank">Läs mer om Mailchimp's integritetsvillkor här.</a></p>
+					</div>
+				</div>
+					<div id="mce-responses" class="clear">
+						<div class="response" id="mce-error-response" style="display:none"></div>
+						<div class="response" id="mce-success-response" style="display:none"></div>
+					</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+					<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_4568c6c5e659fa2c20ff9f977_3506a9b70e" tabindex="-1" value=""></div>
+					<div class="clear"><input type="submit" value="Prenumerera" name="prenumerera" id="mc-embedded-subscribe" class="btn btn-primary btn-lg btn-block"></div>
+					</div>
+				</form>
+				</div>
+				<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone'; }(jQuery));var $mcj = jQuery.noConflict(true);</script>
+				<!--End mc_embed_signup-->
+		 </div>
+		</div>
+	  </div>
+	</div>
+<?php } }
