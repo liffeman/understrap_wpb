@@ -534,4 +534,4 @@ function _wpb_mailchimp_script() {
 <script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/4568c6c5e659fa2c20ff9f977/d087061c6ab0556a0b4841c52.js");</script>
 <?php }
 
-add_action('wp_head', '_wpb_mailchimp_script', 120);
+//add_action('wp_head', '_wpb_mailchimp_script', 120);

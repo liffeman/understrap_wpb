@@ -43,5 +43,22 @@
 		margin-left: auto;
 		margin-right: auto;
 	}
+	.acf-repeater.-empty.-table {
+			table {
+			display: none !important;
+		}
+	}
 
+	.acf-table {
+		th.acf-th[data-name="driver"] {
+			min-width: 200px;
+		}
+		th.acf-th[data-name="driver_country_land"] {
+			min-width: 150px;
+		}
+		th.acf-th[data-name="position"],
+		td.acf-field[data-name="position"] {
+			display: none;
+		}
+	}
 }

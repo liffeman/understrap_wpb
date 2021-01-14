@@ -24,7 +24,7 @@
             "prepend": "",
             "append": "",
             "min": 5,
-            "max": 8,
+            "max": 12,
             "step": 1
         },
         {
@@ -327,6 +327,138 @@
                     "key": "field_5fec9c5825571",
                     "label": "Tävling 8",
                     "name": "race_8",
+                    "type": "clone",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5fec9596c3170",
+                                "operator": ">",
+                                "value": "7"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "formula": "",
+                    "calculated_format": "",
+                    "blank_if_zero": 0,
+                    "readonly": 0,
+                    "clone": [
+                        "field_5feef8d65fc3f"
+                    ],
+                    "display": "seamless",
+                    "layout": "block",
+                    "prefix_label": 1,
+                    "prefix_name": 1
+                },
+                {
+                    "key": "field_60000ed1667b8",
+                    "label": "Tävling 9",
+                    "name": "race_9",
+                    "type": "clone",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5fec9596c3170",
+                                "operator": ">",
+                                "value": "7"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "formula": "",
+                    "calculated_format": "",
+                    "blank_if_zero": 0,
+                    "readonly": 0,
+                    "clone": [
+                        "field_5feef8d65fc3f"
+                    ],
+                    "display": "seamless",
+                    "layout": "block",
+                    "prefix_label": 1,
+                    "prefix_name": 1
+                },
+                {
+                    "key": "field_60000ed8667b9",
+                    "label": "Tävling 10",
+                    "name": "race_10",
+                    "type": "clone",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5fec9596c3170",
+                                "operator": ">",
+                                "value": "7"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "formula": "",
+                    "calculated_format": "",
+                    "blank_if_zero": 0,
+                    "readonly": 0,
+                    "clone": [
+                        "field_5feef8d65fc3f"
+                    ],
+                    "display": "seamless",
+                    "layout": "block",
+                    "prefix_label": 1,
+                    "prefix_name": 1
+                },
+                {
+                    "key": "field_60000edb667ba",
+                    "label": "Tävling 11",
+                    "name": "race_11",
+                    "type": "clone",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5fec9596c3170",
+                                "operator": ">",
+                                "value": "7"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "formula": "",
+                    "calculated_format": "",
+                    "blank_if_zero": 0,
+                    "readonly": 0,
+                    "clone": [
+                        "field_5feef8d65fc3f"
+                    ],
+                    "display": "seamless",
+                    "layout": "block",
+                    "prefix_label": 1,
+                    "prefix_name": 1
+                },
+                {
+                    "key": "field_60000ede667bb",
+                    "label": "Tävling 12",
+                    "name": "race_12",
                     "type": "clone",
                     "instructions": "",
                     "required": 0,
@@ -1302,6 +1434,414 @@
                     "ui_off_text": ""
                 },
                 {
+                    "key": "field_60000f3a667bc",
+                    "label": "Tävling 9",
+                    "name": "col_9",
+                    "type": "number",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5fec9596c3170",
+                                "operator": ">",
+                                "value": "8"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "formula": "",
+                    "calculated_format": "",
+                    "blank_if_zero": 0,
+                    "readonly": 0,
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "min": "",
+                    "max": "",
+                    "step": ""
+                },
+                {
+                    "key": "field_60000f69667c0",
+                    "label": "SS",
+                    "name": "ss_col_9",
+                    "type": "number",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5fec9596c3170",
+                                "operator": ">",
+                                "value": "8"
+                            },
+                            {
+                                "field": "field_5fec9789c317f",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "formula": "",
+                    "calculated_format": "",
+                    "blank_if_zero": 0,
+                    "readonly": 0,
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "min": "",
+                    "max": "",
+                    "step": ""
+                },
+                {
+                    "key": "field_60000f8e667c4",
+                    "label": "R",
+                    "name": "R_col_9",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5fec9596c3170",
+                                "operator": ">",
+                                "value": "8"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "1",
+                        "class": "r-w",
+                        "id": ""
+                    },
+                    "formula": "",
+                    "calculated_format": "",
+                    "blank_if_zero": 0,
+                    "readonly": 0,
+                    "message": "",
+                    "default_value": 0,
+                    "ui": 0,
+                    "ui_on_text": "",
+                    "ui_off_text": ""
+                },
+                {
+                    "key": "field_60000f3c667bd",
+                    "label": "Tävling 10",
+                    "name": "col_10",
+                    "type": "number",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5fec9596c3170",
+                                "operator": ">",
+                                "value": "9"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "formula": "",
+                    "calculated_format": "",
+                    "blank_if_zero": 0,
+                    "readonly": 0,
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "min": "",
+                    "max": "",
+                    "step": ""
+                },
+                {
+                    "key": "field_60000f75667c1",
+                    "label": "SS",
+                    "name": "ss_col_10",
+                    "type": "number",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5fec9596c3170",
+                                "operator": ">",
+                                "value": "9"
+                            },
+                            {
+                                "field": "field_5fec9789c317f",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "formula": "",
+                    "calculated_format": "",
+                    "blank_if_zero": 0,
+                    "readonly": 0,
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "min": "",
+                    "max": "",
+                    "step": ""
+                },
+                {
+                    "key": "field_60000f94667c5",
+                    "label": "R",
+                    "name": "R_col_10",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5fec9596c3170",
+                                "operator": ">",
+                                "value": "9"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "1",
+                        "class": "r-w",
+                        "id": ""
+                    },
+                    "formula": "",
+                    "calculated_format": "",
+                    "blank_if_zero": 0,
+                    "readonly": 0,
+                    "message": "",
+                    "default_value": 0,
+                    "ui": 0,
+                    "ui_on_text": "",
+                    "ui_off_text": ""
+                },
+                {
+                    "key": "field_60000f3e667be",
+                    "label": "Tävling 11",
+                    "name": "col_11",
+                    "type": "number",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5fec9596c3170",
+                                "operator": ">",
+                                "value": "10"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "formula": "",
+                    "calculated_format": "",
+                    "blank_if_zero": 0,
+                    "readonly": 0,
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "min": "",
+                    "max": "",
+                    "step": ""
+                },
+                {
+                    "key": "field_60000f7d667c2",
+                    "label": "SS",
+                    "name": "ss_col_11",
+                    "type": "number",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5fec9596c3170",
+                                "operator": ">",
+                                "value": "10"
+                            },
+                            {
+                                "field": "field_5fec9789c317f",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "formula": "",
+                    "calculated_format": "",
+                    "blank_if_zero": 0,
+                    "readonly": 0,
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "min": "",
+                    "max": "",
+                    "step": ""
+                },
+                {
+                    "key": "field_60000f9e667c6",
+                    "label": "R",
+                    "name": "R_col_11",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5fec9596c3170",
+                                "operator": ">",
+                                "value": "10"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "1",
+                        "class": "r-w",
+                        "id": ""
+                    },
+                    "formula": "",
+                    "calculated_format": "",
+                    "blank_if_zero": 0,
+                    "readonly": 0,
+                    "message": "",
+                    "default_value": 0,
+                    "ui": 0,
+                    "ui_on_text": "",
+                    "ui_off_text": ""
+                },
+                {
+                    "key": "field_60000f41667bf",
+                    "label": "Tävling 12",
+                    "name": "col_12",
+                    "type": "number",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5fec9596c3170",
+                                "operator": ">",
+                                "value": "11"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "formula": "",
+                    "calculated_format": "",
+                    "blank_if_zero": 0,
+                    "readonly": 0,
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "min": "",
+                    "max": "",
+                    "step": ""
+                },
+                {
+                    "key": "field_60000f85667c3",
+                    "label": "SS",
+                    "name": "ss_col_12",
+                    "type": "number",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5fec9596c3170",
+                                "operator": ">",
+                                "value": "11"
+                            },
+                            {
+                                "field": "field_5fec9789c317f",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "formula": "",
+                    "calculated_format": "",
+                    "blank_if_zero": 0,
+                    "readonly": 0,
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "min": "",
+                    "max": "",
+                    "step": ""
+                },
+                {
+                    "key": "field_60000fa6667c7",
+                    "label": "R",
+                    "name": "R_col_12",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5fec9596c3170",
+                                "operator": ">",
+                                "value": "11"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "1",
+                        "class": "r-w",
+                        "id": ""
+                    },
+                    "formula": "",
+                    "calculated_format": "",
+                    "blank_if_zero": 0,
+                    "readonly": 0,
+                    "message": "",
+                    "default_value": 0,
+                    "ui": 0,
+                    "ui_on_text": "",
+                    "ui_off_text": ""
+                },
+                {
                     "key": "field_5fec96e4c317d",
                     "label": "Total",
                     "name": "total",
@@ -1314,7 +1854,7 @@
                         "class": "",
                         "id": ""
                     },
-                    "formula": "col_1+ss_col_1+col_2+ss_col_2+col_3+ss_col_3+col_4+ss_col_4+col_5+ss_col_5+col_6+ss_col_6+col_7+ss_col_7+col_8+ss_col_8",
+                    "formula": "col_1+ss_col_1+col_2+ss_col_2+col_3+ss_col_3+col_4+ss_col_4+col_5+ss_col_5+col_6+ss_col_6+col_7+ss_col_7+col_8+ss_col_8+col_9+ss_col_9+col_10+ss_col_10+col_11+ss_col_11+col_12+ss_col_12",
                     "calculated_format": "",
                     "blank_if_zero": 1,
                     "readonly": 1,
@@ -1340,11 +1880,11 @@
     ],
     "menu_order": 0,
     "position": "normal",
-    "style": "default",
+    "style": "seamless",
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1610040803
+    "modified": 1610620377
 }
