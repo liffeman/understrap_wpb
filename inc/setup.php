@@ -498,10 +498,10 @@ if (!current_user_can('manage_options')) {
 	$ga4_id = get_theme_mod( 'analytics_ga4_id' );
 	$gtm_id = get_theme_mod( 'analytics_gtm_id' );
  	if ($ua_id) {
-	 add_action('wp_head', '_wpb_google_analytics_ua_script', 10);
+	 add_action('wp_head', '_wpb_google_analytics_ua_script', 5);
 	}
 	if ($ga4_id) {
-		 add_action('wp_head', '_wpb_google_analytics_ga4_script', 10);
+		 add_action('wp_head', '_wpb_google_analytics_ga4_script', 5);
 	}
 	if ($gtm_id) {
 		add_action('wp_head', '_wpb_google_tagmanager_script', 25);
@@ -522,6 +522,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 if (!current_user_can('manage_options')) {
 	$gtm_id = get_theme_mod( 'analytics_gtm_id' );
 	if ($gtm_id) {
-    add_action('wp_body_open', '_wpb_google_tagmanager_body_script', 5);
+    add_action('wp_body_open', '_wpb_google_tagmanager_body_script', 1);
 	}
 }
+
+/*
+ * Mailchimp integration *
+*/
+function _wpb_mailchimp_script() {
+?>
+<script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/4568c6c5e659fa2c20ff9f977/d087061c6ab0556a0b4841c52.js");</script>
+<?php }
+
+add_action('wp_head', '_wpb_mailchimp_script', 120);
