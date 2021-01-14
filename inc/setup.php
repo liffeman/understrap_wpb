@@ -147,29 +147,19 @@ if ( ! function_exists( 'understrap_setup' ) ) {
 		understrap_setup_theme_default_settings();
 
 		// Disable Custom Colors
-		add_theme_support( 'disable-custom-colors' );
+		//add_theme_support( 'disable-custom-colors' );
 
 	  // Editor Color Palette
 		  add_theme_support( 'editor-color-palette', array(
 		  array(
+			  'name'  => __( 'Red', 'understrap' ),
+			  'slug'  => 'red',
+			  'color'	=> '#AD0000',
+		  ),
+		  array(
 			  'name'  => __( 'Blue', 'understrap' ),
 			  'slug'  => 'blue',
-			  'color'	=> '#00679c',
-		  ),
-		  array(
-			  'name'  => __( 'Blue', 'understrap' ),
-			  'slug'  => 'blue-100',
-			  'color'	=> '#E5EFF5',
-		  ),
-		  array(
-			  'name'  => __( 'Blue', 'understrap' ),
-			  'slug'  => 'blue-300',
-			  'color'	=> '#B2D0E2',
-		  ),
-		  array(
-			  'name'  => __( 'Blue', 'understrap' ),
-			  'slug'  => 'blue-500',
-			  'color'	=> '#7FB2D0',
+			  'color'	=> '#AD0000',
 		  ),
 		  array(
 			  'name'  => __( 'Gray 100', 'understrap' ),
@@ -215,10 +205,7 @@ if ( ! function_exists( 'understrap_setup' ) ) {
 function use_new_image_size() {
 	if ( function_exists( 'add_image_size' ) ) {
 		add_image_size( 'heroimage', 1920, 1080, true ); // 1920 pixels wide (and unlimited height)
-		//add_image_size( 'puff', 400 ); // 400 pixels wide (and unlimited height)
 		add_image_size( 'grid_image', 400, 300, true ); // 400 pixels wide and  200px height, cropped
-		//add_image_size( 'gallery_image', 300, 300, true ); // 300 pixels wide and height, cropped
-		//add_image_size( 'standard', 460 ); // 400 pixels wide (and unlimited height)
 		add_image_size( 'header_image', 1150, 450, true ); // 1500 pixels wide and 640 px height, cropped
 		add_image_size( 'slider_image', 1000, 450, true ); // 1000 pixels wide and 450 px height, cropped
 	}
@@ -330,7 +317,7 @@ function imagick_sharpen_resized_files( $resized_file ) {
 			$image->unsharpMaskImage( 0, 0.5, 1, 0.05 );
 			$image->setImageFormat( 'jpg' );
 			$image->setImageCompression( Imagick::COMPRESSION_JPEG );
-			$image->setImageCompressionQuality( 0.92 );
+			$image->setImageCompressionQuality( 0.82 );
 			$image->writeImage( $resized_file );
 			break;
 		default:
