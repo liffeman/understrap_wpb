@@ -100,6 +100,18 @@ function register_acf_block_types() {
 			'keywords'          => array( 'video' )
 		));
 
+		// register a video gallery  block.
+		acf_register_block_type(array(
+			'name'              => 'teamsgallery',
+			'title'             => __('Show teams'),
+			'description'       => __('A block for showing teams as a grid view.'),
+			'render_template'   => 'block-templates/block-showteam.php',
+			'enqueue_style'     => get_template_directory_uri() . '/css/custom-editor-style.css',
+			'category'          => 'custom',
+			'icon'              => 'groups',
+			'keywords'          => array( 'team' )
+		));
+
 		// register a standings table block.
 		acf_register_block_type(array(
 			'name'              => 'ads',

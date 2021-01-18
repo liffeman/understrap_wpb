@@ -481,8 +481,8 @@ figure.wp-block-embed.alignwide.is-type-video {
 		padding-left: $post-padding;
 		padding-right: $post-padding;
 		@include media-breakpoint-down(md) {
-			padding-left: $post-padding / 2;
-			padding-right: $post-padding / 2;
+			padding-left: $page-padding / 2;
+			padding-right: $page-padding / 2;
 		}
 	}
 }
@@ -555,17 +555,21 @@ header.entry-header {
 	margin-left: auto;
 	margin-right: auto;
 	font-size: $font-size-sm;
-	color: $gray-500;
+	color: $gray-700;
 	margin-top: 0.5rem;
 	margin-bottom: 1rem;
+	padding-left: $page-padding / 2;
+	padding-right: $page-padding / 2;
 }
 figcaption {
 	font-size: $font-size-sm;
-	color: $gray-500;
+	color: $gray-700;
 	width: 100%;
 	max-width: 780px;
 	margin-left: auto;
 	margin-right: auto;
+	padding-left: $page-padding / 2;
+	padding-right: $page-padding / 2;
 }
 .wp-caption-text {
 	font-size: $font-size-sm;

@@ -22,7 +22,7 @@ defined( 'ABSPATH' ) || exit;
 		<header class="entry-header">
 
 			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-			<?php if (!  is_singular( 'videos' ) ) :?>
+			<?php if ( is_singular( 'post' ) ) :?>
 			<div class="entry-meta">
 
 				<?php understrap_posted_on(); ?>

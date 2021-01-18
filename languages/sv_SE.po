@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Worldrally2\n"
-"POT-Creation-Date: 2021-01-15 14:01+0100\n"
-"PO-Revision-Date: 2021-01-15 14:01+0100\n"
+"POT-Creation-Date: 2021-01-18 15:15+0100\n"
+"PO-Revision-Date: 2021-01-18 15:18+0100\n"
 "Last-Translator: Leif Kajrup <leif@kajrup.se>\n"
 "Language-Team: Leif Kajrup <leif@kajrup.se>\n"
 "Language: sv_SE\n"
@@ -131,42 +131,61 @@ msgid "A block with a countdown to date."
 msgstr "Ett block med en nedräkningstimer."
 
 #: inc/custom-blocks.php:44
-msgid "Standings table"
-msgstr "Poängtabell"
+msgid "Standings - Driver"
+msgstr "Poängtabell - Förare"
 
 #: inc/custom-blocks.php:45
-msgid "A block with a table for results and standings."
-msgstr "Ett block med en tabell för resultat och poängställningar."
+msgid "A block with a table for results and standings for drivers."
+msgstr "Ett block med en tabell för resultat och ställningar för förare."
 
 #: inc/custom-blocks.php:57
+msgid "Standings  - Team/Manufacturer"
+msgstr "Poängtabell - Team/tillverkare"
+
+#: inc/custom-blocks.php:58
+msgid ""
+"A block with a table for results and standings for Teams and/or manufactors."
+msgstr ""
+"Ett block med en tabell för resultat och ställning för Lag och/eller "
+"tillverkare."
+
+#: inc/custom-blocks.php:70
 msgid "Files (PDF)"
 msgstr "Filer (PDF)"
 
-#: inc/custom-blocks.php:58
+#: inc/custom-blocks.php:71
 msgid "A block for listing files."
 msgstr "Ett block för att lista filer."
 
-#: inc/custom-blocks.php:69
+#: inc/custom-blocks.php:82
 msgid "Show posts"
 msgstr "Visa inlägg"
 
-#: inc/custom-blocks.php:70
+#: inc/custom-blocks.php:83
 msgid "A block for listing posts."
 msgstr "Ett block med de senaste inläggen."
 
-#: inc/custom-blocks.php:81
+#: inc/custom-blocks.php:94
 msgid "Video Gallery"
 msgstr "Videogalleri"
 
-#: inc/custom-blocks.php:82
+#: inc/custom-blocks.php:95
 msgid "A block for showing videoposts as a grid view."
 msgstr "Ett block för visning av videoposter som rutnätsvy."
 
-#: inc/custom-blocks.php:93
+#: inc/custom-blocks.php:106
+msgid "Show teams"
+msgstr "Visa team"
+
+#: inc/custom-blocks.php:107
+msgid "A block for showing teams as a grid view."
+msgstr "Ett block för visning av team som rutnätsvy."
+
+#: inc/custom-blocks.php:118
 msgid "Ads"
 msgstr "Annonser"
 
-#: inc/custom-blocks.php:94
+#: inc/custom-blocks.php:119
 msgid "A block for adding space for ads."
 msgstr "Ett block för att lägga till utrymme för annonser."
 
@@ -216,7 +235,7 @@ msgstr "Alla filmer"
 msgid "Add New Video"
 msgstr "Lägg till ny film"
 
-#: inc/custom-post-types.php:19
+#: inc/custom-post-types.php:19 inc/custom-post-types.php:78
 msgid "Add New"
 msgstr "Lägg till ny"
 
@@ -244,27 +263,27 @@ msgstr "Visa filmer"
 msgid "Search Videos"
 msgstr "Sök efter videor"
 
-#: inc/custom-post-types.php:26
+#: inc/custom-post-types.php:26 inc/custom-post-types.php:85
 msgid "Not found"
 msgstr "Hittades inte"
 
-#: inc/custom-post-types.php:27
+#: inc/custom-post-types.php:27 inc/custom-post-types.php:86
 msgid "Not found in Trash"
 msgstr "Hittades inte i papperskorgen"
 
-#: inc/custom-post-types.php:28
+#: inc/custom-post-types.php:28 inc/custom-post-types.php:87
 msgid "Featured Image"
 msgstr "Utvald bild"
 
-#: inc/custom-post-types.php:29
+#: inc/custom-post-types.php:29 inc/custom-post-types.php:88
 msgid "Set featured image"
 msgstr "Ange utvald bild"
 
-#: inc/custom-post-types.php:30
+#: inc/custom-post-types.php:30 inc/custom-post-types.php:89
 msgid "Remove featured image"
 msgstr "Ta bort utvald bild"
 
-#: inc/custom-post-types.php:31
+#: inc/custom-post-types.php:31 inc/custom-post-types.php:90
 msgid "Use as featured image"
 msgstr "Använd som utvald bild"
 
@@ -295,6 +314,92 @@ msgstr "Film"
 #: inc/custom-post-types.php:40
 msgid "Postformat for embedded videos and films"
 msgstr "Postformat för inbäddade videor och filmer"
+
+#: inc/custom-post-types.php:69
+msgctxt "Post Type General Name"
+msgid "Teams"
+msgstr "Teams"
+
+#: inc/custom-post-types.php:70
+msgctxt "Post Type Singular Name"
+msgid "Team"
+msgstr "Team"
+
+#: inc/custom-post-types.php:71 inc/custom-post-types.php:72
+msgid "Teams"
+msgstr "Teams"
+
+#: inc/custom-post-types.php:73
+msgid "Teams Archives"
+msgstr "Teams Arkiv"
+
+#: inc/custom-post-types.php:74
+msgid "Team Attributes"
+msgstr "Team attribut"
+
+#: inc/custom-post-types.php:75
+msgid "Parent team:"
+msgstr "Överordnat team:"
+
+#: inc/custom-post-types.php:76
+msgid "All teams"
+msgstr "Alla teams"
+
+#: inc/custom-post-types.php:77
+msgid "Add New team"
+msgstr "Lägg till nytt team"
+
+#: inc/custom-post-types.php:79
+msgid "New team"
+msgstr "Nytt team"
+
+#: inc/custom-post-types.php:80
+msgid "Edit team"
+msgstr "Redigera team"
+
+#: inc/custom-post-types.php:81
+msgid "Update team"
+msgstr "Uppdatera team"
+
+#: inc/custom-post-types.php:82
+msgid "View team"
+msgstr "Visa team"
+
+#: inc/custom-post-types.php:83
+msgid "View teams"
+msgstr "Visa teams"
+
+#: inc/custom-post-types.php:84
+msgid "Search teams"
+msgstr "Sök efter team"
+
+#: inc/custom-post-types.php:91
+msgid "Insert into team"
+msgstr "Infoga i team"
+
+#: inc/custom-post-types.php:92
+msgid "Uploaded to this team"
+msgstr "Laddas upp till detta team"
+
+#: inc/custom-post-types.php:93
+msgid "Teams list"
+msgstr "Lista team"
+
+#: inc/custom-post-types.php:94
+msgid "Teams list navigation"
+msgstr "Navigering i teamslista"
+
+#: inc/custom-post-types.php:95
+msgid "Filter teams list"
+msgstr "Filtrera teams"
+
+#: inc/custom-post-types.php:98
+msgid "Team"
+msgstr "Team"
+
+#: inc/custom-post-types.php:99
+msgid "A custom post type for teams"
+msgstr "En anpassad sidtyp för team"
 
 #: inc/customizer.php:42
 msgid "Theme Layout Settings"
@@ -517,7 +622,6 @@ msgid "Page Header"
 msgstr "Sidhuvud"
 
 #: inc/setup.php:155
-#, fuzzy
 msgid "Red"
 msgstr "Röd"
 

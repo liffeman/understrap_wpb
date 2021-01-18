@@ -121,6 +121,7 @@ echo '<a class="anchor" id="' . $section_anchor . '"></a>';
 
 				<?php foreach( $repeater as $i => $row ): ?>
 					<?php
+						$team_name = $row['team'];
 						if ($row['R_col_1']) {$cell_1 =  'R'; } else { if($row['col_1']){ $cell_1 = $row['col_1']; } else { $cell_1 = ' - '; } }
 						if ($row['R_col_2']) {$cell_2 =  'R'; } else { if($row['col_2']){ $cell_2 = $row['col_2']; } else { $cell_2 = ' - '; } }
 						if ($row['R_col_3']) {$cell_3 =  'R'; } else { if($row['col_3']){ $cell_3 = $row['col_3']; } else { $cell_3 = ' - '; } }
@@ -141,7 +142,7 @@ echo '<a class="anchor" id="' . $section_anchor . '"></a>';
 							echo $placering
 						?></td>
 						<td class="driver-col"><span class="flag-icon flag-icon-<?php echo strtolower($row['driver_country_land']);?> mr-2"></span> <?php echo $row['driver'];?></td>
-						<?php if ( get_field('show_team') ):?><td><?php echo $row['team'];?></td><?php endif; ?>
+						<?php if ( get_field('show_team') ):?><td><?php echo esc_html( $team_name->post_title );?></td><?php endif; ?>
 						<?php if ($num_of_races > 0) :?><td class="race-col race1"><?php echo $cell_1; ?></td>
 							<?php if ( get_field('show_ss') ):?><?php if ($num_of_races > 0) :?><td class="race-col-ss ss1"><?php echo $row['ss_col_1'];?></td><?php endif;?><?php endif; ?>
 						<?php endif;?>
