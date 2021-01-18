@@ -41,15 +41,28 @@ function register_acf_block_types() {
 	// register a standings table block.
 		acf_register_block_type(array(
 			'name'              => 'standings',
-			'title'             => __('Standings table'),
-			'description'       => __('A block with a table for results and standings.'),
+			'title'             => __('Standings - Driver'),
+			'description'       => __('A block with a table for results and standings for drivers.'),
 			'render_template'   => 'block-templates/block-table.php',
 			'enqueue_style'     => get_template_directory_uri() . '/css/custom-editor-style.css',
 			'category'          => 'custom',
 			'icon'              => 'editor-ol',
-			'keywords'          => array( 'table','standings', 'result' ),
+			'keywords'          => array( 'table','standings', 'result', 'driver' ),
 			'align'				=> 'wide'
 		));
+
+	// register a standings table block.
+	acf_register_block_type(array(
+		'name'              => 'standings_team',
+		'title'             => __('Standings  - Team/Manufacturer'),
+		'description'       => __('A block with a table for results and standings for Teams and/or manufactors.'),
+		'render_template'   => 'block-templates/block-table-team.php',
+		'enqueue_style'     => get_template_directory_uri() . '/css/custom-editor-style.css',
+		'category'          => 'custom',
+		'icon'              => 'editor-ol',
+		'keywords'          => array( 'table','standings', 'result', 'team', 'manufactor' ),
+		'align'				=> 'wide'
+	));
 
 		// register a standings table block.
 		acf_register_block_type(array(

@@ -48,6 +48,19 @@
 			display: none !important;
 		}
 	}
+	.acf-block-body .acf-fields>.acf-field.race {
+		width: auto;
+		display: inline-block;
+		.acf-input>.acf-fields.-border {
+			border: 0;
+		}
+	}
+	.acf-block-body .acf-fields>.acf-field[data-name="land"] {
+		padding: 2px;
+		width: auto;
+		min-width: 150px;
+	}
+
 
 	.acf-table {
 		th.acf-th[data-name="driver"] {
