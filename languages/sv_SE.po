@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Worldrally2\n"
-"POT-Creation-Date: 2021-01-13 17:09+0100\n"
-"PO-Revision-Date: 2021-01-13 17:28+0100\n"
+"POT-Creation-Date: 2021-01-15 14:01+0100\n"
+"PO-Revision-Date: 2021-01-15 14:01+0100\n"
 "Last-Translator: Leif Kajrup <leif@kajrup.se>\n"
 "Language-Team: Leif Kajrup <leif@kajrup.se>\n"
 "Language: sv_SE\n"
@@ -516,48 +516,52 @@ msgstr "Sektion"
 msgid "Page Header"
 msgstr "Sidhuvud"
 
-#: inc/setup.php:155 inc/setup.php:160 inc/setup.php:165 inc/setup.php:170
+#: inc/setup.php:155
+#, fuzzy
+msgid "Red"
+msgstr "Röd"
+
+#: inc/setup.php:160
 msgid "Blue"
 msgstr "Blå"
 
-#: inc/setup.php:175
+#: inc/setup.php:165
 msgid "Gray 100"
 msgstr "Grå 100"
 
-#: inc/setup.php:180
+#: inc/setup.php:170
 msgid "Gray 300"
 msgstr "Grå 300"
 
-#: inc/setup.php:185
+#: inc/setup.php:175
 msgid "Gray 500"
 msgstr "Grå 500"
 
-#: inc/setup.php:190
+#: inc/setup.php:180
 msgid "Gray 700"
 msgstr "Grå 700"
 
-#: inc/setup.php:195
+#: inc/setup.php:185
 msgid "Gray 900"
 msgstr "Grå 900"
 
-#: inc/setup.php:200
+#: inc/setup.php:190
 msgid "Black"
 msgstr "Svart"
 
-#: inc/setup.php:205
+#: inc/setup.php:195
 msgid "White"
 msgstr "Vit"
 
-#: inc/setup.php:273
+#: inc/setup.php:260
 msgid "Read More..."
 msgstr "Läs mer…"
 
-#: inc/setup.php:324
+#: inc/setup.php:311
 msgid "Could not read image size."
 msgstr "Det gick inte att läsa bildstorleken."
 
 #: inc/template-tags.php:43
-#| msgid ", "
 msgid " "
 msgstr " "
 
