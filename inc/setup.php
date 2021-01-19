@@ -427,8 +427,8 @@ add_filter( 'remove_the_archive_title', 'wporg_remove_category_title' );
 
 
 
-/**
- * Add Google Analytics  and Tag Manager IDs
+/*
+ * Add Google Analytics  and Tag Manager IDs *
  */
 
 /* Google Universal Analytics */
