@@ -10,6 +10,13 @@ defined( 'ABSPATH' ) || exit;
 ?>
 
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
+<?php if ( has_post_thumbnail() ) : ?>
+		<figure class="alignfull">
+			<div class="featured-image">
+			<?php echo get_the_post_thumbnail( $post->ID, 'large', array( 'class' =>  'responsive' ) ); ?>
+			</div>
+		</figure>
+<?php endif; ?>
 
 	<header class="entry-header">
 
@@ -17,7 +24,6 @@ defined( 'ABSPATH' ) || exit;
 
 	</header><!-- .entry-header -->
 
-	<?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
 
 	<div class="entry-content">
 

@@ -14,7 +14,14 @@ body {
 	}
 }
 
-.page .entry-content .alignwide {
+.featured-image {
+	max-height: 700px;
+	overflow: hidden;
+	width: 100vw;
+	display: flex;
+	margin-top: -2rem;
+}
+.page .alignwide {
 	max-width: 100vw;
 	margin-left: -$page-padding;
 	margin-right: -$page-padding;
@@ -25,7 +32,7 @@ body {
 	}
 }
 
-.single .entry-content .alignwide {
+.single .alignwide {
 	max-width: 100vw;
 	margin-left: -$post-padding;
 	margin-right: -$post-padding;
@@ -36,13 +43,15 @@ body {
 	}
 }
 
-.entry-content .alignfull {
+.alignfull {
 	width: 100vw !important;
 	margin-left: calc(50% - 50vw);
 	margin-right: calc(50% - 50vw);
 	img {
 		width: 100vw !important;
 		max-width: 100vw !important;
+		height: 100%;
+		align-self: center;
 	}
 }
 
@@ -215,6 +224,34 @@ h1 {
 		@include media-breakpoint-down(md) {
 			padding-left: $page-padding / 2;
 			padding-right: $page-padding / 2;
+		}
+	}
+}
+
+
+
+/* Footer */
+
+#wrapper-footer-full {
+	background-color: $primary;
+	background: url(../img/bg_bryta.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	color: $white;
+	text-align: center;
+	.widget-title {
+		color: inherit;
+	}
+	.widget_nav_menu {
+		list-style: none;
+		padding-left: 0;
+		li.menu-item {
+			display: inline-flex;
+			padding: 1rem;
+			a {
+				color: inherit;
+			}
 		}
 	}
 }

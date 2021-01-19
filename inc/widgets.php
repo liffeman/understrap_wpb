@@ -67,16 +67,16 @@ if ( ! function_exists( 'understrap_widget_classes' ) ) {
 			$widget_classes = 'widget-count-' . $widget_count;
 			if ( 0 === $widget_count % 4 || $widget_count > 6 ) {
 				// Four widgets per row if there are exactly four or more than six.
-				$widget_classes .= ' col-md-3';
+				$widget_classes .= ' col-md-12';
 			} elseif ( 6 === $widget_count ) {
 				// If two widgets are published.
-				$widget_classes .= ' col-md-2';
+				$widget_classes .= ' col-md-12';
 			} elseif ( $widget_count >= 3 ) {
 				// Three widgets per row if there's three or more widgets.
-				$widget_classes .= ' col-md-4';
+				$widget_classes .= ' col-md-12';
 			} elseif ( 2 === $widget_count ) {
 				// If two widgets are published.
-				$widget_classes .= ' col-md-6';
+				$widget_classes .= ' col-md-12';
 			} elseif ( 1 === $widget_count ) {
 				// If just on widget is active.
 				$widget_classes .= ' col-md-12';
@@ -163,7 +163,7 @@ if ( ! function_exists( 'understrap_widgets_init' ) ) {
 				'name'          => __( 'Footer Full', 'understrap' ),
 				'id'            => 'footerfull',
 				'description'   => __( 'Full sized footer widget with dynamic grid', 'understrap' ),
-				'before_widget' => '<div id="%1$s" class="footer-widget %2$s dynamic-classes">',
+				'before_widget' => '<div id="%1$s" class="footer-widget %2$s dynamic-classes text-light">',
 				'after_widget'  => '</div><!-- .footer-widget -->',
 				'before_title'  => '<h3 class="widget-title">',
 				'after_title'   => '</h3>',
