@@ -105,6 +105,34 @@ if ( ! function_exists( 'understrap_setup' ) ) {
 			)
 		);
 
+		register_block_style(
+		  'core/cover',
+		  array(
+				'name'  => 'hero-header',
+				'label' => __( 'Hero', 'understrap' ),
+				'inline_style' => '.is-style-hero',
+			)
+		);
+
+
+		register_block_style(
+		  'core/group',
+		  array(
+			  'name'  => 'section',
+			  'label' => __( 'Section', 'understrap' ),
+			  'inline_style' => '.is-style-section',
+			)
+		);
+
+		register_block_style(
+			  'core/group',
+			  array(
+					'name'  => 'page-header',
+					'label' => __( 'Page Header', 'understrap' ),
+					'inline_style' => '.is-style-page-header',
+				)
+		  );
+
 		// Set up the WordPress Theme logo feature.
 		add_theme_support( 'custom-logo' );
 
@@ -117,8 +145,90 @@ if ( ! function_exists( 'understrap_setup' ) ) {
 		// Check and setup theme default settings.
 		understrap_setup_theme_default_settings();
 
+		// Editor Color Palette
+		  add_theme_support( 'editor-color-palette', array(
+		  array(
+			  'name'  => __( 'Blue', 'understrap' ),
+			  'slug'  => 'blue',
+			  'color'	=> '#00679c',
+		  ),
+		  array(
+			  'name'  => __( 'Blue', 'understrap' ),
+			  'slug'  => 'blue-100',
+			  'color'	=> '#E5EFF5',
+		  ),
+		  array(
+			  'name'  => __( 'Blue', 'understrap' ),
+			  'slug'  => 'blue-300',
+			  'color'	=> '#B2D0E2',
+		  ),
+		  array(
+			  'name'  => __( 'Blue', 'understrap' ),
+			  'slug'  => 'blue-500',
+			  'color'	=> '#7FB2D0',
+		  ),
+		  array(
+			  'name'  => __( 'Gray 100', 'understrap' ),
+			  'slug'  => 'gray-100',
+			  'color' => '#f8f9fa',
+		  ),
+		  array(
+			  'name'  => __( 'Gray 300', 'understrap' ),
+			  'slug'  => 'gray-300',
+			  'color' => '#dee2e6',
+		  ),
+		  array(
+			  'name'  => __( 'Gray 500', 'understrap' ),
+			  'slug'  => 'gray-500',
+			  'color' => '#adb5bd',
+		  ),
+		  array(
+			  'name'  => __( 'Gray 700', 'understrap' ),
+			  'slug'  => 'gray-700',
+			  'color' => '#495057',
+		  ),
+		  array(
+			  'name'  => __( 'Gray 900', 'understrap' ),
+			  'slug'  => 'gray-900',
+			  'color' => '#212529',
+		  ),
+		  array(
+			  'name'  => __( 'Black', 'understrap' ),
+			  'slug'  => 'black',
+			  'color' => '#000000',
+		  ),
+		  array(
+			  'name'  => __( 'White', 'understrap' ),
+			  'slug'  => 'white',
+			  'color' => '#ffffff',
+		  ),
+	  ) );
+
 	}
 }
+
+
+function use_new_image_size() {
+	if ( function_exists( 'add_image_size' ) ) {
+		//add_image_size( 'heroimage', 1920 ); // 1920 pixels wide (and unlimited height)
+		//add_image_size( 'puff', 400 ); // 400 pixels wide (and unlimited height)
+		add_image_size( 'grid_image', 400, 300, true ); // 400 pixels wide and  200px height, cropped
+		//add_image_size( 'gallery_image', 300, 300, true ); // 300 pixels wide and height, cropped
+		//add_image_size( 'standard', 460 ); // 400 pixels wide (and unlimited height)
+		add_image_size( 'header_image', 1150, 450, true ); // 1500 pixels wide and 640 px height, cropped
+	}
+}
+
+add_action( 'after_setup_theme', 'use_new_image_size' );
+
+function create_custom_image_size($sizes){
+	$custom_sizes = array(
+	'grid_image' => 'Grid Image size'
+	);
+	return array_merge( $sizes, $custom_sizes );
+}
+add_filter('image_size_names_choose', 'create_custom_image_size');
+
 
 
 add_filter( 'excerpt_more', 'understrap_custom_excerpt_more' );

@@ -228,6 +228,12 @@ h1 {
 	}
 }
 
+.is-style-section{
+	padding: 3rem 0;
+	.wp-block-group__inner-container {
+	@extend .container;
+	}
+}
 
 
 /* Footer */
