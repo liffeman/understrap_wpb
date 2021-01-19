@@ -201,7 +201,7 @@ function featured_image_full() { ?>
 				<div class="featured-image-in-header-inner-content">
 					<h1 class="featured-page-title">
 						<?php if ( $service_icon ) {
-							echo $service_icon;
+							//echo $service_icon;
 							}
 						?>
 						<?php the_title(); ?>
@@ -214,7 +214,7 @@ function featured_image_full() { ?>
 			<header class="entry-header">
 				<h1 class="entry-title text-center">
 				<?php if ( $service_icon ) {
-					echo $service_icon;
+					//echo $service_icon;
 					}
 				?>
 				<?php the_title( ); ?>
