@@ -1,7 +1,9 @@
 .custom-block{
+	padding-top: 1rem;
+	padding-bottom: 1rem;
 	&.countdown {
 		.container {
-			padding: 2.5rem 1rem;
+			padding: 2.5rem 0;
 
 			.countdown-title {
 				text-align: center;
@@ -9,14 +11,14 @@
 
 			.event-logo {
 				img {
-					max-width: 300px;
+					max-width: 240px;
 					width: auto;
 					max-height: 300px;
 				}
 			}
 			.countdown-content {
 				width: 100%;
-				padding: 2rem;
+				//padding: 2rem;
 				font-size: $h1-font-size;
 				font-weight: $font-weight-bold;
 				text-align: center;
@@ -27,6 +29,10 @@
 				}
 			}
 		}
+	}
+	.carousel {
+		margin-top: -1rem;
+		margin-bottom: -1rem;
 	}
 }
 

@@ -76,7 +76,7 @@ $section_anchor = $id;
 
 						$view = get_field('visa_som');
 						if($view == 'carousel') {
-							$parentClass = 'carousel slide" data-ride="carousel';
+							$parentClass = 'carousel slide" data-pause="false" data-ride="carousel"';
 						} elseif($view == 'grid') {
 							$parentClass = 'row row-cols-1 row-cols-md-';
 							$parentClass .= $columns;

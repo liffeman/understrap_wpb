@@ -26,7 +26,7 @@ if( !empty($block['anchor']) ) {
 // Create class attribute allowing for custom "className" and "align" values.
 $className = 'custom-block';
 $className .= ' countdown';
-$className .= ' d-flex flex-column flex-wrap justify-items-center';
+$className .= ' d-flex flex-column flex-wrap justify-items-center mt-3 mb-3';
 if( !empty($block['className']) ) {
 	$className .= ' ' . $block['className'];
 }
@@ -48,14 +48,14 @@ echo '<a class="anchor" id="' . $section_anchor . '"></a>';
 			echo '<h2 class="countdown-title">' . $countdown_title . '</h2>';
 		}
 		?>
-		<div class="d-flex flex-row align-items-center">
+		<div class="d-flex flex-column  flex-md-row align-items-center">
 		<?php if( $countdown_img ) {
 			echo '<div class="event-logo">';
 			echo wp_get_attachment_image( $countdown_img, $countdown_img_size );
 			echo '</div>';
 			}
 		?>
-		<div id="countdown" class="countdown-content"></div>
+		<div id="countdown" class="countdown-content p-0 p-md-5"></div>
 		</div>
 	</div>
 </div>
@@ -82,7 +82,7 @@ echo '<a class="anchor" id="' . $section_anchor . '"></a>';
 	  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
 	  // Output the result in an element with id="demo"
-	  document.getElementById('countdown').innerHTML = '<div class="d-flex flex-md-row flex-column"><div class="col">' + days + '<span class="label">dagar</span></div>' + '<div class="col">' + hours + '<span class="label">timmar</span></div>' + '<div class="col">' + minutes + '<span class="label">minuter</span></div>' + '<div class="col">' + seconds + '<span class="label">sekunder</span></div></div>';
+	  document.getElementById('countdown').innerHTML = '<div class="d-flex flex-md-row flex-row flex-wrap"><div class="col">' + days + '<span class="label">dagar</span></div>' + '<div class="col">' + hours + '<span class="label">timmar</span></div>' + '<div class="col">' + minutes + '<span class="label">minuter</span></div>' + '<div class="col">' + seconds + '<span class="label">sekunder</span></div></div>';
 
 	  // If the count down is over, write some text
 	  if (distance < 0) {
