@@ -14,7 +14,7 @@ if ( ! function_exists( 'custom_login_logo' ) ) {
 	function custom_login_logo() { ?>
 		<style type="text/css">
 			#login h1 a, .login h1 a {
-				background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/img/login-logo.svg);
+				background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/img/bryta_logo_alt.svg);
 			height:100px;
 			width:320px;
 			background-size: 100px 100px;

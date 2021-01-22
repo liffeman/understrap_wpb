@@ -1,0 +1,34 @@
+// Gutenberg color options
+// -- see editor-color-palette in functions.php
+$colors:
+	( bryta, #1d1a55),
+	( bryta-2,#274193 ),
+	( bryta-3,#274193 ),
+	( bryta-4,#3098d5 ),
+	( alcohol,#0078a9 ),
+	( sugar,#971b81 ),
+	( smoking,#90120d ),
+	( drinking,#006875 ),
+	( gambling,#007d3c ),
+	( gray-100, #f8f9fa ),
+	( gray-300, #dee2e6 ),
+	( gray-500, #adb5bd ),
+	( gray-700, #495057 ),
+	( gray-900, #212529 ),
+	( black, #000 ),
+	( white, #fff );
+
+
+/* Color Options
+--------------------------------------------- */
+
+@each $name, $color in $colors {
+
+	.has-#{$name}-color {
+		color: $color;
+	}
+
+	.has-#{$name}-background-color {
+		background-color: $color !important;
+	}
+}

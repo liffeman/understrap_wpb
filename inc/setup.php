@@ -148,26 +148,51 @@ if ( ! function_exists( 'understrap_setup' ) ) {
 		// Editor Color Palette
 		  add_theme_support( 'editor-color-palette', array(
 		  array(
-			  'name'  => __( 'Blue', 'understrap' ),
-			  'slug'  => 'blue',
-			  'color'	=> '#00679c',
+			  'name'  => __( 'Bryta Primär', 'understrap' ),
+			  'slug'  => 'bryta',
+			  'color'	=> '#1d1a55',
 		  ),
 		  array(
-			  'name'  => __( 'Blue', 'understrap' ),
-			  'slug'  => 'blue-100',
-			  'color'	=> '#E5EFF5',
+			  'name'  => __( 'Bryta Sekundär', 'understrap' ),
+			  'slug'  => 'bryta-2',
+			  'color'	=> '#274193',
 		  ),
 		  array(
-			  'name'  => __( 'Blue', 'understrap' ),
-			  'slug'  => 'blue-300',
-			  'color'	=> '#B2D0E2',
+			  'name'  => __( 'Bryta Sekundär 2', 'understrap' ),
+			  'slug'  => 'bryta-3',
+			  'color'	=> '#3065af',
 		  ),
 		  array(
-			  'name'  => __( 'Blue', 'understrap' ),
-			  'slug'  => 'blue-500',
-			  'color'	=> '#7FB2D0',
+			  'name'  => __( 'Bryta sekundär 3', 'understrap' ),
+			  'slug'  => 'bryta-4',
+			  'color'	=> '#3098d5',
+		  ),
+		array(
+			  'name'  => __( 'Alkohol', 'understrap' ),
+			  'slug'  => 'alcohol',
+			  'color'	=> '#0078a9',
+		  ),
+  		array(
+			  'name'  => __( 'Socker', 'understrap' ),
+			  'slug'  => 'sugar',
+			  'color'	=> '#971b81',
 		  ),
 		  array(
+				'name'  => __( 'Rökning', 'understrap' ),
+				'slug'  => 'smoking',
+				'color'	=> '#90120d',
+			),
+		array(
+			'name'  => __( 'Kontrollerat drickande', 'understrap' ),
+			'slug'  => 'drinking',
+			'color'	=> '#006875',
+		),
+		array(
+			'name'  => __( 'Spel', 'understrap' ),
+			'slug'  => 'gambling',
+			'color'	=> '#007d3c',
+		),
+		 array(
 			  'name'  => __( 'Gray 100', 'understrap' ),
 			  'slug'  => 'gray-100',
 			  'color' => '#f8f9fa',
