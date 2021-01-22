@@ -73,6 +73,12 @@ if ( ! function_exists( 'understrap_setup' ) ) {
 		 */
 		add_theme_support( 'post-thumbnails' );
 
+		// Add support for editor styles.
+		add_theme_support( 'editor-styles' );
+
+		// Enqueue editor styles.
+		add_editor_style( 'css/custom-editor-style.min.css' );
+
 		/*
 		 * Adding support for Widget edit icons in customizer
 		 */

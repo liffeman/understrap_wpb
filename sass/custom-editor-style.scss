@@ -1,6 +1,5 @@
-//Add your own editor styles here or comment out the next line if you want to pull in the whole Bootstrap stuff
-.interface-interface-skeleton__content {
 	@import "theme";
+
 	.editor-styles-wrapper {
 		padding: 0;
 		font-family: $font-family-base;
@@ -31,21 +30,3 @@
 			max-width: none !important;
 		}
 	}
-	.card {
-		padding: unset;
-		margin-top: 0;
-		.card-title {
-			margin-top: 0;
-		}
-	}
-	.acf-block-body .acf-block-fields {
-		width: 100%;
-		margin-left: auto;
-		margin-right: auto;
-	}
-	.acf-repeater.-empty.-table {
-			table {
-			display: none !important;
-		}
-	}
-}
