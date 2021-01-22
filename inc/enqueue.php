@@ -35,3 +35,14 @@ if ( ! function_exists( 'understrap_scripts' ) ) {
 } // End of if function_exists( 'understrap_scripts' ).
 
 add_action( 'wp_enqueue_scripts', 'understrap_scripts' );
+
+
+/**
+ * Enqueue a script in the WordPress admin on edit.php.
+ *
+ * @param int $hook Hook suffix for the current admin page.
+ */
+function wpdocs_selectively_enqueue_admin_script( $hook ) {
+	wp_enqueue_script( 'font-awesome', get_template_directory_uri() . '/js/all.min.js', array(), $js_version, true );
+}
+add_action( 'admin_enqueue_scripts', 'wpdocs_selectively_enqueue_admin_script' );

@@ -27,6 +27,65 @@
 					font-size: $font-size-sm;
 					font-weight: $font-weight-base;
 				}
+				.message {
+					font-size: $font-size-lg;
+					font-weight: $font-weight-normal;
+				}
+				.weather-widget {
+					display: flex;
+					flex-direction: column;
+					font-size: $font-size-lg;
+					align-items: center;
+					justify-content: center;
+					@include media-breakpoint-up(md) {
+						flex-direction: row;
+					}
+					.weather-location {
+						font-family: $font-family-base;
+						margin-bottom: 0;
+						text-align: right;
+					}
+					.weather-content {
+						display: flex;
+						flex-direction: column;
+						justify-content: center;
+						align-items: center;
+						@include media-breakpoint-up(md) {
+							flex-direction: row;
+						}
+						.weather-symbol {
+							//background-color: $white;
+							//border-radius: 50%;
+							//padding: 1rem;
+							padding-left: 1rem;
+							padding-right: 1rem;
+							img {
+								max-width: 100px !important;
+							}
+						}
+						.weather-body {
+							font-weight: $font-weight-base;
+							.weather-cond {
+								text-align: left;
+							}
+							.weather-temp {
+								text-align: left;
+								font-weight: $font-weight-bold;
+								.weather-temp-feel {
+									font-weight: $font-weight-normal;
+									font-size: $font-size-sm;
+
+								}
+							}
+						}
+					}
+				}
+			}
+
+			.countdown-link {
+				display: flex;
+				justify-content: center;
+				margin-top: 1rem;
 			}
 		}
 	}

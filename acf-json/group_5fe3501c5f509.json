@@ -58,8 +58,12 @@
                 "class": "",
                 "id": ""
             },
+            "formula": "",
+            "calculated_format": "",
+            "blank_if_zero": 0,
+            "readonly": 0,
             "display_format": "j F, Y H:i:s",
-            "return_format": "j F, Y H:i:s",
+            "return_format": "Y-m-d H:i:s",
             "first_day": 1
         },
         {
@@ -107,6 +111,78 @@
             "ajax": 0,
             "return_format": "value",
             "placeholder": ""
+        },
+        {
+            "key": "field_600967f16753c",
+            "label": "Väderrapport",
+            "name": "weather",
+            "type": "text",
+            "instructions": "Välj plats som skall visas väder från",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "formula": "",
+            "calculated_format": "",
+            "blank_if_zero": 0,
+            "readonly": 0,
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_6009682d6753d",
+            "label": "Sidlänk",
+            "name": "sidlank",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "formula": "",
+            "calculated_format": "",
+            "blank_if_zero": 0,
+            "readonly": 0,
+            "return_format": "array"
+        },
+        {
+            "key": "field_600968526753e",
+            "label": "Visa endast efter avslutad nedräkning",
+            "name": "show_link",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6009682d6753d",
+                        "operator": "!=empty"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "formula": "",
+            "calculated_format": "",
+            "blank_if_zero": 0,
+            "readonly": 0,
+            "message": "",
+            "default_value": 1,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
         }
     ],
     "location": [
@@ -126,5 +202,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1610027323
+    "modified": 1611305580
 }
