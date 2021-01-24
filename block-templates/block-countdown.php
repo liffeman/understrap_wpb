@@ -96,8 +96,8 @@ echo '<a class="anchor" id="' . $section_anchor . '"></a>';
 
 	$w_place = $json_a['name'];
 	$w_desc = $json_a['weather']['0']['description'];
-	$w_temp =  $json_a['main'][temp];
-	$w_feels = $json_a['main'][feels_like];
+	$w_temp =  $json_a['main']['temp'];
+	$w_feels = $json_a['main']['feels_like'];
 	$w_id = $json_a['weather']['0']['id'];
 	$w_icon = $json_a['weather']['0']['icon'];
 	$w_default_icon = '<img src="https://openweathermap.org/img/wn/' . $json_a['weather']['0']['icon'] . '@2x.png">';

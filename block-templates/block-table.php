@@ -31,6 +31,7 @@ $section_anchor = $id;
 $num_of_races = get_field('antal_tavlingar');
 $show_teams = get_field('show_team');
 $show_ss = get_field('show_ss');
+$ss_title = get_field('ss_title');
 $races = get_field('races');
 $race_1 = get_field('race_1');
 $race_2 = get_field('race_2');
@@ -44,7 +45,11 @@ $race_9 = get_field('race_9');
 $race_10 = get_field('race_10');
 $race_11 = get_field('race_11');
 $race_12 = get_field('race_12');
-
+if ($ss_title) {
+	$ss_th = $ss_title;
+} else {
+	$ss_th = 'SS';
+}
 ?>
 <?php if( !empty($section_anchor) ){
 echo '<a class="anchor" id="' . $section_anchor . '"></a>';
@@ -60,40 +65,40 @@ echo '<a class="anchor" id="' . $section_anchor . '"></a>';
 					<th class="driver-col">Förare</th>
 					<?php if ( get_field('show_team') ):?><th>Team</th><?php endif; ?>
 					<?php if ($num_of_races > 0) :?><th class="race-col race1"><span class="flag-icon flag-icon-<?php echo strtolower($race_1['land']);?>"></span></th>
-						<?php if ( get_field('show_ss') ):?><?php if ($num_of_races > 0) :?><th class="race-col-ss ml-2 ss1">SS</th><?php endif;?><?php endif; ?>
+						<?php if ( get_field('show_ss') ):?><?php if ($num_of_races > 0) :?><th class="race-col-ss ml-2 ss1"><?php echo $ss_th; ?></th><?php endif;?><?php endif; ?>
 					<?php endif;?>
 					<?php if ($num_of_races > 1) :?><th class="race-col race2"><span class="flag-icon flag-icon-<?php echo strtolower($race_2['land']);?>"></span></th>
-						<?php if ( get_field('show_ss') ):?><?php if ($num_of_races > 1) :?><th class="race-col-ss ml-2 ss2">SS</th><?php endif;?><?php endif; ?>
+						<?php if ( get_field('show_ss') ):?><?php if ($num_of_races > 1) :?><th class="race-col-ss ml-2 ss2"><?php echo $ss_th; ?></th><?php endif;?><?php endif; ?>
 					<?php endif;?>
 					<?php if ($num_of_races > 2) :?><th class="race-col race3"><span class="flag-icon flag-icon-<?php echo strtolower($race_3['land']);?>"></span></th>
-						<?php if ( get_field('show_ss') ):?><?php if ($num_of_races > 2) :?><th class="race-col-ss ml-2 ss3">SS</th><?php endif;?><?php endif; ?>
+						<?php if ( get_field('show_ss') ):?><?php if ($num_of_races > 2) :?><th class="race-col-ss ml-2 ss3"><?php echo $ss_th; ?></th><?php endif;?><?php endif; ?>
 					<?php endif;?>
 					<?php if ($num_of_races > 3) :?><th class="race-col race4"><span class="flag-icon flag-icon-<?php echo strtolower($race_4['land']);?>"></span></th>
-						<?php if ( get_field('show_ss') ):?><?php if ($num_of_races > 3) :?><th class="race-col-ss ml-2 ss4">SS</th><?php endif;?><?php endif; ?>
+						<?php if ( get_field('show_ss') ):?><?php if ($num_of_races > 3) :?><th class="race-col-ss ml-2 ss4"><?php echo $ss_th; ?></th><?php endif;?><?php endif; ?>
 					<?php endif;?>
 					<?php if ($num_of_races > 4) :?><th class="race-col race5"><span class="flag-icon flag-icon-<?php echo strtolower($race_5['land']);?>"></span></th>
-						<?php if ( get_field('show_ss') ):?><?php if ($num_of_races > 4) :?><th class="race-col-ss ml-2 ss5">SS</th><?php endif;?><?php endif; ?>
+						<?php if ( get_field('show_ss') ):?><?php if ($num_of_races > 4) :?><th class="race-col-ss ml-2 ss5"><?php echo $ss_th; ?></th><?php endif;?><?php endif; ?>
 					<?php endif;?>
 					<?php if ($num_of_races > 5) :?><th class="race-col race6"><span class="flag-icon flag-icon-<?php echo strtolower($race_6['land']);?>"></span></th>
-						<?php if ( get_field('show_ss') ):?><?php if ($num_of_races > 5) :?><th class="race-col-ss ml-2 ss6">SS</th><?php endif;?><?php endif; ?>
+						<?php if ( get_field('show_ss') ):?><?php if ($num_of_races > 5) :?><th class="race-col-ss ml-2 ss6"><?php echo $ss_th; ?></th><?php endif;?><?php endif; ?>
 					<?php endif;?>
 					<?php if ($num_of_races >6) :?><th class="race-col race7"><span class="flag-icon flag-icon-<?php echo strtolower($race_7['land']);?>"></span></th>
-						<?php if ( get_field('show_ss') ):?><?php if ($num_of_races > 6) :?><th class="race-col-ss ml-2 ss7">SS</th><?php endif;?><?php endif; ?>
+						<?php if ( get_field('show_ss') ):?><?php if ($num_of_races > 6) :?><th class="race-col-ss ml-2 ss7"><?php echo $ss_th; ?></th><?php endif;?><?php endif; ?>
 					<?php endif;?>
 					<?php if ($num_of_races > 7) :?><th class="race-col race8"><span class="flag-icon flag-icon-<?php echo strtolower($race_8['land']);?>"></span></th>
-						<?php if ( get_field('show_ss') ):?><?php if ($num_of_races > 7) :?><th class="race-col-ss ml-2 ss8">SS</th><?php endif;?><?php endif; ?>
+						<?php if ( get_field('show_ss') ):?><?php if ($num_of_races > 7) :?><th class="race-col-ss ml-2 ss8"><?php echo $ss_th; ?></th><?php endif;?><?php endif; ?>
 					<?php endif;?>
 					<?php if ($num_of_races > 8) :?><th class="race-col race9"><span class="flag-icon flag-icon-<?php echo strtolower($race_9['land']);?>"></span></th>
-						<?php if ( get_field('show_ss') ):?><?php if ($num_of_races > 8) :?><th class="race-col-ss ml-2 ss9">SS</th><?php endif;?><?php endif; ?>
+						<?php if ( get_field('show_ss') ):?><?php if ($num_of_races > 8) :?><th class="race-col-ss ml-2 ss9"><?php echo $ss_th; ?></th><?php endif;?><?php endif; ?>
 					<?php endif;?>
 					<?php if ($num_of_races > 9) :?><th class="race-col race10"><span class="flag-icon flag-icon-<?php echo strtolower($race_10['land']);?>"></span></th>
-						<?php if ( get_field('show_ss') ):?><?php if ($num_of_races > 9) :?><th class="race-col-ss ml-2 ss10">SS</th><?php endif;?><?php endif; ?>
+						<?php if ( get_field('show_ss') ):?><?php if ($num_of_races > 9) :?><th class="race-col-ss ml-2 ss10"><?php echo $ss_th; ?></th><?php endif;?><?php endif; ?>
 					<?php endif;?>
 					<?php if ($num_of_races > 10) :?><th class="race-col race11"><span class="flag-icon flag-icon-<?php echo strtolower($race_11['land']);?>"></span></th>
-						<?php if ( get_field('show_ss') ):?><?php if ($num_of_races > 10) :?><th class="race-col-ss ml-2 ss11">SS</th><?php endif;?><?php endif; ?>
+						<?php if ( get_field('show_ss') ):?><?php if ($num_of_races > 10) :?><th class="race-col-ss ml-2 ss11"><?php echo $ss_th; ?></th><?php endif;?><?php endif; ?>
 					<?php endif;?>
 					<?php if ($num_of_races > 11) :?><th class="race-col race12"><span class="flag-icon flag-icon-<?php echo strtolower($race_12['land']);?>"></span></th>
-						<?php if ( get_field('show_ss') ):?><?php if ($num_of_races > 11) :?><th class="race-col-ss ml-2 ss12">SS</th><?php endif;?><?php endif; ?>
+						<?php if ( get_field('show_ss') ):?><?php if ($num_of_races > 11) :?><th class="race-col-ss ml-2 ss12"><?php echo $ss_th; ?></th><?php endif;?><?php endif; ?>
 					<?php endif;?>
 					<th class="total-col">Totalt</th>
 				</tr>
