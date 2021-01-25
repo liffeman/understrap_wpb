@@ -563,11 +563,9 @@ add_filter('acf/settings/remove_wp_meta_box', '__return_true');
 add_action('acf/input/admin_head', 'wpster_acf_repeater_collapse');
 function wpster_acf_repeater_collapse() {
 ?>
-<style id="wpster-acf-repeater-collapse">.acf-repeater .acf-table {display:none;}</style>
 <script type="text/javascript">
 	jQuery(function($) {
-		$('.acf-repeater .acf-row').addClass('-collapsed');
-		$('#wpster-acf-repeater-collapse').detach();
+		$('.acf-repeater.-block .acf-row').addClass('-collapsed');
 	});
 </script>
 <?php
