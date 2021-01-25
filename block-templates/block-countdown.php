@@ -67,7 +67,94 @@ echo '<a class="anchor" id="' . $section_anchor . '"></a>';
 			}
 		?>
 			<div id="countdown" class="countdown-content p-0 px-md-5"></div>
+
+		<?php if($countdown_weather): ?>
+
+			<?php
+			$weather_url = 'https://api.openweathermap.org/data/2.5/weather?q='. $countdown_weather . '&units=metric&lang=sv&appid=0ac0c1d7df67ef6e7bf7f532815f01b5';
+			$string = file_get_contents($weather_url);
+			$json_a = json_decode($string,true);
+
+			$w_place = $json_a['name'];
+			$w_desc = $json_a['weather']['0']['description'];
+			$w_temp =  $json_a['main']['temp'];
+			$w_feels = $json_a['main']['feels_like'];
+			$w_id = $json_a['weather']['0']['id'];
+			$w_icon = $json_a['weather']['0']['icon'];
+			$w_default_icon = '<img src="https://openweathermap.org/img/wn/' . $json_a['weather']['0']['icon'] . '@2x.png">';
+
+			$w_fa_icon = $w_icon;
+
+			switch ($w_icon) {
+				case "01d":
+					$w_fa_icon = 'sun';
+					break;
+				case "01n":
+					$w_fa_icon = 'moon';
+					break;
+				case "02d":
+					$w_fa_icon = 'clouds-sun';
+					break;
+				case "02n":
+					$w_fa_icon = 'clouds-moon';
+					break;
+				case "03d":
+					$w_fa_icon = 'cloud';
+					break;
+				case "03n":
+					$w_fa_icon = 'cloud';
+					break;
+				case "04d":
+					$w_fa_icon = 'clouds';
+					break;
+				case "04n":
+					$w_fa_icon = 'clouds';
+					break;
+				case "09d":
+					$w_fa_icon = 'cloud-showers';
+					break;
+				case "09n":
+					$w_fa_icon = 'cloud-showers';
+					break;
+				case "10d":
+					$w_fa_icon = 'cloud-rain';
+					break;
+				case "10n":
+					$w_fa_icon = 'cloud-rain';
+					break;
+				case "11d":
+					$w_fa_icon = 'thunderstorm';
+					break;
+				case "11n":
+					$w_fa_icon = 'thunderstorm';
+					break;
+				case "13d":
+					$w_fa_icon = 'snowflake';
+					break;
+				case "13n":
+					$w_fa_icon = 'snowflake';
+					break;
+				case "50d":
+					$w_fa_icon = 'fog';
+					break;
+				case "50n":
+					$w_fa_icon = 'fog';
+					break;
+				default:
+					$w_fa_icon = 'temperature-low';
+				}
+
+			$weather_icon = '<i class="fas fa-' .$w_fa_icon .' fa-4x"></i>';
+
+			$weather_widget = '<div class="weather-widget">	<div class="weather-location">'. $w_place . '</div><div class="weather-content"><div class="weather-symbol">'.$weather_icon.'</div><div class="weather-body"><div class="weather-cond">' . ucfirst($w_desc).'</div>	<div class="weather-temp">' . round($w_temp, 0).'° <span class="weather-temp-feel">(Känns som '. round($w_feels,0).'°)</span></div></div></div></div>';
+
+			echo $weather_widget;
+			?>
+
+		<?php endif ;?>
 		</div>
+
+
 		<?php if ($countdown_link) {
 			$btn_color = ' btn-outline-';
 			if (strpos($countdown_color, 'bg-light' ) !== false) {
@@ -76,7 +163,6 @@ echo '<a class="anchor" id="' . $section_anchor . '"></a>';
 				$btn_color .= 'light';
 			}
 				if ($countdown_now > $time_now) {
-					echo $show_link;
 					if (! $show_link) {
 						echo '<div class="countdown-link"><a class="btn btn-lg'.$btn_color.'" href="' . esc_url( $link_url ) . '" target="' . esc_attr( $link_target ) . '">' . esc_html( $link_title ). '</a></div>';
 					}
@@ -88,94 +174,10 @@ echo '<a class="anchor" id="' . $section_anchor . '"></a>';
 	</div>
 </div>
 
-<?php if($countdown_weather): ?>
-<?php
-	$weather_url = 'https://api.openweathermap.org/data/2.5/weather?q='. $countdown_weather . '&units=metric&lang=sv&appid=0ac0c1d7df67ef6e7bf7f532815f01b5';
-	$string = file_get_contents($weather_url);
-	$json_a = json_decode($string,true);
-
-	$w_place = $json_a['name'];
-	$w_desc = $json_a['weather']['0']['description'];
-	$w_temp =  $json_a['main']['temp'];
-	$w_feels = $json_a['main']['feels_like'];
-	$w_id = $json_a['weather']['0']['id'];
-	$w_icon = $json_a['weather']['0']['icon'];
-	$w_default_icon = '<img src="https://openweathermap.org/img/wn/' . $json_a['weather']['0']['icon'] . '@2x.png">';
-
-	$w_fa_icon = $w_icon;
-
-	switch ($w_icon) {
-		case "01d":
-			$w_fa_icon = 'sun';
-			break;
-		case "01n":
-			$w_fa_icon = 'moon';
-			break;
-		case "02d":
-			$w_fa_icon = 'clouds-sun';
-			break;
-		case "02n":
-			$w_fa_icon = 'clouds-moon';
-			break;
-		case "03d":
-			$w_fa_icon = 'cloud';
-			break;
-		case "03n":
-			$w_fa_icon = 'cloud';
-			break;
-		case "04d":
-			$w_fa_icon = 'clouds';
-			break;
-		case "04n":
-			$w_fa_icon = 'clouds';
-			break;
-		case "09d":
-			$w_fa_icon = 'cloud-showers';
-			break;
-		case "09n":
-			$w_fa_icon = 'cloud-showers';
-			break;
-		case "10d":
-			$w_fa_icon = 'cloud-rain';
-			break;
-		case "10n":
-			$w_fa_icon = 'cloud-rain';
-			break;
-		case "11d":
-			$w_fa_icon = 'thunderstorm';
-			break;
-		case "11n":
-			$w_fa_icon = 'thunderstorm';
-			break;
-		case "13d":
-			$w_fa_icon = 'snowflake';
-			break;
-		case "13n":
-			$w_fa_icon = 'snowflake';
-			break;
-		case "50d":
-			$w_fa_icon = 'fog';
-			break;
-		case "50n":
-			$w_fa_icon = 'fog';
-			break;
-		default:
-	    	$w_fa_icon = 'temperature-low';
-		}
-
-	$weather_icon = '<i class="fas fa-' .$w_fa_icon .' fa-4x"></i>';
-
-	$weather_widget = '<div class="weather-widget">	<div class="weather-location">'. $w_place . '</div><div class="weather-content"><div class="weather-symbol">'.$weather_icon.'</div><div class="weather-body"><div class="weather-cond">' . ucfirst($w_desc).'</div>	<div class="weather-temp">' . round($w_temp, 0).'° <span class="weather-temp-feel">(Känns som '. round($w_feels,0).'°)</span></div></div></div></div>';
-?>
-<?php endif ;?>
-
 <?php
 $after_event = '';
 if ($countdown_msg ){
-	$after_event .= '<div class="message">' . $countdown_msg . '</div>';
-}
-if ($countdown_weather) {
-	$after_event .= $weather_widget;
+	$after_event .= '<div class="message col">' . $countdown_msg . '</div>';
 }
 //echo '<pre>' . print_r($json_a, true) . '</pre>';
 
