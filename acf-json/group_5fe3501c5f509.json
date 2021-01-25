@@ -179,7 +179,7 @@
             "blank_if_zero": 0,
             "readonly": 0,
             "message": "",
-            "default_value": 1,
+            "default_value": 0,
             "ui": 0,
             "ui_on_text": "",
             "ui_off_text": ""
@@ -202,5 +202,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1611305580
+    "modified": 1611586887
 }
