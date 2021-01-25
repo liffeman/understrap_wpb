@@ -555,3 +555,20 @@ function df_disable_comments_hide_existing_comments($comments) {
    return $comments;
 }
 add_filter('comments_array', 'df_disable_comments_hide_existing_comments', 10, 2);
+
+
+add_filter('acf/settings/remove_wp_meta_box', '__return_true');
+
+// Collapse ACF Repeater by default
+add_action('acf/input/admin_head', 'wpster_acf_repeater_collapse');
+function wpster_acf_repeater_collapse() {
+?>
+<style id="wpster-acf-repeater-collapse">.acf-repeater .acf-table {display:none;}</style>
+<script type="text/javascript">
+	jQuery(function($) {
+		$('.acf-repeater .acf-row').addClass('-collapsed');
+		$('#wpster-acf-repeater-collapse').detach();
+	});
+</script>
+<?php
+}
