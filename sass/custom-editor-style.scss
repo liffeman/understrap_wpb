@@ -48,19 +48,44 @@
 			display: none !important;
 		}
 	}
+	.acf-field .acf-label {
+		margin-bottom: 5px;
+		label {
+			font-size: 13px;
+		}
+	}
+	.acf-block-body .acf-fields>.acf-field {
+		padding: 5px !important;
+		min-height: unset;
+	}
 	.acf-block-body .acf-fields>.acf-field.race {
 		width: auto;
-		display: inline-block;
+		//display: inline-block;
 		.acf-input>.acf-fields.-border {
 			border: 0;
 		}
 	}
+	.acf-block-body .acf-fields>.acf-field.bg-head {
+		background-color: $gray-300;
+	}
 	.acf-block-body .acf-fields>.acf-field[data-name="land"] {
-		padding: 2px;
+		padding: 0 !important;
 		width: auto;
 		min-width: 150px;
+		.acf-label {
+			display: none;
+		}
+	}
+	.acf-block-body .acf-fields>.acf-field[data-name="driver_country_land"] {
+		width: 33%;
+		background-color: $gray-300;
+		display: inline-block;
+		min-height: 70px;
 	}
 
+	.acf-block-body .acf-clone-fields.acf-fields.-top.-border {
+		border: none;
+	}
 
 	.acf-table {
 		th.acf-th[data-name="driver"] {
@@ -72,6 +97,24 @@
 		th.acf-th[data-name="position"],
 		td.acf-field[data-name="position"] {
 			display: none;
+		}
+	}
+	.acf-field.acf-field-clone.race {
+		max-width: 150px !important;
+		display: inline-block;
+	}
+
+	.acf-field {
+		.pos {
+			display: none;
+		}
+		.driver,
+		.team,
+		.driver_country,
+		.race,
+		.ss,
+		.r-w {
+			//width: 33% !important;
 		}
 	}
 }

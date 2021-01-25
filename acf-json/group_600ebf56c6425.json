@@ -1,5 +1,5 @@
 {
-    "key": "group_5ff711ba9e670",
+    "key": "group_600ebf56c6425",
     "title": "Block - Tabell Förare",
     "fields": [
         {
@@ -596,7 +596,7 @@
                     "conditional_logic": 0,
                     "wrapper": {
                         "width": "33",
-                        "class": "driver",
+                        "class": "driver bg-head",
                         "id": ""
                     },
                     "formula": "",
@@ -627,7 +627,7 @@
                     ],
                     "wrapper": {
                         "width": "33",
-                        "class": "team",
+                        "class": "team bg-head",
                         "id": ""
                     },
                     "formula": "",
@@ -653,7 +653,7 @@
                     "conditional_logic": 0,
                     "wrapper": {
                         "width": "33",
-                        "class": "driver_country",
+                        "class": "driver_country bg-head",
                         "id": ""
                     },
                     "formula": "",
@@ -663,14 +663,14 @@
                     "clone": [
                         "field_5feef8d65fc3f"
                     ],
-                    "display": "group",
+                    "display": "seamless",
                     "layout": "row",
                     "prefix_label": 0,
                     "prefix_name": 1
                 },
                 {
                     "key": "field_5fec96e4c317b",
-                    "label": "Tävling 1",
+                    "label": "Poäng tävling 1",
                     "name": "col_1",
                     "type": "number",
                     "instructions": "",
@@ -685,7 +685,7 @@
                         ]
                     ],
                     "wrapper": {
-                        "width": "30",
+                        "width": "33",
                         "class": "race",
                         "id": ""
                     },
@@ -723,7 +723,7 @@
                         ]
                     ],
                     "wrapper": {
-                        "width": "30",
+                        "width": "33",
                         "class": "ss",
                         "id": ""
                     },
@@ -756,7 +756,7 @@
                         ]
                     ],
                     "wrapper": {
-                        "width": "30",
+                        "width": "33",
                         "class": "r-w",
                         "id": ""
                     },
@@ -772,7 +772,7 @@
                 },
                 {
                     "key": "field_5feca36d596b0",
-                    "label": "Tävling 2",
+                    "label": "Poäng tävling 2",
                     "name": "col_2",
                     "type": "number",
                     "instructions": "",
@@ -787,7 +787,7 @@
                         ]
                     ],
                     "wrapper": {
-                        "width": "",
+                        "width": "33",
                         "class": "race",
                         "id": ""
                     },
@@ -825,7 +825,7 @@
                         ]
                     ],
                     "wrapper": {
-                        "width": "",
+                        "width": "33",
                         "class": "ss",
                         "id": ""
                     },
@@ -858,7 +858,7 @@
                         ]
                     ],
                     "wrapper": {
-                        "width": "1",
+                        "width": "33",
                         "class": "r-w",
                         "id": ""
                     },
@@ -874,7 +874,7 @@
                 },
                 {
                     "key": "field_5feca382596b1",
-                    "label": "Tävling 3",
+                    "label": "Poäng tävling 3",
                     "name": "col_3",
                     "type": "number",
                     "instructions": "",
@@ -889,7 +889,7 @@
                         ]
                     ],
                     "wrapper": {
-                        "width": "",
+                        "width": "33",
                         "class": "race",
                         "id": ""
                     },
@@ -927,7 +927,7 @@
                         ]
                     ],
                     "wrapper": {
-                        "width": "",
+                        "width": "33",
                         "class": "ss",
                         "id": ""
                     },
@@ -960,7 +960,7 @@
                         ]
                     ],
                     "wrapper": {
-                        "width": "1",
+                        "width": "33",
                         "class": "r-w",
                         "id": ""
                     },
@@ -976,7 +976,7 @@
                 },
                 {
                     "key": "field_5feca38e596b2",
-                    "label": "Tävling 4",
+                    "label": "Poäng tävling 4",
                     "name": "col_4",
                     "type": "number",
                     "instructions": "",
@@ -991,7 +991,7 @@
                         ]
                     ],
                     "wrapper": {
-                        "width": "",
+                        "width": "33",
                         "class": "race",
                         "id": ""
                     },
@@ -1029,7 +1029,7 @@
                         ]
                     ],
                     "wrapper": {
-                        "width": "",
+                        "width": "33",
                         "class": "ss",
                         "id": ""
                     },
@@ -1062,7 +1062,7 @@
                         ]
                     ],
                     "wrapper": {
-                        "width": "1",
+                        "width": "33",
                         "class": "r-w",
                         "id": ""
                     },
@@ -1078,7 +1078,7 @@
                 },
                 {
                     "key": "field_5feca396596b3",
-                    "label": "Tävling 5",
+                    "label": "Poäng tävling 5",
                     "name": "col_5",
                     "type": "number",
                     "instructions": "",
@@ -1093,7 +1093,7 @@
                         ]
                     ],
                     "wrapper": {
-                        "width": "",
+                        "width": "33",
                         "class": "race",
                         "id": ""
                     },
@@ -1131,7 +1131,7 @@
                         ]
                     ],
                     "wrapper": {
-                        "width": "",
+                        "width": "33",
                         "class": "ss",
                         "id": ""
                     },
@@ -1164,7 +1164,7 @@
                         ]
                     ],
                     "wrapper": {
-                        "width": "1",
+                        "width": "33",
                         "class": "r-w",
                         "id": ""
                     },
@@ -1180,7 +1180,7 @@
                 },
                 {
                     "key": "field_5feca39d596b4",
-                    "label": "Tävling 6",
+                    "label": "Poäng tävling 6",
                     "name": "col_6",
                     "type": "number",
                     "instructions": "",
@@ -1195,7 +1195,7 @@
                         ]
                     ],
                     "wrapper": {
-                        "width": "",
+                        "width": "33",
                         "class": "race",
                         "id": ""
                     },
@@ -1233,7 +1233,7 @@
                         ]
                     ],
                     "wrapper": {
-                        "width": "",
+                        "width": "33",
                         "class": "ss",
                         "id": ""
                     },
@@ -1266,7 +1266,7 @@
                         ]
                     ],
                     "wrapper": {
-                        "width": "1",
+                        "width": "33",
                         "class": "r-w",
                         "id": ""
                     },
@@ -1282,7 +1282,7 @@
                 },
                 {
                     "key": "field_5feca3a4596b5",
-                    "label": "Tävling 7",
+                    "label": "Poäng tävling 7",
                     "name": "col_7",
                     "type": "number",
                     "instructions": "",
@@ -1297,7 +1297,7 @@
                         ]
                     ],
                     "wrapper": {
-                        "width": "",
+                        "width": "33",
                         "class": "race",
                         "id": ""
                     },
@@ -1335,7 +1335,7 @@
                         ]
                     ],
                     "wrapper": {
-                        "width": "",
+                        "width": "33",
                         "class": "ss",
                         "id": ""
                     },
@@ -1368,7 +1368,7 @@
                         ]
                     ],
                     "wrapper": {
-                        "width": "1",
+                        "width": "33",
                         "class": "r-w",
                         "id": ""
                     },
@@ -1384,7 +1384,7 @@
                 },
                 {
                     "key": "field_5feca3ae596b6",
-                    "label": "Tävling 8",
+                    "label": "Poäng tävling 8",
                     "name": "col_8",
                     "type": "number",
                     "instructions": "",
@@ -1399,7 +1399,7 @@
                         ]
                     ],
                     "wrapper": {
-                        "width": "",
+                        "width": "33",
                         "class": "race",
                         "id": ""
                     },
@@ -1437,7 +1437,7 @@
                         ]
                     ],
                     "wrapper": {
-                        "width": "",
+                        "width": "33",
                         "class": "ss",
                         "id": ""
                     },
@@ -1470,7 +1470,7 @@
                         ]
                     ],
                     "wrapper": {
-                        "width": "1",
+                        "width": "33",
                         "class": "r-w",
                         "id": ""
                     },
@@ -1486,7 +1486,7 @@
                 },
                 {
                     "key": "field_60000f3a667bc",
-                    "label": "Tävling 9",
+                    "label": "Poäng tävling 9",
                     "name": "col_9",
                     "type": "number",
                     "instructions": "",
@@ -1501,7 +1501,7 @@
                         ]
                     ],
                     "wrapper": {
-                        "width": "",
+                        "width": "33",
                         "class": "race",
                         "id": ""
                     },
@@ -1539,7 +1539,7 @@
                         ]
                     ],
                     "wrapper": {
-                        "width": "",
+                        "width": "33",
                         "class": "ss",
                         "id": ""
                     },
@@ -1572,7 +1572,7 @@
                         ]
                     ],
                     "wrapper": {
-                        "width": "1",
+                        "width": "33",
                         "class": "r-w",
                         "id": ""
                     },
@@ -1588,7 +1588,7 @@
                 },
                 {
                     "key": "field_60000f3c667bd",
-                    "label": "Tävling 10",
+                    "label": "Poäng tävling 10",
                     "name": "col_10",
                     "type": "number",
                     "instructions": "",
@@ -1603,7 +1603,7 @@
                         ]
                     ],
                     "wrapper": {
-                        "width": "",
+                        "width": "33",
                         "class": "race",
                         "id": ""
                     },
@@ -1641,7 +1641,7 @@
                         ]
                     ],
                     "wrapper": {
-                        "width": "",
+                        "width": "33",
                         "class": "ss",
                         "id": ""
                     },
@@ -1674,7 +1674,7 @@
                         ]
                     ],
                     "wrapper": {
-                        "width": "1",
+                        "width": "33",
                         "class": "r-w",
                         "id": ""
                     },
@@ -1690,7 +1690,7 @@
                 },
                 {
                     "key": "field_60000f3e667be",
-                    "label": "Tävling 11",
+                    "label": "Poäng tävling 11",
                     "name": "col_11",
                     "type": "number",
                     "instructions": "",
@@ -1705,7 +1705,7 @@
                         ]
                     ],
                     "wrapper": {
-                        "width": "",
+                        "width": "33",
                         "class": "race",
                         "id": ""
                     },
@@ -1743,7 +1743,7 @@
                         ]
                     ],
                     "wrapper": {
-                        "width": "",
+                        "width": "33",
                         "class": "ss",
                         "id": ""
                     },
@@ -1776,7 +1776,7 @@
                         ]
                     ],
                     "wrapper": {
-                        "width": "1",
+                        "width": "33",
                         "class": "r-w",
                         "id": ""
                     },
@@ -1792,23 +1792,15 @@
                 },
                 {
                     "key": "field_60000f41667bf",
-                    "label": "Tävling 12",
+                    "label": "Poäng tävling 12",
                     "name": "col_12",
                     "type": "number",
                     "instructions": "",
                     "required": 0,
-                    "conditional_logic": [
-                        [
-                            {
-                                "field": "field_5fec9596c3170",
-                                "operator": ">",
-                                "value": "11"
-                            }
-                        ]
-                    ],
+                    "conditional_logic": 0,
                     "wrapper": {
-                        "width": "",
-                        "class": "race",
+                        "width": "33",
+                        "class": "",
                         "id": ""
                     },
                     "formula": "",
@@ -1845,7 +1837,7 @@
                         ]
                     ],
                     "wrapper": {
-                        "width": "",
+                        "width": "33",
                         "class": "ss",
                         "id": ""
                     },
@@ -1878,7 +1870,7 @@
                         ]
                     ],
                     "wrapper": {
-                        "width": "1",
+                        "width": "33",
                         "class": "r-w",
                         "id": ""
                     },
@@ -1894,7 +1886,7 @@
                 },
                 {
                     "key": "field_5fec96e4c317d",
-                    "label": "Total",
+                    "label": "Poäng totalt",
                     "name": "total",
                     "type": "number",
                     "instructions": "",
@@ -1902,7 +1894,7 @@
                     "conditional_logic": 0,
                     "wrapper": {
                         "width": "100",
-                        "class": "total",
+                        "class": "total bg-dark text-white",
                         "id": ""
                     },
                     "formula": "col_1+ss_col_1+col_2+ss_col_2+col_3+ss_col_3+col_4+ss_col_4+col_5+ss_col_5+col_6+ss_col_6+col_7+ss_col_7+col_8+ss_col_8+col_9+ss_col_9+col_10+ss_col_10+col_11+ss_col_11+col_12+ss_col_12",
@@ -1923,19 +1915,19 @@
     "location": [
         [
             {
-                "param": "block",
+                "param": "post_type",
                 "operator": "==",
-                "value": "acf\/standings"
+                "value": "post"
             }
         ]
     ],
     "menu_order": 0,
     "position": "normal",
-    "style": "seamless",
+    "style": "default",
     "label_placement": "top",
-    "instruction_placement": "field",
+    "instruction_placement": "label",
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1611578878
+    "modified": 1611582289
 }

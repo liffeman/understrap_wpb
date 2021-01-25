@@ -63,7 +63,6 @@ echo '<a class="anchor" id="' . $section_anchor . '"></a>';
 				<tr>
 					<th class="pos-col">Pos</th>
 					<th class="driver-col">Förare</th>
-					<?php if ( get_field('show_team') ):?><th>Team</th><?php endif; ?>
 					<?php if ($num_of_races > 0) :?><th class="race-col race1"><span class="flag-icon flag-icon-<?php echo strtolower($race_1['land']);?>"></span></th>
 						<?php if ( get_field('show_ss') ):?><?php if ($num_of_races > 0) :?><th class="race-col-ss ml-2 ss1"><?php echo $ss_th; ?></th><?php endif;?><?php endif; ?>
 					<?php endif;?>
@@ -146,8 +145,8 @@ echo '<a class="anchor" id="' . $section_anchor . '"></a>';
 							$placering += 1;
 							echo $placering
 						?></td>
-						<td class="driver-col"><span class="flag-icon flag-icon-<?php echo strtolower($row['driver_country_land']);?> mr-2"></span> <?php echo $row['driver'];?></td>
-						<?php if ( get_field('show_team') ):?><td><?php echo esc_html( $team_name->post_title );?></td><?php endif; ?>
+						<td class="driver-col"><span class="flag-icon flag-icon-<?php echo strtolower($row['driver_country_land']);?> mr-2"></span> <?php echo $row['driver'];?>
+						<?php if ( get_field('show_team') ):?><div class="team font-italic"><?php echo esc_html( $team_name->post_title );?></div><?php endif; ?></td>
 						<?php if ($num_of_races > 0) :?><td class="race-col race1"><?php echo $cell_1; ?></td>
 							<?php if ( get_field('show_ss') ):?><?php if ($num_of_races > 0) :?><td class="race-col-ss ss1"><?php echo $row['ss_col_1'];?></td><?php endif;?><?php endif; ?>
 						<?php endif;?>
