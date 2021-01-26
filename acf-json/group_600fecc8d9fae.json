@@ -1,5 +1,5 @@
 {
-    "key": "group_600fdaa9970f2",
+    "key": "group_600fecc8d9fae",
     "title": "Block - Tabell Förare",
     "fields": [
         {
@@ -1797,20 +1797,24 @@
                     "name": "col_12",
                     "type": "number",
                     "instructions": "",
-                    "required": false,
-                    "conditional_logic": false,
+                    "required": 0,
+                    "conditional_logic": 0,
                     "wrapper": {
-                        "width": "",
+                        "width": "33",
                         "class": "",
                         "id": ""
                     },
+                    "formula": "",
+                    "calculated_format": "",
+                    "blank_if_zero": 0,
+                    "readonly": 0,
                     "default_value": "",
-                    "min": "",
-                    "max": "",
-                    "step": "",
                     "placeholder": "",
                     "prepend": "",
-                    "append": ""
+                    "append": "",
+                    "min": "",
+                    "max": "",
+                    "step": ""
                 },
                 {
                     "key": "field_60000f85667c3",
@@ -1834,7 +1838,7 @@
                         ]
                     ],
                     "wrapper": {
-                        "width": "",
+                        "width": "33",
                         "class": "ss",
                         "id": ""
                     },
@@ -1867,7 +1871,7 @@
                         ]
                     ],
                     "wrapper": {
-                        "width": "1",
+                        "width": "33",
                         "class": "r-w",
                         "id": ""
                     },
@@ -1920,8 +1924,8 @@
     ],
     "menu_order": 0,
     "position": "normal",
-    "style": "seamless",
-    "label_placement": "top",
+    "style": "default",
+    "label_placement": "left",
     "instruction_placement": "label",
     "hide_on_screen": "",
     "active": true,
@@ -1938,5 +1942,5 @@
         }
     },
     "acfe_note": "",
-    "modified": 1611654907
+    "modified": 1611656604
 }
