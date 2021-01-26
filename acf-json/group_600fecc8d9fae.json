@@ -1798,7 +1798,15 @@
                     "type": "number",
                     "instructions": "",
                     "required": 0,
-                    "conditional_logic": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5fec9596c3170",
+                                "operator": ">",
+                                "value": "11"
+                            }
+                        ]
+                    ],
                     "wrapper": {
                         "width": "33",
                         "class": "race",
@@ -1942,5 +1950,5 @@
         }
     },
     "acfe_note": "",
-    "modified": 1611657162
+    "modified": 1611657893
 }
