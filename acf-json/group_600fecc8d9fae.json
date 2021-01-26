@@ -1801,7 +1801,7 @@
                     "conditional_logic": 0,
                     "wrapper": {
                         "width": "33",
-                        "class": "",
+                        "class": "race",
                         "id": ""
                     },
                     "formula": "",
@@ -1895,7 +1895,7 @@
                     "conditional_logic": 0,
                     "wrapper": {
                         "width": "100",
-                        "class": "total bg-dark",
+                        "class": "total bg-dark text-light",
                         "id": ""
                     },
                     "formula": "col_1+ss_col_1+col_2+ss_col_2+col_3+ss_col_3+col_4+ss_col_4+col_5+ss_col_5+col_6+ss_col_6+col_7+ss_col_7+col_8+ss_col_8+col_9+ss_col_9+col_10+ss_col_10+col_11+ss_col_11+col_12+ss_col_12",
@@ -1942,5 +1942,5 @@
         }
     },
     "acfe_note": "",
-    "modified": 1611656604
+    "modified": 1611657162
 }
