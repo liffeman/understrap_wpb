@@ -664,7 +664,7 @@
                     "clone": [
                         "field_5feef8d65fc3f"
                     ],
-                    "display": "group",
+                    "display": "seamless",
                     "layout": "row",
                     "prefix_label": 0,
                     "prefix_name": 1
@@ -1931,7 +1931,12 @@
         "json"
     ],
     "acfe_form": 0,
-    "acfe_meta": "",
+    "acfe_meta": {
+        "acfcloneindex": {
+            "acfe_meta_key": "",
+            "acfe_meta_value": ""
+        }
+    },
     "acfe_note": "",
-    "modified": 1611652970
+    "modified": 1611654907
 }
