@@ -559,17 +559,20 @@ add_filter('comments_array', 'df_disable_comments_hide_existing_comments', 10, 2
 
 add_filter('acf/settings/remove_wp_meta_box', '__return_true');
 
+if ( is_plugin_active( 'acf-extended/acf-extended.php' ) ) {
+	//plugin is activated
 
-add_action('acf/init', 'my_acfe_modules');
-function my_acfe_modules(){
+	add_action('acf/init', 'my_acfe_modules');
+	function my_acfe_modules(){
 
-	// Disable modules
-	acfe_update_setting('modules/dynamic_forms', false);
-	acfe_update_setting('modules/dynamic_post_types', false);
-	acfe_update_setting('modules/categories', false);
-	acfe_update_setting('modules/dynamic_taxonomies', false);
-	acfe_update_setting('modules/dynamic_block_types', false);
-	acfe_update_setting('modules/dynamic_options_pages', false);
-	acfe_update_setting('modules/author', false);
+		// Disable modules
+		acfe_update_setting('modules/dynamic_forms', false);
+		acfe_update_setting('modules/dynamic_post_types', false);
+		acfe_update_setting('modules/categories', false);
+		acfe_update_setting('modules/dynamic_taxonomies', false);
+		acfe_update_setting('modules/dynamic_block_types', false);
+		acfe_update_setting('modules/dynamic_options_pages', false);
+		acfe_update_setting('modules/author', false);
 
+	}
 }
