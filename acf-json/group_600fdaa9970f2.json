@@ -1,5 +1,5 @@
 {
-    "key": "group_600ebf56c6425",
+    "key": "group_600fdaa9970f2",
     "title": "Block - Tabell Förare",
     "fields": [
         {
@@ -555,6 +555,7 @@
             "calculated_format": "",
             "blank_if_zero": 0,
             "readonly": 0,
+            "acfe_repeater_stylised_button": 1,
             "collapsed": "field_5fec96e4c3178",
             "min": 0,
             "max": 0,
@@ -663,7 +664,7 @@
                     "clone": [
                         "field_5feef8d65fc3f"
                     ],
-                    "display": "seamless",
+                    "display": "group",
                     "layout": "row",
                     "prefix_label": 0,
                     "prefix_name": 1
@@ -1796,24 +1797,20 @@
                     "name": "col_12",
                     "type": "number",
                     "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
+                    "required": false,
+                    "conditional_logic": false,
                     "wrapper": {
-                        "width": "33",
+                        "width": "",
                         "class": "",
                         "id": ""
                     },
-                    "formula": "",
-                    "calculated_format": "",
-                    "blank_if_zero": 0,
-                    "readonly": 0,
                     "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
                     "min": "",
                     "max": "",
-                    "step": ""
+                    "step": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
                 },
                 {
                     "key": "field_60000f85667c3",
@@ -1837,7 +1834,7 @@
                         ]
                     ],
                     "wrapper": {
-                        "width": "33",
+                        "width": "",
                         "class": "ss",
                         "id": ""
                     },
@@ -1870,7 +1867,7 @@
                         ]
                     ],
                     "wrapper": {
-                        "width": "33",
+                        "width": "1",
                         "class": "r-w",
                         "id": ""
                     },
@@ -1886,7 +1883,7 @@
                 },
                 {
                     "key": "field_5fec96e4c317d",
-                    "label": "Poäng totalt",
+                    "label": "Total",
                     "name": "total",
                     "type": "number",
                     "instructions": "",
@@ -1894,7 +1891,7 @@
                     "conditional_logic": 0,
                     "wrapper": {
                         "width": "100",
-                        "class": "total bg-dark text-white",
+                        "class": "total bg-dark",
                         "id": ""
                     },
                     "formula": "col_1+ss_col_1+col_2+ss_col_2+col_3+ss_col_3+col_4+ss_col_4+col_5+ss_col_5+col_6+ss_col_6+col_7+ss_col_7+col_8+ss_col_8+col_9+ss_col_9+col_10+ss_col_10+col_11+ss_col_11+col_12+ss_col_12",
@@ -1915,19 +1912,26 @@
     "location": [
         [
             {
-                "param": "post_type",
+                "param": "block",
                 "operator": "==",
-                "value": "post"
+                "value": "acf\/standings"
             }
         ]
     ],
     "menu_order": 0,
     "position": "normal",
-    "style": "default",
+    "style": "seamless",
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1611582289
+    "acfe_display_title": "",
+    "acfe_autosync": [
+        "json"
+    ],
+    "acfe_form": 0,
+    "acfe_meta": "",
+    "acfe_note": "",
+    "modified": 1611652970
 }

@@ -1,11 +1,10 @@
 //Add your own editor styles here or comment out the next line if you want to pull in the whole Bootstrap stuff
-.interface-interface-skeleton__content {
+.editor-styles-wrapper {
 	@import "theme";
-	.editor-styles-wrapper {
-		padding: 0;
-		font-family: $font-family-base;
-		font-size: $font-size-base;
-	}
+	padding: 0;
+	font-family: $font-family-base !important;
+	font-size: $font-size-base;
+
 	.editor-post-title__block {
 		font-family: $headings-font-family;
 		.editor-post-title__input {
@@ -60,6 +59,7 @@
 	}
 	.acf-block-body .acf-fields>.acf-field.race {
 		width: auto;
+		clear: left;
 		//display: inline-block;
 		.acf-input>.acf-fields.-border {
 			border: 0;
