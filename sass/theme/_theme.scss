@@ -235,7 +235,30 @@ h1 {
 	}
 }
 
-
+/* Apps */
+.apps {
+	display: flex;
+	justify-content: center;
+	.app {
+		//max-width: 240px;
+		//height: 70px;
+		//overflow: hidden;
+		min-width: 240px;
+		height: 70px;
+		overflow: hidden;
+		display: flex;
+		justify-content: center;
+		border: none;
+		border-radius: $border-radius-lg;
+		margin: 1rem;
+		.app-title {
+			margin-bottom: 0;
+			text-align: center;
+			white-space: nowrap;
+			color: $white;
+		}
+	}
+}
 /* Footer */
 
 #wrapper-footer-full {
