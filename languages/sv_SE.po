@@ -1,397 +1,1186 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: understrap\n"
-"Report-Msgid-Bugs-To: http://wordpress.org/support/theme/_s\n"
-"POT-Creation-Date: 2016-11-23 20:21+0200\n"
-"PO-Revision-Date: 2017-02-20 13:19+0000\n"
-"Last-Translator: Filip Wessman <filip@effektid.com>\n"
-"Language-Team: Swedish (Swedish)\n"
-"Language: sv-SE\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
+"Project-Id-Version: bryta\n"
+"POT-Creation-Date: 2021-01-27 14:51+0100\n"
+"PO-Revision-Date: 2021-01-27 15:04+0100\n"
+"Last-Translator: Leif Kajrup <leif@kajrup.se>\n"
+"Language-Team: Leif Kajrup <leif@kajrup.se>\n"
+"Language: sv_SE\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Loco-Source-Locale: sv_SE\n"
-"POT-Revision-Date: Mon Jul 04 2016 09:13:18 GMT+0200 (CEST)\n"
-"X-Poedit-SourceCharset: UTF-8\n"
-"X-Generator: Loco - https://localise.biz/\n"
-"X-Poedit-KeywordsList: _:1;gettext:1;dgettext:2;ngettext:1,2;dngettext:2,3;"
-"__:1;_e:1;_c:1;_n:1,2;_n_noop:1,2;_nc:1,2;__ngettext:1,2;__ngettext_noop:1,2;"
-"_x:1,2c;_ex:1,2c;_nx:1,2,4c;_nx_noop:1,2,3c;_n_js:1,2;_nx_js:1,2,3c;"
-"esc_attr__:1;esc_html__:1;esc_attr_e:1;esc_html_e:1;esc_attr_x:1,2c;"
-"esc_html_x:1,2c;comments_number_link:2,3;t:1;st:1;trans:1;transChoice:1,2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 2.4.2\n"
 "X-Poedit-Basepath: ..\n"
-"X-Poedit-SearchPath-0: footer.php\n"
-"X-Poedit-SearchPath-1: header.php\n"
-"X-Poedit-SearchPath-2: index.php\n"
-"X-Poedit-SearchPath-3: statichero.php\n"
-"X-Poedit-SearchPath-4: 404.php\n"
-"X-Poedit-SearchPath-5: archive.php\n"
-"X-Poedit-SearchPath-6: search.php\n"
-"X-Poedit-SearchPath-7: sticky.php\n"
-"X-Poedit-SearchPath-8: single.php\n"
-"X-Poedit-SearchPath-9: sidebar.php\n"
-"X-Poedit-SearchPath-10: comment-form.php\n"
-"X-Poedit-SearchPath-11: comments.php\n"
-"X-Poedit-SearchPath-12: content-none.php\n"
-"X-Poedit-SearchPath-13: content-page.php\n"
-"X-Poedit-SearchPath-14: content-search.php\n"
-"X-Poedit-SearchPath-15: content-single.php\n"
-"X-Poedit-SearchPath-16: content.php\n"
-"X-Poedit-SearchPath-17: hero.php\n"
-"X-Poedit-SearchPath-18: page.php\n"
-"X-Poedit-SearchPath-19: functions.php\n"
-"X-Poedit-SearchPath-20: page-templates\n"
-"X-Poedit-SearchPath-21: inc\n"
-"X-Loco-Parser: loco_parse_po"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: style.css\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.min.js\n"
+"X-Poedit-SearchPathExcluded-1: node_modules\n"
 
-#: ../comments.php:28
-#, php-format
-msgctxt "comments title"
-msgid "One thought on &ldquo;%2$s&rdquo;"
-msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
-msgstr[0] "En tanke kring &ldquo;%2$s&rdquo;"
-msgstr[1] "%1$s tankar kring &ldquo;%2$s&rdquo;"
-msgstr[2] "&ldquo;%2$s&rdquo;: %1$s комментариев"
-
-#: ../comments.php:35 ../comments.php:56
-msgid "Comment navigation"
-msgstr "Kommentars navigering"
-
-#: ../comments.php:37 ../comments.php:58
-msgid "&larr; Older Comments"
-msgstr "&larr; Äldre kommentarer"
-
-#: ../comments.php:40 ../comments.php:61
-msgid "Newer Comments &rarr;"
-msgstr "Nyare kommentarer &rarr;"
-
-#: ../comments.php:72
-msgid "Comments are closed."
-msgstr "Kommentarsfältet är avstängt."
-
-#: ../author.php:27
-msgid "About:"
-msgstr "Om:"
-
-#: ../author.php:32 ../inc/custom-comments.php:16
-msgid "Website"
-msgstr "Website"
-
-#: ../author.php:34
-msgid "Profile"
-msgstr "Profil"
-
-#: ../author.php:38
-msgid "Posts by"
-msgstr "Inlägg av "
-
-#: ../footer.php:24
-msgid "http://wordpress.org/"
-msgstr "http://wordpress.org/"
-
-#: ../footer.php:24
-#, php-format
-msgid "Proudly powered by %s"
-msgstr "Drivs av %s"
-
-#: ../footer.php:26
-#, php-format
-msgid "Theme: %1$s by %2$s."
-msgstr "tema av: %1$s by %2$s."
-
-#: ../header.php:30
-msgid "Skip to content"
-msgstr "Hoppa till innehållet"
-
-#: ../search.php:23
-#, php-format
-msgid "Search Results for: %s"
-msgstr "Sök resultat för: %s"
-
-#: ../404.php:22
+#: 404.php:30
 msgid "Oops! That page can&rsquo;t be found."
 msgstr "Oops! Sidan verkar inte finnas."
 
-#: ../404.php:27
+#: 404.php:36
 msgid ""
 "It looks like nothing was found at this location. Maybe try one of the links "
 "below or a search?"
 msgstr ""
-"Här verkar det inte finnas något. Du kan prova någon an länkarna "
-"nedan eller söka efter det?"
+"Här verkar det inte finnas något. Du kan prova någon an länkarna nedan eller "
+"söka efter det?"
 
-#: ../404.php:37
+#: 404.php:46
 msgid "Most Used Categories"
-msgstr "Most Used Categories"
+msgstr "Mest använda kategorier"
 
-#. translators: %1$s: smiley
-#: ../404.php:57
+#: 404.php:69
 #, php-format
 msgid "Try looking in the monthly archives. %1$s"
-msgstr "Try looking in the monthly archives. %1$s"
+msgstr "Prova att kolla i månadsarkivet. %1$s"
 
-#: ../searchform.php:9 ../searchform.php:13
-msgid "Search"
-msgstr "Sök"
+#: author.php:38
+msgid "About:"
+msgstr "Om:"
 
-#: ../searchform.php:11
-msgid "Search &hellip;"
-msgstr "Sök &hellip;"
+#: author.php:49
+msgid "Website"
+msgstr "Webbplats"
 
-#. Name of the template
-msgid "Full Width Page"
-msgstr "Full Width Page"
+#: author.php:56
+msgid "Profile"
+msgstr "Profil"
 
-#. Name of the template
-msgid "Empty Page Template"
-msgstr "Empty Page Template"
+#: author.php:62
+msgid "Posts by"
+msgstr "Inlägg av"
 
-#: ../inc/widgets.php:10
-msgid "Sidebar"
-msgstr "Sidebar"
+#: author.php:75
+msgid "Permanent Link:"
+msgstr "Permalänk:"
 
-#: ../inc/widgets.php:20
-msgid "Hero Slider"
-msgstr "Hero Slider"
+#: author.php:79
+msgid "in"
+msgstr "i"
 
-#: ../inc/widgets.php:30
-msgid "Hero Static"
-msgstr "Hero Static"
-
-#: ../inc/widgets.php:40
-msgid "Footer Full"
-msgstr "Sidfot"
-
-#: ../inc/customizer.php:24
-msgid "Slider Settings"
-msgstr "Slider Inställningar"
-
-#: ../inc/customizer.php:33
-msgid "Number of slides displaying at once"
-msgstr "Antal slides som visas samtidigt"
-
-#: ../inc/customizer.php:45
-msgid "Slider Time (in ms)"
-msgstr "Slider tid (i ms)"
-
-#: ../inc/customizer.php:57
-msgid "Loop Slider Content"
-msgstr "Loop Slider Innehåll"
-
-#: ../inc/template-tags.php:18
+#: comments.php:37
 #, php-format
-msgid " Edited %4$s"
-msgstr " Redigerat %4$s"
+msgctxt "comments title"
+msgid "One thought on &ldquo;%s&rdquo;"
+msgstr "En tanke kring &ldquo;%s&rdquo;"
 
-#: ../inc/template-tags.php:29
+#: comments.php:45
 #, php-format
+msgctxt "comments title"
+msgid "%1$s thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] "En tanke kring &ldquo;%2$s&rdquo;"
+msgstr[1] "%1$s tankar kring &ldquo;%2$s&rdquo;"
+
+#: comments.php:64 comments.php:99
+msgid "Comment navigation"
+msgstr "Navigera bland kommentarer"
+
+#: comments.php:68 comments.php:103
+msgid "&larr; Older Comments"
+msgstr "&larr; Äldre kommentarer"
+
+#: comments.php:74 comments.php:109
+msgid "Newer Comments &rarr;"
+msgstr "Nyare kommentarer &rarr;"
+
+#: header.php:32
+msgid "Skip to content"
+msgstr "Hoppa till innehållet"
+
+#: header.php:37
+msgid "Main Navigation"
+msgstr "Huvudnavigation"
+
+#: header.php:76
+msgid "Toggle navigation"
+msgstr "Visa/göm navigering"
+
+#: inc/class-wp-bootstrap-navwalker.php:376
+msgid "Add a menu"
+msgstr "Lägg till en meny"
+
+#: inc/custom-blocks.php:16
+msgid "Custom Blocks"
+msgstr "Anpassade block"
+
+#: inc/custom-blocks.php:31 inc/custom-post-types.php:13
+#: inc/custom-post-types.php:14
+msgid "Apps"
+msgstr "Appar"
+
+#: inc/custom-blocks.php:32
+msgid "A block to whow apps."
+msgstr "Ett block för att visa appar."
+
+#: inc/custom-blocks.php:42
+msgid "FAQs"
+msgstr "FAQs"
+
+#: inc/custom-blocks.php:43
+msgid "A block to whow FAQs."
+msgstr "Ett block för att visa FAQ."
+
+#: inc/custom-comments.php:102
+msgid "Comments are closed."
+msgstr "Kommentering är för tillfället avstängt."
+
+#: inc/custom-header.php:54
+msgid "Default Header Image"
+msgstr "Standard sidhuvudsbild"
+
+#: inc/custom-login.php:34
+msgid "Login to dashboard"
+msgstr "Logga in på instrumentpanelen"
+
+#: inc/custom-post-types.php:11
+msgctxt "Post Type General Name"
+msgid "Apps"
+msgstr "Appar"
+
+#: inc/custom-post-types.php:12
+msgctxt "Post Type Singular Name"
+msgid "App"
+msgstr "App"
+
+#: inc/custom-post-types.php:15
+msgid "App archives"
+msgstr "Apparkiv"
+
+#: inc/custom-post-types.php:16
+msgid "App Attributes"
+msgstr "Appattribut"
+
+#: inc/custom-post-types.php:17
+msgid "Parent App:"
+msgstr "Överordnad app:"
+
+#: inc/custom-post-types.php:18
+msgid "All Apps"
+msgstr "Alla appar"
+
+#: inc/custom-post-types.php:19
+msgid "Add New App"
+msgstr "Lägg till ny app"
+
+#: inc/custom-post-types.php:20 inc/custom-post-types.php:78
+msgid "Add New"
+msgstr "Lägg till ny"
+
+#: inc/custom-post-types.php:21
+msgid "New App"
+msgstr "Ny app"
+
+#: inc/custom-post-types.php:22
+msgid "Edit App"
+msgstr "Redigera app"
+
+#: inc/custom-post-types.php:23
+msgid "Update App"
+msgstr "Uppdatera app"
+
+#: inc/custom-post-types.php:24
+msgid "View App"
+msgstr "Visa app"
+
+#: inc/custom-post-types.php:25
+msgid "View Apps"
+msgstr "Visa appar"
+
+#: inc/custom-post-types.php:26
+msgid "Search Apps"
+msgstr "Sök i appar"
+
+#: inc/custom-post-types.php:27 inc/custom-post-types.php:85
+msgid "Not found"
+msgstr "Hittades inte"
+
+#: inc/custom-post-types.php:28 inc/custom-post-types.php:86
+msgid "Not found in Trash"
+msgstr "Hittades inte i papperskorgen"
+
+#: inc/custom-post-types.php:29 inc/custom-post-types.php:87
+msgid "Featured Image"
+msgstr "Utvald bild"
+
+#: inc/custom-post-types.php:30 inc/custom-post-types.php:88
+msgid "Set featured image"
+msgstr "Ange utvald bild"
+
+#: inc/custom-post-types.php:31 inc/custom-post-types.php:89
+msgid "Remove featured image"
+msgstr "Ta bort utvald bild"
+
+#: inc/custom-post-types.php:32 inc/custom-post-types.php:90
+msgid "Use as featured image"
+msgstr "Använd som utvald bild"
+
+#: inc/custom-post-types.php:33
+msgid "Insert into App"
+msgstr "Infoga i App"
+
+#: inc/custom-post-types.php:34
+msgid "Uploaded to this App"
+msgstr "Uppladdad till denna App"
+
+#: inc/custom-post-types.php:35
+msgid "Apps list"
+msgstr "Listan Appar"
+
+#: inc/custom-post-types.php:36
+msgid "Apps list navigation"
+msgstr "Navigering i appar listar"
+
+#: inc/custom-post-types.php:37
+msgid "Filter Apps list"
+msgstr "Listan Filtrera appar"
+
+#: inc/custom-post-types.php:40
+msgid "App"
+msgstr "App"
+
+#: inc/custom-post-types.php:41
+msgid "App from Bryta punkt nu"
+msgstr "App från Bryta punkt nu"
+
+#: inc/custom-post-types.php:69
+msgctxt "Post Type General Name"
+msgid "FAQ"
+msgstr "FAQ"
+
+#: inc/custom-post-types.php:70
+msgctxt "Post Type Singular Name"
+msgid "FAQ"
+msgstr "FAQ"
+
+#: inc/custom-post-types.php:71 inc/custom-post-types.php:72
+#: inc/custom-post-types.php:98
+msgid "FAQ"
+msgstr "FAQ"
+
+#: inc/custom-post-types.php:73
+msgid "FAQ archives"
+msgstr "FAQ Arkiv"
+
+#: inc/custom-post-types.php:74
+msgid "FAQ Attributes"
+msgstr "FAQ-attribut"
+
+#: inc/custom-post-types.php:75
+msgid "Parent FAQ:"
+msgstr "Huvudfrågor:"
+
+#: inc/custom-post-types.php:76
+msgid "All FAQs"
+msgstr "Alla FAQs"
+
+#: inc/custom-post-types.php:77
+msgid "Add New FAQ"
+msgstr "Lägg till ny FAQ"
+
+#: inc/custom-post-types.php:79
+msgid "New FAQ"
+msgstr "Ny FAQ"
+
+#: inc/custom-post-types.php:80
+msgid "Edit FAQ"
+msgstr "Redigera FAQ"
+
+#: inc/custom-post-types.php:81
+msgid "Update FAQ"
+msgstr "Uppdatera FAQ"
+
+#: inc/custom-post-types.php:82
+msgid "View FAQ"
+msgstr "Visa FAQ"
+
+#: inc/custom-post-types.php:83
+msgid "View FAQs"
+msgstr "Visa FAQs"
+
+#: inc/custom-post-types.php:84
+msgid "Search FAQs"
+msgstr "Sök FAQs"
+
+#: inc/custom-post-types.php:91
+msgid "Insert into FAQ"
+msgstr "Infoga i FAQ"
+
+#: inc/custom-post-types.php:92
+msgid "Uploaded to this FAQ"
+msgstr "Uppladdad till denna FAQ"
+
+#: inc/custom-post-types.php:93
+msgid "FAQs list"
+msgstr "Lista FAQ"
+
+#: inc/custom-post-types.php:94
+msgid "FAQs list navigation"
+msgstr "Lista FAQ"
+
+#: inc/custom-post-types.php:95
+msgid "Filter FAQs list"
+msgstr "Filtrera listan för FAQ"
+
+#: inc/custom-post-types.php:99
+msgid "FAQ for Bryta punkt nu"
+msgstr "FAQ för Bryta punkt nu"
+
+#: inc/customizer.php:42
+msgid "Theme Layout Settings"
+msgstr "Temainställningar"
+
+#: inc/customizer.php:44
+msgid "Container width and sidebar defaults"
+msgstr "Bredd på container och sidopanelslayout"
+
+#: inc/customizer.php:50
+msgid "Google Analytics"
+msgstr "Google Analytics"
+
+#: inc/customizer.php:52
+msgid "Add Analytics settings"
+msgstr "Lägg till Analytics-inställningar"
+
+#: inc/customizer.php:91
+msgid "Container Width"
+msgstr "Innehållsbredd"
+
+#: inc/customizer.php:92
+msgid "Choose between Bootstrap's container and container-fluid"
+msgstr "Välj mellan Bootstraps container eller container-fluid"
+
+#: inc/customizer.php:97
+msgid "Fixed width container"
+msgstr "Container med fast bredd"
+
+#: inc/customizer.php:98
+msgid "Full width container"
+msgstr "Behållare för full bredd"
+
+#: inc/customizer.php:120
+msgid "Sidebar Positioning"
+msgstr "Sidopanelens position"
+
+#: inc/customizer.php:122
+msgid ""
+"Set sidebar's default position. Can either be: right, left, both or none. "
+"Note: this can be overridden on individual pages."
+msgstr ""
+"Välj sidobarens standardposition. Kan vara höger, vänster, båda eller ingen. "
+"Obs! Detta kan skrivas över på individuella sidor."
+
+#: inc/customizer.php:130
+msgid "Right sidebar"
+msgstr "Höger sidopanel"
+
+#: inc/customizer.php:131
+msgid "Left sidebar"
+msgstr "Vänster sidopanel"
+
+#: inc/customizer.php:132
+msgid "Left & Right sidebars"
+msgstr "Vänster & Höger sidopanel"
+
+#: inc/customizer.php:133
+msgid "No sidebar"
+msgstr "Ingen sidopanel"
+
+#: inc/customizer.php:165
+msgid "Blog view setting"
+msgstr "Inställning av bloggvy"
+
+#: inc/customizer.php:167
+msgid "Set the default view of the blog and archive page."
+msgstr "Ange standardvyn för blogg- och arkivsidan."
+
+#: inc/customizer.php:175
+msgid "Grid view"
+msgstr "Rutnätsvy"
+
+#: inc/customizer.php:176
+msgid "List view"
+msgstr "Listvy"
+
+#: inc/customizer.php:188
+msgid "Choose color scheme on navbar"
+msgstr "Välj färgschema på navbar"
+
+#: inc/customizer.php:190
+msgid "Choose dark or light color on navbar"
+msgstr "Välj mörk eller ljus färg på navbar"
+
+#: inc/customizer.php:198 inc/customizer.php:297
+msgid "Dark theme"
+msgstr "Mörkt tema"
+
+#: inc/customizer.php:199
+msgid "Light theme"
+msgstr "Ljust tema"
+
+#: inc/customizer.php:200
+msgid "Primary color theme"
+msgstr "Primärfärgstema"
+
+#: inc/customizer.php:222
+msgid "Show search button in navbar"
+msgstr "Visa sök i navigering"
+
+#: inc/customizer.php:224
+msgid "Set to show or hide the search button in the navbar"
+msgstr "Ange att visa eller dölja sökknappen i navbaren"
+
+#: inc/customizer.php:232
+msgid "Show search button"
+msgstr "Visa sök"
+
+#: inc/customizer.php:233
+msgid "Hide search button"
+msgstr "Dölj sök"
+
+#: inc/customizer.php:255
+msgid "Off Canvas Menu"
+msgstr "Off Canvas Meny"
+
+#: inc/customizer.php:257
+msgid "Set to user OffCanvas instead of bootstrap menu"
+msgstr "Använda OffCanvas istället för bootstrap meny"
+
+#: inc/customizer.php:265
+msgid "Use Off Canvas"
+msgstr "Använd OffCanvas"
+
+#: inc/customizer.php:266
+msgid "Use standard Bootstrap"
+msgstr "Använd standard Bootstrap"
+
+#: inc/customizer.php:287
+msgid "Theme color"
+msgstr "Tema färg"
+
+#: inc/customizer.php:289
+msgid "Set the theme color of the Off Canvas Menu"
+msgstr "Ange tema på Off Canvas menyn"
+
+#: inc/customizer.php:298
+msgid "Light"
+msgstr "Ljus"
+
+#: inc/customizer.php:321
+msgid "Google Analytics Tracking ID"
+msgstr "Google Analytics Spårnings ID"
+
+#: inc/customizer.php:323
+msgid "Add your Google Analytics Tracking ID (UA-XXXXX)"
+msgstr "Lägg till ditt Google Analytics Spårnings-ID (UA-XXXXX)"
+
+#: inc/customizer.php:350
+msgid "Google Analytics 4 Tracking ID"
+msgstr "Google Analytics 4-spårnings-ID"
+
+#: inc/customizer.php:352
+msgid "Add your Google Analytics 4 Tracking ID (G-XXXXX)"
+msgstr "Lägg till ditt Google Analytics 4 Spårnings-ID (G-XXXXX)"
+
+#: inc/customizer.php:379
+msgid "Google Tag Manager ID"
+msgstr "Google Tag Manager ID"
+
+#: inc/customizer.php:381
+msgid "Add your Google Tag Manager ID (GTM-XXXXX)"
+msgstr "Lägg till ditt Google Tag Manager-ID (GTM-XXXXX)"
+
+#: inc/extras.php:96
+msgid "Post navigation"
+msgstr "Inläggsnavigering"
+
+#: inc/extras.php:100
+msgctxt "Previous post link"
+msgid "<i class=\"fa fa-angle-left\"></i>&nbsp;%title"
+msgstr "<i class=\"fa fa-angle-left\"></i>&nbsp;%title"
+
+#: inc/extras.php:103
+msgctxt "Next post link"
+msgid "%title&nbsp;<i class=\"fa fa-angle-right\"></i>"
+msgstr "%title&nbsp;<i class=\"fa fa-angle-right\"></i>"
+
+#: inc/hooks.php:30
+msgid "https://wordpress.org/"
+msgstr "https://wordpress.org/"
+
+#: inc/hooks.php:33
+#, php-format
+msgid "Proudly powered by %s"
+msgstr "Drivs stolt med %s"
+
+#: inc/hooks.php:38
+#, php-format
+msgid "Theme by: %1$s."
+msgstr "Tema av: %1$s."
+
+#: inc/pagination.php:53
+msgid "&laquo;"
+msgstr "&laquo;"
+
+#: inc/pagination.php:54
+msgid "&raquo;"
+msgstr "&raquo;"
+
+#: inc/pagination.php:57
+msgid "Posts navigation"
+msgstr "Inläggsnavigering"
+
+#: inc/setup.php:49
+msgid "Primary Menu"
+msgstr "Primär meny"
+
+#: inc/setup.php:50
+msgid "Footer Menu"
+msgstr "Sidfotsmeny"
+
+#: inc/setup.php:118
+msgid "Hero"
+msgstr "Hero"
+
+#: inc/setup.php:128
+msgid "Section"
+msgstr "Sektion"
+
+#: inc/setup.php:137
+msgid "Page Header"
+msgstr "Sidhuvud"
+
+#: inc/setup.php:157
+msgid "Bryta Primär"
+msgstr "Bryta Primär"
+
+#: inc/setup.php:162
+msgid "Bryta Sekundär"
+msgstr "Bryta Sekundär"
+
+#: inc/setup.php:167
+msgid "Bryta Sekundär 2"
+msgstr "Bryta Sekundär 2"
+
+#: inc/setup.php:172
+msgid "Bryta sekundär 3"
+msgstr "Bryta sekundär 3"
+
+#: inc/setup.php:177
+msgid "Alkohol"
+msgstr "Alkohol"
+
+#: inc/setup.php:182
+msgid "Socker"
+msgstr "Socker"
+
+#: inc/setup.php:187
+msgid "Rökning"
+msgstr "Rökning"
+
+#: inc/setup.php:192
+msgid "Kontrollerat drickande"
+msgstr "Kontrollerat drickande"
+
+#: inc/setup.php:197
+msgid "Spel"
+msgstr "Spel"
+
+#: inc/setup.php:202
+msgid "Gray 100"
+msgstr "Grå 100"
+
+#: inc/setup.php:207
+msgid "Gray 300"
+msgstr "Grå 300"
+
+#: inc/setup.php:212
+msgid "Gray 500"
+msgstr "Grå 500"
+
+#: inc/setup.php:217
+msgid "Gray 700"
+msgstr "Grå 700"
+
+#: inc/setup.php:222
+msgid "Gray 900"
+msgstr "Grå 900"
+
+#: inc/setup.php:227
+msgid "Black"
+msgstr "Svart"
+
+#: inc/setup.php:232
+msgid "White"
+msgstr "Vit"
+
+#: inc/setup.php:297
+msgid "Read More..."
+msgstr "Läs mer…"
+
+#: inc/setup.php:354
+msgid "Could not read image size."
+msgstr "Det gick inte att läsa bildstorleken."
+
+#: inc/template-tags.php:28
 msgctxt "post date"
-msgid "Posted on %s"
-msgstr "Publicerat den %s"
+msgid "Posted on"
+msgstr "Publicerad"
 
-#: ../inc/template-tags.php:34
-#, php-format
-msgctxt "post author"
-msgid "by %s"
-msgstr "av %s"
-
-#. translators: used between list items, there is a space after the comma
-#: ../inc/template-tags.php:51 ../inc/template-tags.php:57
+#: inc/template-tags.php:45 inc/template-tags.php:51
 msgid ", "
 msgstr ", "
 
-#: ../inc/template-tags.php:53
+#: inc/template-tags.php:48
 #, php-format
-msgid "Posted in %1$s"
-msgstr "Publicerat i %1$s"
+msgid "Posted in %s"
+msgstr "Publicerad i %s"
 
-#: ../inc/template-tags.php:59
+#: inc/template-tags.php:54
 #, php-format
-msgid "Tagged %1$s"
-msgstr "Taggad %1$s"
+msgid "Tagged %s"
+msgstr "Märkt med %1$s"
 
-#: ../inc/template-tags.php:65
+#: inc/template-tags.php:59
 msgid "Leave a comment"
 msgstr "Kommentera"
 
-#: ../inc/template-tags.php:65
+#: inc/template-tags.php:59
 msgid "1 Comment"
 msgstr "1 Kommentar"
 
-#: ../inc/template-tags.php:65
-#, php-format
+#: inc/template-tags.php:59
 msgid "% Comments"
-msgstr "% Kommentarer"
+msgstr "% kommentarer"
 
-#. translators: %s: Name of current post
-#: ../inc/template-tags.php:72
+#: inc/template-tags.php:65
 #, php-format
 msgid "Edit %s"
 msgstr "Ändra %s"
 
-#: ../inc/setup.php:48
-msgid "Primary Menu"
-msgstr "Huvud meny"
+#: inc/widgets.php:103
+msgid "Right Sidebar"
+msgstr "Höger sidopanel"
 
-#: ../inc/setup.php:98
-msgid "Read More..."
-msgstr "Läs mer"
+#: inc/widgets.php:105
+msgid "Right sidebar widget area"
+msgstr "Widgetområde för höger sidofält"
 
-#: ../inc/custom-comments.php:12
-msgid "Name"
-msgstr "Namn"
+#: inc/widgets.php:115
+msgid "Left Sidebar"
+msgstr "Vänster sidopanel"
 
-#: ../inc/custom-comments.php:14
-msgid "Email"
-msgstr "E-post"
+#: inc/widgets.php:117
+msgid "Left sidebar widget area"
+msgstr "Widgetområde för vänster sidofält"
 
-#: ../inc/custom-comments.php:25
-msgctxt "noun"
-msgid "Comment"
-msgstr "Kommentarer"
+#: inc/widgets.php:127
+msgid "Hero Slider"
+msgstr "Hero Slider"
 
-#: ../loop-templates/content-single.php:29 ../loop-templates/content.php:33 ..
-#: loop-templates/content-page.php:25
+#: inc/widgets.php:129
+msgid "Hero slider area. Place two or more widgets here and they will slide!"
+msgstr ""
+"Hero Slider-området. Placera två eller flera widgets här och de kommer att "
+"glida!"
+
+#: inc/widgets.php:139
+msgid "Hero Canvas"
+msgstr "Hero Canvas"
+
+#: inc/widgets.php:141
+msgid "Full size canvas hero area for Bootstrap and other custom HTML markup"
+msgstr ""
+"Full storlek canvas Hero område för bootstrap och andra anpassade HTML Markup"
+
+#: inc/widgets.php:151
+msgid "Top Full"
+msgstr "Top full"
+
+#: inc/widgets.php:153
+msgid "Full top widget with dynamic grid"
+msgstr "Full Top widget med dynamiskt rutnät"
+
+#: inc/widgets.php:163
+msgid "Footer Full"
+msgstr "Sidfot fullbredd"
+
+#: inc/widgets.php:165
+msgid "Full sized footer widget with dynamic grid"
+msgstr "Full storlek sidfot widget med dynamiskt rutnät"
+
+#: loop-templates/content-faq.php:48 loop-templates/content-grid.php:48
+#: loop-templates/content-page.php:42 loop-templates/content-single.php:35
+#: loop-templates/content.php:42
 msgid "Pages:"
 msgstr "Sidor:"
 
-#: ../loop-templates/content-none.php:16
+#: loop-templates/content-none.php:18
 msgid "Nothing Found"
 msgstr "Inget hittades"
 
-#: ../loop-templates/content-none.php:24
+#: loop-templates/content-none.php:30
 #, php-format
 msgid ""
 "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr "Redo att skriv ditt första inlägg? <a href=\"%1$s\">Börja här</a>."
 
-#: ../loop-templates/content-none.php:28
+#: loop-templates/content-none.php:38
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
 msgstr ""
 "Tyvärr fick din sökning inga träffar. Du kan prova igen med nya nyckelord."
 
-#: ../loop-templates/content-none.php:33
+#: loop-templates/content-none.php:46
 msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."
 msgstr "Vi verkar inte hitta det du söker, Det kanske hjälper att söka."
 
-#: ../loop-templates/content-page.php:34
+#: loop-templates/content-page.php:52 woocommerce/myaccount/my-address.php:61
 msgid "Edit"
 msgstr "Ändra"
 
-#: ../woocommerce/myaccount/form-edit-address.php
-msgid "Save Address"
-msgstr "Spara adress"
+#: search.php:36
+#, php-format
+msgid "Search Results for: %s"
+msgstr "Sök resultat för: %s"
 
-#: ../woocommerce/myaccount/my-orders.php
-msgid "%s for %s item"
-msgstr "%s för %s vara"
+#: searchform.php:13
+msgid "Search"
+msgstr "Sök"
 
-#: ../woocommerce/myaccount/my-orders.php
-msgid "Pay"
-msgstr "Betala"
+#: searchform.php:16
+msgid "Search &hellip;"
+msgstr "Sök &hellip;"
 
-#: ../woocommerce/myaccount/my-orders.php
-msgid "View"
-msgstr "Visa"
+#: sidebar-templates/sidebar-footerfull.php:53
+msgctxt "copyright date format"
+msgid "Y"
+msgstr "Y"
 
-#: ../woocommerce/myaccount/my-orders.php
-msgid "Cancel"
-msgstr "Avbryt"
+#: sidebar-templates/sidebar-hero.php:28 woocommerce/myaccount/orders.php:89
+msgid "Previous"
+msgstr "Föregående"
 
-#: ../woocommerce/myaccount/form-login.php
-msgid "Login"
-msgstr "Login"
+#: sidebar-templates/sidebar-hero.php:36 woocommerce/myaccount/orders.php:93
+msgid "Next"
+msgstr "Nästa"
 
-#: ../woocommerce/myaccount/form-login.php
+#: woocommerce/cart/cart-empty.php:29
+msgid "Return to shop"
+msgstr "Gå tillbaka till butiken"
+
+#: woocommerce/cart/cart.php:30 woocommerce/cart/cart.php:77
+#: woocommerce/checkout/form-pay.php:27
+msgid "Product"
+msgstr "Produkt"
+
+#: woocommerce/cart/cart.php:31 woocommerce/cart/cart.php:97
+msgid "Price"
+msgstr "Pris"
+
+#: woocommerce/cart/cart.php:32 woocommerce/cart/cart.php:103
+#: woocommerce/global/quantity-input.php:28
+msgid "Quantity"
+msgstr "Antal"
+
+#: woocommerce/cart/cart.php:33 woocommerce/cart/cart.php:125
+msgid "Subtotal"
+msgstr "Delsumma"
+
+#: woocommerce/cart/cart.php:56
+msgid "Remove this item"
+msgstr "Ta bort"
+
+#: woocommerce/cart/cart.php:92
+msgid "Available on backorder"
+msgstr "Tillgänglig som restorder"
+
+#: woocommerce/cart/cart.php:143
+msgid "Coupon:"
+msgstr "Kupong:"
+
+#: woocommerce/cart/cart.php:143 woocommerce/checkout/form-coupon.php:34
+msgid "Coupon code"
+msgstr "Rabattkod"
+
+#: woocommerce/cart/cart.php:143 woocommerce/checkout/form-coupon.php:38
+msgid "Apply coupon"
+msgstr "Använd rabattkupong"
+
+#: woocommerce/cart/cart.php:148
+msgid "Update cart"
+msgstr "Uppdatera varukorg"
+
+#: woocommerce/cart/proceed-to-checkout-button.php:26
+msgid "Proceed to checkout"
+msgstr "Fortsätt till kassan"
+
+#: woocommerce/checkout/form-checkout.php:26
+msgid "You must be logged in to checkout."
+msgstr "Du måste vara inloggad för att kunna avsluta köpet."
+
+#: woocommerce/checkout/form-checkout.php:52
+msgid "Your order"
+msgstr "Din beställning"
+
+#: woocommerce/checkout/form-coupon.php:26
+msgid "Have a coupon?"
+msgstr "Har du en rabattkod?"
+
+#: woocommerce/checkout/form-coupon.php:26
+msgid "Click here to enter your code"
+msgstr "Klicka här för att ange din kod"
+
+#: woocommerce/checkout/form-coupon.php:31
+msgid "If you have a coupon code, please apply it below."
+msgstr "Om du har en kupongkod, vänligen använd den nedan."
+
+#: woocommerce/checkout/form-pay.php:28
+msgid "Qty"
+msgstr "Antal"
+
+#: woocommerce/checkout/form-pay.php:29
+msgid "Totals"
+msgstr "Totalt"
+
+#: woocommerce/checkout/form-pay.php:79
+msgid ""
+"Sorry, it seems that there are no available payment methods for your "
+"location. Please contact us if you require assistance or wish to make "
+"alternate arrangements."
+msgstr ""
+"Det ser inte ut som det finns några betalsätt för din adress. Vänligen "
+"kontakta oss om du behöver hjälp eller önskar få andra alternativ."
+
+#: woocommerce/checkout/payment.php:33
+msgid ""
+"Sorry, it seems that there are no available payment methods for your state. "
+"Please contact us if you require assistance or wish to make alternate "
+"arrangements."
+msgstr ""
+"Det ser inte ut som det finns några betalsätt för din adress. Vänligen "
+"kontakta oss om du behöver hjälp eller önskar få andra alternativ."
+
+#: woocommerce/checkout/payment.php:33
+msgid "Please fill in your details above to see available payment methods."
+msgstr ""
+"Vänligen fyll i dina uppgifter här ovanför för att se tillgängliga betalsätt."
+
+#: woocommerce/checkout/payment.php:42
+#, php-format
+msgid ""
+"Since your browser does not support JavaScript, or it is disabled, please "
+"ensure you click the %1$sUpdate Totals%2$s button before placing your order. "
+"You may be charged more than the amount stated above if you fail to do so."
+msgstr ""
+"Eftersom din webbläsare inte stöder JavaScript, eller så är den inaktiverad, "
+"se till att du klickar på knappen%1$sUpdate Totals %2$s innan du beställer. "
+"Du kan debiteras mer än det belopp som anges ovan om du inte gör det."
+
+#: woocommerce/checkout/payment.php:44
+msgid "Update totals"
+msgstr "Uppdatera summan"
+
+#: woocommerce/global/form-login.php:33
+#: woocommerce/myaccount/form-lost-password.php:28
+msgid "Username or email"
+msgstr "Användarnamn eller e-postadress"
+
+#: woocommerce/global/form-login.php:37 woocommerce/myaccount/form-login.php:42
+#: woocommerce/myaccount/form-login.php:94
 msgid "Password"
 msgstr "Lösenord"
 
-#: ../woocommerce/myaccount/form-login.php
-msgid "Username or email address"
-msgstr "Användarnamn eller E-post adress"
-
-#: ../woocommerce/myaccount/form-login.php
-msgid "Lost your password?"
-msgstr "Glömt ditt lösenord?"
-
-#: ../woocommerce/myaccount/form-login.php
-msgid "Username"
-msgstr "Användarnamn"
-
-#: ../woocommerce/myaccount/form-login.php
-msgid "Email address"
-msgstr "E-post adress"
-
-#: ../woocommerce/myaccount/form-login.php
-msgid "Register"
-msgstr "Registrera"
-
-#: ../woocommerce/myaccount/form-login.php
+#: woocommerce/global/form-login.php:46 woocommerce/myaccount/form-login.php:50
 msgid "Remember me"
 msgstr "Kom ihåg mig"
 
+#: woocommerce/global/form-login.php:50 woocommerce/myaccount/form-login.php:31
+msgid "Login"
+msgstr "Login"
 
-#: ../woocommerce/myaccount/form-edit-account.php
+#: woocommerce/global/form-login.php:54 woocommerce/myaccount/form-login.php:57
+msgid "Lost your password?"
+msgstr "Glömt ditt lösenord?"
+
+#: woocommerce/global/quantity-input.php:28
+#, php-format
+msgid "%s quantity"
+msgstr "%s antal"
+
+#: woocommerce/global/quantity-input.php:41
+msgctxt "Product quantity input tooltip"
+msgid "Qty"
+msgstr "Antal"
+
+#: woocommerce/loop/orderby.php:24
+msgid "Shop order"
+msgstr "Order/beställning"
+
+#: woocommerce/myaccount/downloads.php:41
+msgid "Go shop"
+msgstr "Beställ nu"
+
+#: woocommerce/myaccount/downloads.php:43
+msgid "No downloads available yet."
+msgstr "Inga nedladdningar tillgängliga."
+
+#: woocommerce/myaccount/form-edit-account.php:27
 msgid "First name"
 msgstr "Förnamn"
 
-#: ../woocommerce/myaccount/form-edit-account.php
+#: woocommerce/myaccount/form-edit-account.php:31
 msgid "Last name"
 msgstr "Efternamn"
 
-#: ../woocommerce/myaccount/form-edit-account.php
-msgid "Email adress"
+#: woocommerce/myaccount/form-edit-account.php:37
+msgid "Display name"
+msgstr "Visningsnamn"
+
+#: woocommerce/myaccount/form-edit-account.php:38
+msgid ""
+"This will be how your name will be displayed in the account section and in "
+"reviews"
+msgstr "Så här kommer ditt namn att visas i kontot och i recensioner"
+
+#: woocommerce/myaccount/form-edit-account.php:43
+#: woocommerce/myaccount/form-login.php:87
+msgid "Email address"
 msgstr "E-post adress"
 
-#: ../woocommerce/myaccount/form-edit-account.php
-msgid "Current Password (leave blank to leave unchanged)"
-msgstr "Nuvarande lösenord (lämna tomt för att inte ändra)"
+#: woocommerce/myaccount/form-edit-account.php:48
+msgid "Password change"
+msgstr "Ändra lösenord"
 
+#: woocommerce/myaccount/form-edit-account.php:51
+msgid "Current password (leave blank to leave unchanged)"
+msgstr "Nuvarande lösenord (lämna blankt om oförändrat)"
 
-#: ../woocommerce/myaccount/form-edit-account.php
-msgid "New Password (leave blank to leave unchanged)"
-msgstr "Nytt lösenord (lämna tomt för att inte ändra)"
+#: woocommerce/myaccount/form-edit-account.php:55
+msgid "New password (leave blank to leave unchanged)"
+msgstr "Nytt lösenord (lämna tomt för att behålla nuvarande)"
 
-#: ../woocommerce/myaccount/form-edit-account.php
-msgid "Confirm New Password"
+#: woocommerce/myaccount/form-edit-account.php:59
+msgid "Confirm new password"
 msgstr "Bekräfta nytt lösenord"
 
-#: ../woocommerce/myaccount/form-edit-account.php
-msgid "Password Change"
-msgstr "Byt lösenord"
-
-#: ../woocommerce/myaccount/form-edit-account.php
+#: woocommerce/myaccount/form-edit-account.php:69
 msgid "Save changes"
 msgstr "Spara ändringar"
 
-#. Name of the theme
-msgid "UnderStrap"
-msgstr "UnderStrap"
+#: woocommerce/myaccount/form-edit-address.php:20
+#: woocommerce/myaccount/my-address.php:29
+#: woocommerce/myaccount/my-address.php:38
+msgid "Billing address"
+msgstr "Faktureringsadress"
 
-#. Theme URI of the theme
-msgid "http://understrap.com"
-msgstr "http://understrap.com"
+#: woocommerce/myaccount/form-edit-address.php:20
+#: woocommerce/myaccount/my-address.php:30
+msgid "Shipping address"
+msgstr "Leveransadress"
 
-#. Description of the theme
+#: woocommerce/myaccount/form-edit-address.php:46
+msgid "Save address"
+msgstr "Spara adress"
+
+#: woocommerce/myaccount/form-login.php:38
+msgid "Username or email address"
+msgstr "Användarnamn eller E-post adress"
+
+#: woocommerce/myaccount/form-login.php:53
+msgid "Log in"
+msgstr "Logga in"
+
+#: woocommerce/myaccount/form-login.php:71
+#: woocommerce/myaccount/form-login.php:108
+msgid "Register"
+msgstr "Registrera"
+
+#: woocommerce/myaccount/form-login.php:80
+msgid "Username"
+msgstr "Användarnamn"
+
+#: woocommerce/myaccount/form-login.php:100
+msgid "A password will be sent to your email address."
+msgstr "Ett lösenord skickas till din e-postadress."
+
+#: woocommerce/myaccount/form-lost-password.php:25
 msgid ""
-"Combination of Automattic´s _s theme and Bootstrap 4. Made as a solid "
-"starting point for your next theme project and WordPress website. Use it as "
-"starter theme or as parent theme. It is up to you."
+"Lost your password? Please enter your username or email address. You will "
+"receive a link to create a new password via email."
 msgstr ""
-"En kombination av Automattic´s _s tema och Bootstrap 4. Gjort som en bas för "
-"ditt nästa tema eller WordPress webbplats. Använd det som en grund eller som "
-"ett förälder tema. Det är upp till dig."
+"Glömt ditt lösenord? Vänligen ange ditt användarnamn eller din e-postadress. "
+"Du kommer att få ett mail med en länk för att återställa ditt lösenord."
 
-#. Author of the theme
-msgid "Holger Koenemann"
-msgstr "Holger Koenemann"
+#: woocommerce/myaccount/form-lost-password.php:38
+msgid "Reset password"
+msgstr "Återställ lösenord"
 
-#. Author URI of the theme
-msgid "http://www.holgerkoenemann.de"
-msgstr "http://www.holgerkoenemann.de"
+#: woocommerce/myaccount/form-reset-password.php:25
+msgid "Enter a new password below."
+msgstr "Ange ett nytt lösenord nedan."
+
+#: woocommerce/myaccount/form-reset-password.php:28
+msgid "New password"
+msgstr "Nytt lösenord"
+
+#: woocommerce/myaccount/form-reset-password.php:32
+msgid "Re-enter new password"
+msgstr "Ange nytt lösenord igen"
+
+#: woocommerce/myaccount/form-reset-password.php:45
+msgid "Save"
+msgstr "Spara"
+
+#: woocommerce/myaccount/my-address.php:49
+msgid "The following addresses will be used on the checkout page by default."
+msgstr "Följande adresser kommer att användas i kassan som standard."
+
+#: woocommerce/myaccount/my-address.php:66
+msgid "You have not set up this type of address yet."
+msgstr "Du har inte skapat denna typ av adress ännu."
+
+#: woocommerce/myaccount/my-orders.php:16
+msgid "Order"
+msgstr "Beställning"
+
+#: woocommerce/myaccount/my-orders.php:17
+msgid "Date"
+msgstr "Datum"
+
+#: woocommerce/myaccount/my-orders.php:18
+msgid "Status"
+msgstr "Status"
+
+#: woocommerce/myaccount/my-orders.php:19
+msgid "Total"
+msgstr "Totalt"
+
+#: woocommerce/myaccount/my-orders.php:39
+msgid "Recent orders"
+msgstr "Tidigare beställningar"
+
+#: woocommerce/myaccount/my-orders.php:65 woocommerce/myaccount/orders.php:49
+msgctxt "hash before order number"
+msgid "#"
+msgstr "#"
+
+#: woocommerce/myaccount/my-orders.php:77 woocommerce/myaccount/orders.php:61
+#, php-format
+msgid "%1$s for %2$s item"
+msgid_plural "%1$s for %2$s items"
+msgstr[0] "%s för %s vara"
+msgstr[1] "%s för %s vara"
+
+#: woocommerce/myaccount/orders.php:101
+msgid "Go to the shop"
+msgstr "Gå och beställ"
+
+#: woocommerce/myaccount/orders.php:103
+msgid "No order has been made yet."
+msgstr "Ingen beställning har gjorts ännu."
+
+#: woocommerce/product-searchform.php:25
+msgid "Search products&hellip;"
+msgstr "Sök produkter&hellip;"
+
+#: woocommerce/product-searchform.php:26
+msgid "Search for:"
+msgstr "Sök efter:"
+
+#: woocommerce/product-searchform.php:29
+msgctxt "submit button"
+msgid "Search"
+msgstr "Sök"
+
+#. Theme Name of the plugin/theme
+msgid "bryta"
+msgstr "bryta"
+
+#. Theme URI of the plugin/theme
+msgid "https://wpbyran.se"
+msgstr "https://wpbyran.se"
+
+#. Description of the plugin/theme
+msgid ""
+"A starter theme based on Understrap, a combination of Automattic´s _s theme "
+"and Bootstrap 4. Made as a solid starting point for your next theme project "
+"and WordPress website."
+msgstr ""
+"Ett starttema baserat på Understrap, en kombination av Automattics _s och "
+"Bootstrap 4. Utvecklat och levererat av WP_Byrån."
+
+#. Author of the plugin/theme
+msgid "WP_Byrån"
+msgstr "WP_Byrån"
+
+#. Author URI of the plugin/theme
+msgid "https://liffeman.me"
+msgstr "https://liffeman.me"
+
+#~ msgid "Empty Page Template"
+#~ msgstr "Empty Page Template"
+
+#~ msgid "Hero Static"
+#~ msgstr "Hero Static"
+
+#~ msgid "Number of slides displaying at once"
+#~ msgstr "Antal slides som visas samtidigt"
+
+#~ msgid "Slider Time (in ms)"
+#~ msgstr "Slider tid (i ms)"
+
+#~ msgid "Loop Slider Content"
+#~ msgstr "Loop Slider Innehåll"
+
+#, php-format
+#~ msgid " Edited %4$s"
+#~ msgstr " Redigerat %4$s"
+
+#, php-format
+#~ msgctxt "post author"
+#~ msgid "by %s"
+#~ msgstr "av %s"
+
+#~ msgid "Name"
+#~ msgstr "Namn"
+
+#~ msgid "Email"
+#~ msgstr "E-post"
+
+#~ msgctxt "noun"
+#~ msgid "Comment"
+#~ msgstr "Kommentarer"
+
+#~ msgid "Pay"
+#~ msgstr "Betala"
+
+#~ msgid "Cancel"
+#~ msgstr "Avbryt"
+
+#~ msgid "Email adress"
+#~ msgstr "E-post adress"
+
+#~ msgid "UnderStrap"
+#~ msgstr "UnderStrap"
+
+#~ msgid "http://understrap.com"
+#~ msgstr "http://understrap.com"
+
+#~ msgid "Holger Koenemann"
+#~ msgstr "Holger Koenemann"
+
+#~ msgid "http://www.holgerkoenemann.de"
+#~ msgstr "http://www.holgerkoenemann.de"
