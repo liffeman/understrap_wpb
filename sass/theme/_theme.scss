@@ -230,13 +230,24 @@ h1 {
 
 /* content */
 .single {
-	.card-body.single-card {
+	.card-body.single-card,
+	.entry-footer {
 		padding-left: $post-padding;
 		padding-right: $post-padding;
 		@include media-breakpoint-down(md) {
 			padding-left: $post-padding / 2;
 			padding-right: $post-padding / 2;
 		}
+	}
+	.entry-meta {
+		font-size: $font-size-sm;
+		margin-bottom: $spacer;
+	}
+	.entry-footer {
+		font-size: $font-size-sm;
+		border-top: 1px solid $border-color;
+		padding-top: $spacer;
+		padding-bottom: $spacer;
 	}
 }
 .page {
@@ -297,6 +308,23 @@ h1 {
 	border: none;
 	border-bottom: 3px solid $white !important;
 }
+
+/* Postnavigation */
+.navigation.post-navigation {
+	margin-bottom: 2rem;
+	padding: 1rem 2rem !important;
+}
+
+/* Comments */
+.comments-area {
+	margin-top: 1rem;
+	padding: 2rem;
+	background-color: $gray-100;
+	border: $gray-100;
+	@extend .card;
+}
+
+
 /* Footer */
 
 #wrapper-footer-full {

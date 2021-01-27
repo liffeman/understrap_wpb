@@ -254,7 +254,8 @@ add_action( 'after_setup_theme', 'use_new_image_size' );
 
 function create_custom_image_size($sizes){
 	$custom_sizes = array(
-	'grid_image' => 'Grid Image size'
+		'grid_image' => 'Grid Image size',
+		'header_image' => 'Sidhuvudsbild'
 	);
 	return array_merge( $sizes, $custom_sizes );
 }
@@ -292,7 +293,7 @@ if ( ! function_exists( 'understrap_all_excerpts_get_more_link' ) ) {
 	 */
 	function understrap_all_excerpts_get_more_link( $post_excerpt ) {
 		if ( ! is_admin() ) {
-			$post_excerpt = $post_excerpt . ' [...]<p><a class="btn btn-secondary understrap-read-more-link" href="' . esc_url( get_permalink( get_the_ID() ) ) . '">' . __(
+			$post_excerpt = $post_excerpt . ' [...]<p><a class="btn btn-primary understrap-read-more-link" href="' . esc_url( get_permalink( get_the_ID() ) ) . '">' . __(
 				'Read More...',
 				'understrap'
 			) . '</a></p>';
@@ -312,6 +313,31 @@ function understrap_excerpt_length( $length ) {
 	return 20;
 }
 add_filter( 'excerpt_length', 'understrap_excerpt_length');
+
+
+
+
+if( ! function_exists('fix_no_editor_on_posts_page'))
+{
+	/**
+	 * Add the wp-editor back into WordPress after it was removed in 4.2.2.
+	 *
+	 * @param $post
+	 * @return void
+	 */
+	function fix_no_editor_on_posts_page($post)
+	{
+		if($post->ID != get_option('page_for_posts'))
+			return;
+
+		remove_action('edit_form_after_title', '_wp_posts_page_notice');
+		add_post_type_support('page', 'editor');
+	}
+	add_action('edit_form_after_title', 'fix_no_editor_on_posts_page', 0);
+}
+
+
+
 
 
 /**
