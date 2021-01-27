@@ -31,8 +31,8 @@ body {
 	margin-right: -$page-padding;
 	width: auto;
 	@include media-breakpoint-down(md) {
-		margin-left: -$page-padding / 2;
-		margin-right: -$page-padding / 2;
+		margin-left: -$page-padding-sm;
+		margin-right: -$page-padding-sm;
 	}
 }
 
@@ -42,8 +42,8 @@ body {
 	margin-right: -$post-padding;
 	//width: auto;
 	@include media-breakpoint-down(md) {
-		margin-left: -$post-padding / 2;
-		margin-right: -$post-padding / 2;
+		margin-left: -$post-padding-sm;
+		margin-right: -$post-padding-sm;
 	}
 }
 
@@ -89,11 +89,22 @@ h1 {
 	.wp-block-media-text__content {
 		padding-right: 0;
 		padding-left: 10%;
+		@include media-breakpoint-down(sm) {
+			padding-left: 0;
+		}
 	}
 	&.has-media-on-the-right {
 		.wp-block-media-text__content {
-		padding-right: 10%;
-		padding-left: 0;
+			padding-right: 10%;
+			padding-left: 0;
+			@include media-breakpoint-down(sm) {
+				padding-right: 0;
+			}
+		}
+	}
+	@include media-breakpoint-down(sm) {
+		.wp-block-media-text__media {
+			margin-bottom: 2rem !important;
 		}
 	}
 }
@@ -207,6 +218,10 @@ h1 {
 	text-transform: uppercase;
 	border-bottom: 14px solid transparent;
 	padding-top: 3.125rem;
+	@include media-breakpoint-down(md) {
+		padding-top: 0.75rem
+	}
+
 	&:hover {
 		transition: all .5s ease-in-out;
 		border-bottom-color: $primary;
@@ -235,8 +250,8 @@ h1 {
 		padding-left: $post-padding;
 		padding-right: $post-padding;
 		@include media-breakpoint-down(md) {
-			padding-left: $post-padding / 2;
-			padding-right: $post-padding / 2;
+			padding-left: $post-padding-sm;
+			padding-right: $post-padding-sm;
 		}
 	}
 	.entry-meta {
@@ -255,14 +270,17 @@ h1 {
 		padding-left: $page-padding;
 		padding-right: $page-padding;
 		@include media-breakpoint-down(md) {
-			padding-left: $page-padding / 2;
-			padding-right: $page-padding / 2;
+			padding-left: $page-padding-sm;
+			padding-right: $page-padding-sm;
 		}
 	}
 }
 
 .is-style-section{
 	padding: 5rem 0;
+	@include media-breakpoint-down(md) {
+		padding: 1rem 0.25rem;
+	}
 	.wp-block-group__inner-container {
 	@extend .container;
 	}

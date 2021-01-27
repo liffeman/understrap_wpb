@@ -50,11 +50,16 @@ $dark:          $gray-800 !default;
 $enable-shadows:                            		 true;
 $enable-responsive-font-sizes:                true;
 
+$rfs-base-font-size: 		0.75rem;
+$rfs-factor:					10;
+
 
 $spacer: 1rem;
 
 $post-padding:				10rem;
+$post-padding-sm:		0.5rem;
 $page-padding:			4rem;
+$page-padding-sm:		0.5rem;
 
 
 // Body

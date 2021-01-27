@@ -45,7 +45,7 @@ echo '<a class="anchor" id="' . $section_anchor . '"></a>';
 	if( $posts ): ?>
 	<div class="row">
 		<div class="container">
-			<div class="apps card-deck mt-3 mb-3">
+			<div class="apps card-deck flex-column flex-md-row mt-3 mb-3">
 				<?php foreach( $posts as $post): ?>
 					<?php setup_postdata($post); ?>
 					<div class="card app rounded-lg bg-primary text-white">

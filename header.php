@@ -31,7 +31,7 @@ $offcanvastheme = get_theme_mod('understrap_offcanvas_theme');
 
 		<a class="skip-link sr-only sr-only-focusable" href="#content"><?php esc_html_e( 'Skip to content', 'understrap' ); ?></a>
 
-		<nav id="main-nav" class="navbar <?php echo $nav_theme; ?> navbar-expand-md shadow-lg sticky-top" aria-labelledby="main-nav-label">
+		<nav id="main-nav" class="navbar <?php echo $nav_theme; ?> navbar-expand-lg shadow-lg sticky-top" aria-labelledby="main-nav-label">
 
 			<h2 id="main-nav-label" class="sr-only">
 				<?php esc_html_e( 'Main Navigation', 'understrap' ); ?>
