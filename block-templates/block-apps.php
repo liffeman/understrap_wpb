@@ -45,10 +45,10 @@ echo '<a class="anchor" id="' . $section_anchor . '"></a>';
 	if( $posts ): ?>
 	<div class="row">
 		<div class="container">
-			<div class="apps">
+			<div class="apps card-deck mb-3">
 				<?php foreach( $posts as $post): ?>
 					<?php setup_postdata($post); ?>
-					<div class="card app bg-dark text-white">
+					<div class="card app rounded-lg bg-dark text-white">
 						<?php if ( has_post_thumbnail()) : ?>
 							<?php the_post_thumbnail( 'large', array( 'class' => 'card-img' ) );?>
 						<?php endif; ?>
