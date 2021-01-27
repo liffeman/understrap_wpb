@@ -8,6 +8,10 @@
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 ?>
+<?php
+$show_title = get_field('sidrubrik');
+$show_breadcrumb = get_field('brodsmulor');
+?>
 
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 <?php if ( has_post_thumbnail() ) : ?>
@@ -17,12 +21,15 @@ defined( 'ABSPATH' ) || exit;
 			</div>
 		</figure>
 <?php endif; ?>
+<?php
 
+if( get_field('sidrubrik') == 0 ): ?>
 	<header class="entry-header">
 
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 
 	</header><!-- .entry-header -->
+<?php endif ;?>
 
 
 	<div class="entry-content">

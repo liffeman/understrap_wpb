@@ -34,10 +34,19 @@ function register_acf_block_types() {
         'enqueue_style'     => get_template_directory_uri() . '/css/custom-editor-style.css',
         'category'          => 'custom',
         'icon'              => 'tide',
-        'keywords'          => array( 'countdown'),
-        'align'				=> 'full'
-    ));
-
+        'keywords'          => array( 'apps')
+	));
+	// register a post list block.
+	acf_register_block_type(array(
+		'name'              => 'faq',
+		'title'             => __('FAQs'),
+		'description'       => __('A block to whow FAQs.'),
+		'render_template'   => 'block-templates/block-faqs.php',
+		'enqueue_style'     => get_template_directory_uri() . '/css/custom-editor-style.css',
+		'category'          => 'custom',
+		'icon'              => 'editor-help',
+		'keywords'          => array( 'faq')
+	));
 }
 
 // Check if function exists and hook into setup.

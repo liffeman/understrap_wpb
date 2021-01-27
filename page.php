@@ -16,10 +16,15 @@ defined( 'ABSPATH' ) || exit;
 get_header();
 
 $container = get_theme_mod( 'understrap_container_type' );
+$show_title = get_field('sidrubrik');
+$class_wrapper = '';
+if ($show_title == 1 ) {
+	$class_wrapper .= ' no-title';
+}
 
 ?>
 
-<div class="wrapper" id="page-wrapper">
+<div class="wrapper<?php echo $class_wrapper;?>" id="page-wrapper">
 
 	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
 
