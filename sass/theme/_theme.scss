@@ -33,10 +33,10 @@ body {
 }
 
 .single .alignwide {
-	max-width: 100vw;
+	//max-width: 100vw;
 	margin-left: -$post-padding;
 	margin-right: -$post-padding;
-	width: auto;
+	//width: auto;
 	@include media-breakpoint-down(md) {
 		margin-left: -$post-padding / 2;
 		margin-right: -$post-padding / 2;
@@ -44,17 +44,22 @@ body {
 }
 
 .alignfull {
-	width: 100vw !important;
-	margin-left: calc(50% - 50vw);
-	margin-right: calc(50% - 50vw);
+	//width: 100vw !important;
+	margin-left: calc( -100vw / 2 + 100% / 2 );
+	margin-right: calc( -100vw / 2 + 100% / 2 );
+	max-width: 100vw;
 	img {
-		width: 100vw !important;
+		//width: 100vw !important;
 		max-width: 100vw !important;
 		height: 100%;
 		align-self: center;
 	}
 }
-
+figure.alignfull {
+	img {
+	width: 100vw;
+	}
+}
 /* custom logo */
 
 .custom-logo-link {
@@ -243,7 +248,7 @@ h1 {
 		//max-width: 240px;
 		//height: 70px;
 		//overflow: hidden;
-		min-width: 240px;
+		min-width: 200px;
 		height: 70px;
 		overflow: hidden;
 		display: flex;
@@ -251,11 +256,18 @@ h1 {
 		border: none;
 		border-radius: $border-radius-lg;
 		margin: 1rem;
+	    img.card-img {
+			width: auto !important;
+			max-width: 100% !important;
+			height: auto;
+		}
 		.app-title {
 			margin-bottom: 0;
 			text-align: center;
 			white-space: nowrap;
 			color: $white;
+			padding-left: 2rem;
+			padding-right: 2rem;
 		}
 	}
 }
