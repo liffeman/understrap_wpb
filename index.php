@@ -15,10 +15,15 @@
 defined( 'ABSPATH' ) || exit;
 
 get_header();
+$page_for_posts_ID = get_option( 'page_for_posts');
 
 $container = get_theme_mod( 'understrap_container_type' );
 $view = get_theme_mod( 'understrap_blog_view' );
 $our_title = get_the_title( get_option('page_for_posts', true) );
+$posts_page = get_post( get_option( 'page_for_posts' ) );
+$the_content = apply_filters( 'the_content', $posts_page->post_content );
+$img = wp_get_attachment_image_src(get_post_thumbnail_id(get_option('page_for_posts')),'large');
+$title_visibility = get_field('sidrubrik', $page_for_posts_ID );
 ?>
 
 <?php if ( is_front_page() && is_home() ) : ?>
@@ -35,6 +40,26 @@ $our_title = get_the_title( get_option('page_for_posts', true) );
 			<?php get_template_part( 'global-templates/left-sidebar-check' ); ?>
 
 			<main class="site-main" id="main">
+				<?php if ($img) : ?>
+					<figure class="alignfull">
+						<div class="featured-image">
+						<?php echo get_the_post_thumbnail( $posts_page->ID, 'large', array( 'class' =>  'responsive' ) ); ?>
+						</div>
+					</figure>
+				<?php endif; ?>
+
+				<?php
+				if( $title_visibility == 0 ): ?>
+					<header class="entry-header">
+						<h1 class="entry-title"><?php echo $our_title; ?></h1>
+					</header><!-- .entry-header -->
+				<?php endif ;?>
+
+				<?php
+					if ( !empty($the_content) ) {
+						echo '<div class="entry-content pb-5">' . $the_content . '</div>';
+						}
+				 ?>
 				<?php
 				if ( have_posts() ) {
 					if ($view == 'grid') {
