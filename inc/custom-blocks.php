@@ -38,6 +38,17 @@ function register_acf_block_types() {
 	));
 	// register a post list block.
 	acf_register_block_type(array(
+		'name'              => 'appstores',
+		'title'             => __('Download in Appstores'),
+		'description'       => __('A block to show download in appstores.'),
+		'render_template'   => 'block-templates/block-appstores.php',
+		'enqueue_style'     => get_template_directory_uri() . '/css/custom-editor-style.css',
+		'category'          => 'custom',
+		'icon'              => 'cart',
+		'keywords'          => array( 'apple', 'appstore', 'google', 'googleplay')
+	));
+	// register a post list block.
+	acf_register_block_type(array(
 		'name'              => 'faq',
 		'title'             => __('FAQs'),
 		'description'       => __('A block to whow FAQs.'),

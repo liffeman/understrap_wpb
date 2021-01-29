@@ -1,0 +1,56 @@
+{
+    "key": "group_6013f6b8684bc",
+    "title": "Block - Appstores",
+    "fields": [
+        {
+            "key": "field_6013f6c29f06b",
+            "label": "Apple AppStore",
+            "name": "appstore",
+            "type": "url",
+            "instructions": "Länk till App i Apple's AppStore",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_6013f6e49f06c",
+            "label": "GooglePlay",
+            "name": "googleplay",
+            "type": "url",
+            "instructions": "Länk till App i GooglePlay",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/appstores"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1611922479
+}
