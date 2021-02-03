@@ -11,15 +11,18 @@ defined( 'ABSPATH' ) || exit;
 <?php
 $show_title = get_field('sidrubrik');
 $show_breadcrumb = get_field('brodsmulor');
+$hide_featured = get_field('hide_featured');
 ?>
 
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 <?php if ( has_post_thumbnail() ) : ?>
+	<?php if( !$hide_featured): ?>
 		<figure class="alignfull">
 			<div class="featured-image">
 			<?php echo get_the_post_thumbnail( $post->ID, 'large', array( 'class' =>  'responsive' ) ); ?>
 			</div>
 		</figure>
+	<?php endif ; ?>
 <?php endif; ?>
 <?php
 
