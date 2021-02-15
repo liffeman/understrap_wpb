@@ -53,7 +53,7 @@ $the_content = apply_filters( 'the_content', $posts_page->post_content );
 				<?php
 				if ( have_posts() ) {
 					if ($view == 'grid') {
-						echo '<div class="card-columns">';
+						echo '<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">';
 						}
 					// Start the Loop.
 					while ( have_posts() ) {

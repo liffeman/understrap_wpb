@@ -75,7 +75,7 @@ $current_category = single_cat_title("", false);
 			<?php
 			if ( have_posts() ) {
 				if ($view == 'grid') {
-					echo '<div class="card-columns">';
+					echo '<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">';
 					}
 				// Start the Loop.
 				while ( have_posts() ) {

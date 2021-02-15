@@ -8,8 +8,8 @@
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 ?>
-
-<div class="card ajax-post">
+<div class="col mb-4">
+<div class="card ajax-post h-100">
 	<div class="categories">
 		<?php
 		foreach((get_the_category()) as $category){
@@ -36,4 +36,5 @@ defined( 'ABSPATH' ) || exit;
 			</div><!-- .entry-meta -->
 	</div>
 	</a>
+</div>
 </div>
