@@ -294,6 +294,126 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
 				)
 			)
 		);
+
+		$wp_customize->add_setting(
+			'understrap_offcanvas_submenu_slide',
+			array(
+				'default'           => 'true',
+				'type'              => 'theme_mod',
+				'sanitize_callback' => 'sanitize_text_field',
+				'capability'        => 'edit_theme_options',
+			)
+		);
+
+		$wp_customize->add_control(
+			new WP_Customize_Control(
+				$wp_customize,
+				'understrap_offcanvas_submenu_slide',
+				array(
+					'label'             => __( 'Slide submenues', 'understrap' ),
+					'description'       => __(
+						'Set if submenues should be sliding or not',
+						'understrap'
+					),
+					'section'           => 'understrap_theme_layout_options',
+					'settings'          => 'understrap_offcanvas_submenu_slide',
+					'type'              => 'select',
+					'sanitize_callback' => 'understrap_theme_slug_sanitize_select',
+					'choices'           => array(
+						'true' => __( 'Slide', 'understrap' ),
+						'false'  => __( 'Collapse', 'understrap' ),
+					),
+					'priority'          => apply_filters( 'understrap_sidebar_position_priority', 46 ),
+				)
+			)
+		);
+
+		$wp_customize->add_setting(
+			'analytics_ua_id',
+			array(
+				'default'           => '',
+				'type'              => 'theme_mod',
+				'sanitize_callback' => 'sanitize_text_field',
+				'capability'        => 'edit_theme_options',
+			)
+		);
+
+
+		$wp_customize->add_control(
+			new WP_Customize_Control(
+				$wp_customize,
+				'analytics_ua_id',
+				array(
+					'label'             => __( 'Google Analytics Tracking ID', 'understrap' ),
+					'description'       => __(
+						'Add your Google Analytics Tracking ID (UA-XXXXX)',
+						'understrap'
+					),
+					'section'           => 'analytics',
+					'settings'          => 'analytics_ua_id',
+					'type'              => 'text',
+					'sanitize_callback' => 'understrap_theme_slug_sanitize_select',
+				)
+			)
+		);
+
+		$wp_customize->add_setting(
+			'analytics_ga4_id',
+			array(
+				'default'           => '',
+				'type'              => 'theme_mod',
+				'sanitize_callback' => 'sanitize_text_field',
+				'capability'        => 'edit_theme_options',
+			)
+		);
+
+
+		$wp_customize->add_control(
+			new WP_Customize_Control(
+				$wp_customize,
+				'analytics_ga4_id',
+				array(
+					'label'             => __( 'Google Analytics 4 Tracking ID', 'understrap' ),
+					'description'       => __(
+						'Add your Google Analytics 4 Tracking ID (G-XXXXX)',
+						'understrap'
+					),
+					'section'           => 'analytics',
+					'settings'          => 'analytics_ga4_id',
+					'type'              => 'text',
+					'sanitize_callback' => 'understrap_theme_slug_sanitize_select',
+				)
+			)
+		);
+
+		$wp_customize->add_setting(
+			'analytics_gtm_id',
+			array(
+				'default'           => '',
+				'type'              => 'theme_mod',
+				'sanitize_callback' => 'sanitize_text_field',
+				'capability'        => 'edit_theme_options',
+			)
+		);
+
+
+		$wp_customize->add_control(
+			new WP_Customize_Control(
+				$wp_customize,
+				'analytics_gtm_id',
+				array(
+					'label'             => __( 'Google Tag Manager ID', 'understrap' ),
+					'description'       => __(
+						'Add your Google Tag Manager ID (GTM-XXXXX)',
+						'understrap'
+					),
+					'section'           => 'analytics',
+					'settings'          => 'analytics_gtm_id',
+					'type'              => 'text',
+					'sanitize_callback' => 'understrap_theme_slug_sanitize_select',
+				)
+			)
+		);
 	}
 } // End of if function_exists( 'understrap_theme_customize_register' ).
 

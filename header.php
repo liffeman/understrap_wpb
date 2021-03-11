@@ -15,6 +15,7 @@ $menu = get_theme_mod('understrap_offcanvas');
 $nav_theme = get_theme_mod('understrap_navbar_scheme');
 $searchbox = get_theme_mod('understrap_searchbox');
 $offcanvastheme = get_theme_mod('understrap_offcanvas_theme');
+$offcanvassubmenuslide = get_theme_mod('understrap_offcanvas_submenu_slide');
 ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
@@ -133,6 +134,7 @@ $offcanvastheme = get_theme_mod('understrap_offcanvas_theme');
 
 					const navigator = menu.navigation({
 						theme: <?php echo json_encode(get_theme_mod('understrap_offcanvas_theme')); ?>,
+						slidingSubmenus: <?php echo get_theme_mod('understrap_offcanvas_submenu_slide'); ?>,
 						title: ""
 					});
 
