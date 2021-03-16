@@ -19,7 +19,7 @@ defined( 'ABSPATH' ) || exit;
 
 	<div class="carousel-caption d-block mb-md-5">
 
-	<div class="categories d-none d-md-block">
+	<div class="categories d-none d-md-flex">
 		<?php
 		foreach((get_the_category()) as $category){
 			echo '<div class="cat-label">' . $category->name.'</div>';
