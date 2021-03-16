@@ -298,7 +298,7 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
 		$wp_customize->add_setting(
 			'understrap_offcanvas_submenu_slide',
 			array(
-				'default'           => 'true',
+				'default'           => 'false',
 				'type'              => 'theme_mod',
 				'sanitize_callback' => 'sanitize_text_field',
 				'capability'        => 'edit_theme_options',
