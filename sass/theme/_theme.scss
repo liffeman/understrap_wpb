@@ -121,7 +121,17 @@ figure.wp-block-embed.alignwide.is-type-video {
 		display: block;
 	}
 }
-
+.header-widget {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	color: $white;
+	.widget-title {
+		padding: 1rem;
+		margin-bottom: 0;
+		font-size: $h5-font-size;
+	}
+}
 
 /* Breadcrumb */
 .breadcrumbs {
