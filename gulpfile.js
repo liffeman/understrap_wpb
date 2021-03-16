@@ -182,11 +182,11 @@ gulp.task( 'watch-bs', gulp.parallel( 'browser-sync', 'watch' ) );
 // Uglifies and concat all JS files into one
 gulp.task( 'scripts', function() {
 	var scripts = [
-		// Start - All BS4 stuff
-		paths.dev + '/js/bootstrap4/bootstrap.bundle.js',
+		// Start - All BS stuff
+		paths.dev + '/js/bootstrap/bootstrap.bundle.js',
 		paths.dev + '/js/themejs/*.js',
 
-		// End - All BS4 stuff
+		// End - All BS stuff
 
 		// Start - All mmmenu-light stuff
 		paths.dev + '/js/mmenu-light/mmenu-light.js',
@@ -195,7 +195,7 @@ gulp.task( 'scripts', function() {
 		// End - All mmeny-light stuff
 
 		// Start - All font awesome  stuff
-		paths.dev + '/js/font-awesome/js/all.min.js',
+		//paths.dev + '/js/font-awesome/js/all.min.js',
 
 		// End - All font awesome stuff
 
@@ -234,12 +234,12 @@ gulp.task( 'copy-assets', function( done ) {
 	// Copy all JS files
 	var stream = gulp
 		.src( paths.node + '/bootstrap/dist/js/**/*.js' )
-		.pipe( gulp.dest( paths.dev + '/js/bootstrap4' ) );
+		.pipe( gulp.dest( paths.dev + '/js/bootstrap' ) );
 
 	// Copy all Bootstrap SCSS files
 	gulp
 		.src( paths.node + '/bootstrap/scss/**/*.scss' )
-		.pipe( gulp.dest( paths.dev + '/sass/bootstrap4' ) );
+		.pipe( gulp.dest( paths.dev + '/sass/bootstrap' ) );
 
 	////////////////// End Bootstrap 4 Assets /////////////////////////
 
@@ -277,8 +277,8 @@ gulp.task( 'copy-assets', function( done ) {
 // Deleting the files distributed by the copy-assets task
 gulp.task( 'clean-vendor-assets', function() {
 	return del( [
-		paths.dev + '/js/bootstrap4',
-		paths.dev + '/sass/bootstrap4',
+		paths.dev + '/js/bootstrap',
+		paths.dev + '/sass/bootstrap',
 		paths.dev + '/js/mmenu-light',
 		paths.dev + '/sass/mmenu-light',
 		paths.fonts + '/*wesome*.{ttf,woff,woff2,eot,svg}',

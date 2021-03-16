@@ -4,7 +4,6 @@ input[type="submit"],
 input[type="button"] {
   @extend .btn;
   @extend .btn-primary;
-  @extend .btn-block;
   @extend .btn-lg;
   &:focus {
 	  box-shadow: none;
@@ -12,7 +11,6 @@ input[type="button"] {
 }
 
 fieldset {
-  @extend .form-group;
 }
 
 select,
@@ -46,11 +44,11 @@ label {
 }
 
 input[type="file"] {
-  @extend .form-control-file;
+  @extend .form-control;
 }
 
 select {
-  @extend .custom-select;
+  @extend .form-select;
 }
 
 .required {
@@ -58,8 +56,6 @@ select {
 }
 
 .search-form label {
-  @extend .form-group;
-
   font-weight: normal;
 }
 

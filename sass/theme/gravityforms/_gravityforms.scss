@@ -8,8 +8,6 @@
   position: relative;
 
   .gfield, .acf-field {
-    @extend .form-group;
-
     position: relative;
   }
 
@@ -224,7 +222,6 @@
 
     // Name field
     &.ginput_container_name {
-      @extend .form-row;
 
       > span {
         @extend .col;
@@ -245,7 +242,6 @@
       .ginput_right,
       .ginput_left,
       .ginput_full {
-        @extend .form-group;
       }
 
       .ginput_full {
@@ -297,14 +293,14 @@
       @extend .list-unstyled;
 
       li {
-        @extend .custom-control;
-        @extend .custom-radio;
+        @extend .form-control;
+        @extend .form-check;
 
         input[type="radio"] {
-          @extend .custom-control-input;
+          @extend .form-check-input;
 
           + label {
-            @extend .custom-control-label;
+            @extend .form-check-label;
           }
         }
       }
@@ -319,14 +315,14 @@
       @extend .list-unstyled;
 
       li {
-        @extend .custom-control;
-        @extend .custom-checkbox;
+        @extend .form-control;
+        @extend .form-check;
 
         input[type="checkbox"] {
-          @extend .custom-control-input;
+          @extend .form-check-input;
 
           + label {
-            @extend .custom-control-label;
+            @extend .form-check-label;
 
             //font-weight: normal;
           }
@@ -339,14 +335,14 @@
  /* Consent checkbox */
 
  .ginput_container_consent {
-	 @extend .custom-control;
-     @extend .custom-checkbox;
+	 @extend .form-control;
+     @extend .form-check;
 
     input[type="checkbox"] {
-        @extend .custom-control-input;
+        @extend .form-check-input;
 
         + label {
-        @extend .custom-control-label;
+        @extend .form-check-label;
 
             //font-weight: normal;
         }
@@ -428,7 +424,6 @@
   /* Progresbar
   -------------------------------------------------------------- */
   .gf_progressbar_wrapper {
-    @extend .form-group;
 
     .gf_progressbar_title {
       color: $gray-500;
@@ -471,7 +466,6 @@
   -------------------------------------------------------------- */
   .gform_page_footer,
   .gform_footer {
-    @extend .form-group;
   }
 
   /* Custom spinner. (Hide original spinner using snippet)
@@ -540,7 +534,7 @@
     width: 30px;
 
     .ui-icon {
-      @extend .sr-only;
+      @extend .visually-hidden;
     }
   }
 
@@ -560,7 +554,7 @@
     width: calc(100% - 60px);
 
     > select {
-      @extend .custom-select;
+      @extend .form-select;
 
       height: min-content;
       line-height: 1;
