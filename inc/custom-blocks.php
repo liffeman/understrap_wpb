@@ -96,7 +96,11 @@ function register_acf_block_types() {
 			'render_template'   => 'block-templates/block-showvideos.php',
 			'enqueue_style'     => get_template_directory_uri() . '/css/custom-editor-style.css',
 			'category'          => 'custom',
+			'mode' => 'edit',
 			'icon'              => 'grid-view',
+			'supports' => array (
+				'mode' => false,
+			),
 			'keywords'          => array( 'video' )
 		));
 

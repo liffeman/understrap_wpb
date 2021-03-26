@@ -579,3 +579,13 @@ function smartwp_featured_image_in_rss_feed( $content ) {
   }
   return $content;
 }
+
+
+// defer loading of videos
+function defer_video_src_to_data($data, $url, $args) {
+	$data = preg_replace('/(src="([^\"\']+)")/', 'src="" data-src="$2"', $data);
+	return $data;
+} // end function defer_video_src_to_data
+add_filter('oembed_result', 'defer_video_src_to_data', 99, 3);
+add_filter('embed_oembed_html', 'defer_video_src_to_data', 99, 3);
+

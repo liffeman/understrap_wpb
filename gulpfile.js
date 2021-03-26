@@ -254,14 +254,13 @@ gulp.task( 'copy-assets', function( done ) {
 			.src( paths.node + '/flag-icon-css/sass/*.scss' )
 			.pipe( gulp.dest( paths.dev + '/sass/flag-icon-css' ) );
 
-	// Copy all  SVG files
-	gulp
-		.src( paths.node + '/flag-icon-css/flags/1x1/*.svg' )
-		.pipe( gulp.dest( paths.dev + '/flags/1x1' ) );
-	gulp
-	.src( paths.node + '/flag-icon-css/flags/4x3/*.svg' )
-	.pipe( gulp.dest( paths.dev + '/flags/4x3' ) );
-
+		// Copy all  SVG files
+		gulp
+			.src( paths.node + '/flag-icon-css/flags/1x1/*.svg' )
+			.pipe( gulp.dest( paths.flags + '/1x1' ) );
+		gulp
+		.src( paths.node + '/flag-icon-css/flags/4x3/*.svg' )
+		.pipe( gulp.dest( paths.flags + '/4x3' ) );
 
 	////////////////// All mmenu Assets /////////////////////////
 		// Copy all JS files
