@@ -1,38 +1,30 @@
 <?php
-
 /**
- * Clients list Block Template.
+ * Partial template for content in page.php
  *
- * @param   array $block The block settings and attributes.
- * @param   string $content The block inner HTML (empty).
- * @param   bool $is_preview True during AJAX preview.
- * @param   (int|string) $post_id The post ID this block is saved to.
+ * @package UnderStrap
  */
 
-// Create id attribute allowing for custom "anchor" value.
-$id = 'custom-block-' . $block['id'];
-if( !empty($block['anchor']) ) {
-	$id = $block['anchor'];
-}
-
-// Create class attribute allowing for custom "className" and "align" values.
-$className = 'custom-block';
-$className .= ' videos';
-if( !empty($block['className']) ) {
-	$className .= ' ' . $block['className'];
-}
-if( !empty($block['align']) ) {
-	$className .= ' align' . $block['align'];
-}
-$section_anchor = $id;
+// Exit if accessed directly.
+defined( 'ABSPATH' ) || exit;
 ?>
 
-<?php if( !empty($section_anchor) ){
-	echo '<a class="anchor" id="' . $section_anchor . '"></a>';
-	}
-?>
-<div id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?>">
-	<?php
+<article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
+
+	<?php if ( !is_front_page()) : ?>
+
+	<header class="entry-header">
+
+		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+
+	</header><!-- .entry-header -->
+
+	<?php endif; ?>
+
+	<div class="entry-content">
+
+		<?php the_content(); ?>
+		<?php
 		// The Query
 		$number = get_field('number_of_posts');
 		$cat = get_field('show_cat');
@@ -71,12 +63,23 @@ $section_anchor = $id;
 			}
 		/* Restore original Post Data */
 		wp_reset_postdata();
-	?>
-</div>
+		?>
 
+		<?php
+		wp_link_pages(
+			array(
+				'before' => '<div class="page-links">' . __( 'Pages:', 'understrap' ),
+				'after'  => '</div>',
+			)
+		);
+		?>
 
+	</div><!-- .entry-content -->
 
+	<footer class="entry-footer">
 
+		<?php edit_post_link( __( 'Edit', 'understrap' ), '<span class="edit-link">', '</span>' ); ?>
 
+	</footer><!-- .entry-footer -->
 
-
+</article><!-- #post-## -->

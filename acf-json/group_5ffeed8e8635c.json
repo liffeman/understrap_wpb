@@ -3,6 +3,31 @@
     "title": "Block - Videos",
     "fields": [
         {
+            "key": "field_605e11f030145",
+            "label": "Antal kolumner",
+            "name": "number_of_cols",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "formula": "",
+            "calculated_format": "",
+            "blank_if_zero": 0,
+            "readonly": 0,
+            "default_value": 3,
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": 1,
+            "max": 6,
+            "step": 1
+        },
+        {
             "key": "field_5ffeed954d29a",
             "label": "Visa filmer",
             "name": "",
@@ -18,10 +43,10 @@
             "formula": "",
             "calculated_format": "",
             "blank_if_zero": 0,
+            "readonly": 0,
             "clone": [
                 "field_5ff45739b0503",
-                "field_5ff45e1018673",
-                "field_5ff458a7b24fc"
+                "field_5ff45e1018673"
             ],
             "display": "seamless",
             "layout": "block",
@@ -36,6 +61,13 @@
                 "operator": "==",
                 "value": "acf\/videogallery"
             }
+        ],
+        [
+            {
+                "param": "post_template",
+                "operator": "==",
+                "value": "page-templates\/videopage.php"
+            }
         ]
     ],
     "menu_order": 0,
@@ -46,5 +78,17 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1610542570
+    "acfe_display_title": "",
+    "acfe_autosync": [
+        "json"
+    ],
+    "acfe_form": 0,
+    "acfe_meta": {
+        "acfcloneindex": {
+            "acfe_meta_key": "",
+            "acfe_meta_value": ""
+        }
+    },
+    "acfe_note": "",
+    "modified": 1616777827
 }
