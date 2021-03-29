@@ -28,8 +28,8 @@
   "homepage": "https://understrap.com",
   "dependencies": {
     "@fortawesome/fontawesome-pro": "^5.15.1",
-    "mmenu-light": "^3.0.7",
-    "flag-icon-css": "^3.5.0"
+    "flag-icon-css": "^3.5.0",
+    "mmenu-light": "^3.0.7"
   },
   "devDependencies": {
     "@babel/core": "^7.12.10",
