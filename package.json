@@ -4,14 +4,14 @@
   "description": "A starter theme framework based on understraot",
   "main": "index.js",
   "dependencies": {
-    "@fortawesome/fontawesome-pro": "^5.15.1",
+    "@fortawesome/fontawesome-pro": "^5.15.3",
     "autoprefixer": "^9.8.6",
     "axios": "^0.21.1",
-    "bootstrap": "^5.0.0-beta2",
+    "bootstrap": "^5.0.0-beta3",
     "browser-sync": "^2.26.14",
     "browser-sync-client": "^2.26.14",
     "browser-sync-ui": "^2.26.14",
-    "core-js-compat": "^3.9.1",
+    "core-js-compat": "^3.10.1",
     "del": "^6.0.0",
     "engine.io": "^3.5.0",
     "gensync": "^1.0.0-beta.2",
@@ -32,8 +32,8 @@
     "socket.io-client": "^2.4.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.13.10",
-    "@babel/preset-env": "^7.13.10"
+    "@babel/core": "^7.13.15",
+    "@babel/preset-env": "^7.13.15"
   },
   "scripts": {
     "postinstall": "gulp copy-assets"
