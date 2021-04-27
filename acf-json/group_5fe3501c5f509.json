@@ -63,7 +63,7 @@
             "blank_if_zero": 0,
             "readonly": 0,
             "display_format": "Y-m-d H:i:s",
-            "return_format": "F j, Y H:i:s",
+            "return_format": "Y-m-d H:i:s",
             "first_day": 1
         },
         {
@@ -214,5 +214,5 @@
         }
     },
     "acfe_note": "",
-    "modified": 1617020917
+    "modified": 1619526350
 }

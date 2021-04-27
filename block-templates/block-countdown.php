@@ -28,7 +28,10 @@ $show_link = get_field('show_link');
 
 $date_now = date('Y-m-d H:i:s');
 $time_now = strtotime($date_now);
+//$countdown_now = date('F j, Y H:i:s', strtotime($countdown_date);
 $countdown_now = strtotime($countdown_date);
+$countdown_print = date('F j, Y H:i:s', strtotime($countdown_date));
+
 
 // Create id attribute allowing for custom "anchor" value.
 $id = 'custom-block-' . $block['id'];
@@ -66,7 +69,16 @@ echo '<a class="anchor" id="' . $section_anchor . '"></a>';
 			echo '</div>';
 			}
 		?>
-		<div id="countdown" class="countdown-content p-0 px-md-5">	</div>
+		<div class="d-none">
+			<?php
+			echo '<p><label>$countdown_date: ' .  $countdown_date . '</p>';
+			echo '<p><label>$countdown_now: ' .  $countdown_now . '</p>';
+			echo '<p><label>$countdown_print: ' .  $countdown_print . '</p>';
+			echo '<p><label>$date_now: ' .  $date_now . '</p>';
+			echo '<p><label>$time_now: ' .  $time_now . '</p>';
+			?>
+		</div>
+		<div id="countdown" class="countdown-content p-0 px-md-5"></div>
 
 		<?php if($countdown_weather): ?>
 
@@ -186,7 +198,7 @@ if ($countdown_msg ){
 <script>
 	// Set the date we're counting down to
 	//var countDownDate = new Date("2021-04-05 14:08:00").getTime();
-	var countDownDate = new Date('<?php echo $countdown_date; ?>').getTime();
+	var countDownDate = new Date('<?php echo $countdown_print; ?>').getTime();
 	//var countDownDate = '<?php echo $countdown_now; ?>';
 
 	// Update the count down every 1 second
